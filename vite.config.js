@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,8 +13,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        auth: resolve(__dirname, 'auth.html'),
+        main: resolve(fileURLToPath(new URL('.', import.meta.url)), 'index.html'),
+        auth: resolve(fileURLToPath(new URL('.', import.meta.url)), 'auth.html'),
       }
     }
   }
