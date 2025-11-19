@@ -48,6 +48,7 @@ function copyDir(src, dest) {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), copyStaticAssets()],
+  base: '/',
   server: {
     port: 3000,
     open: true
