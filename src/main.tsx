@@ -10,9 +10,14 @@ if (!rootElement) {
   throw new Error('Root element not found')
 }
 
-ReactDOM.createRoot(rootElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+try {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  )
+} catch (error) {
+  console.error('Error rendering app:', error)
+  rootElement.innerHTML = '<div style="padding: 20px; text-align: center;"><h1>Error Loading Application</h1><p>Please refresh the page or contact support.</p></div>'
+}
 
