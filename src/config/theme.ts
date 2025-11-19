@@ -16,7 +16,7 @@ export const themes: Record<Exclude<Role, 'admin'>, Theme> = {
     primaryDark: '#1A4FCC',
     background: 'rgba(46, 107, 255, 0.1)',
     backgroundLight: 'rgba(46, 107, 255, 0.05)',
-    name: 'Customer',
+    name: 'Client',
   },
   serviceProvider: {
     primary: '#10B981',
@@ -24,7 +24,7 @@ export const themes: Record<Exclude<Role, 'admin'>, Theme> = {
     primaryDark: '#059669',
     background: 'rgba(16, 185, 129, 0.1)',
     backgroundLight: 'rgba(16, 185, 129, 0.05)',
-    name: 'Service Provider',
+    name: 'Provider',
   },
   doctor: {
     primary: '#7C3AED',

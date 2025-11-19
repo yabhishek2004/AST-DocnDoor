@@ -4,8 +4,8 @@ import { getTheme } from '../config/theme';
 import type { Role } from '../config/theme';
 
 const roles: Array<{ value: Exclude<Role, 'admin'>; label: string }> = [
-  { value: 'customer', label: 'Customer' },
-  { value: 'serviceProvider', label: 'Service Provider' },
+  { value: 'customer', label: 'Client' },
+  { value: 'serviceProvider', label: 'Provider' },
   { value: 'doctor', label: 'Doctor' },
 ];
 
