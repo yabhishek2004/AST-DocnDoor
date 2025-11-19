@@ -9,7 +9,7 @@
 	<meta name="author" content="LayoutDrop" >
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keywords" content="DocnDoor Team, Nurses, House Care Specialists, Leadership, Careers, Medical Staff">
-	<meta name="description" content="Meet the clinicians, coordinators, and house-care captains behind DocnDoor’s seamless at-home experience." >
+	<meta name="description" content="Meet the clinicians, coordinators, and house-care captains behind DocnDoor's seamless at-home experience." >
 	<!-- end::Meta Basic -->
 	
 	<!-- begin::Meta Social -->
@@ -17,8 +17,8 @@
 	<meta property="og:site_name" content="DocnDoor">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="en_us">
-	<meta property="og:title" content="DocnDoor" >
-	<meta property="og:description" content="Meet the clinicians, coordinators, and house-care captains behind DocnDoor’s seamless at-home experience.">
+	<meta property="og:title" content="Our Team | DocnDoor" >
+	<meta property="og:description" content="Meet the clinicians, coordinators, and house-care captains behind DocnDoor's seamless at-home experience.">
 	<meta property="og:image" content="https://brighter.layoutdrop.com/demo/preview.png" >
 	<!-- end::Meta Social -->
 	
@@ -26,8 +26,8 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:url" content="https://brighter.layoutdrop.com/demo/">
 	<meta name="twitter:creator" content="@layoutdrop">
-	<meta name="twitter:title" content="DocnDoor">
-	<meta name="twitter:description" content="Meet the clinicians, coordinators, and house-care captains behind DocnDoor’s seamless at-home experience.">
+	<meta name="twitter:title" content="Our Team | DocnDoor">
+	<meta name="twitter:description" content="Meet the clinicians, coordinators, and house-care captains behind DocnDoor's seamless at-home experience.">
 	<!-- end::Meta Twitter -->
 	
 	<!-- begin::Favicons Icons -->
@@ -36,7 +36,7 @@
 	<!-- end::Favicons Icons -->
 	
 	<!-- begin::Page Title -->
-	<title>DocnDoor | Our Team</title>
+	<title>Our Team | DocnDoor - Meet Our Experts</title>
 	<!-- end::Page Title -->
 	
 	<!-- begin::Mobile Specific -->
@@ -49,6 +49,368 @@
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 	<!-- end::Plugins All CSS -->
+	
+	<style>
+		.team-hero-minimal {
+			min-height: 70vh;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 50%, #2d5a7e 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+			padding: 120px 20px;
+		}
+		.team-hero-minimal::before {
+			content: '';
+			position: absolute;
+			width: 600px;
+			height: 600px;
+			background: radial-gradient(circle, rgba(254, 231, 74, 0.15) 0%, transparent 70%);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+		}
+		.team-hero-content {
+			position: relative;
+			z-index: 2;
+			max-width: 800px;
+		}
+		.team-hero-badge {
+			display: inline-block;
+			padding: 12px 30px;
+			background: rgba(254, 231, 74, 0.2);
+			border: 1px solid rgba(254, 231, 74, 0.4);
+			border-radius: 50px;
+			color: #FEE74A;
+			font-size: 0.9rem;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 30px;
+		}
+		.team-hero-title {
+			font-size: 4.5rem;
+			font-weight: 800;
+			color: #ffffff;
+			line-height: 1.2;
+			margin-bottom: 25px;
+		}
+		.team-hero-subtitle {
+			font-size: 1.3rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.8;
+			margin-bottom: 40px;
+		}
+		
+		.team-stats-bar {
+			background: #ffffff;
+			padding: 60px 0;
+			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+		}
+		.team-stats-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 40px;
+			text-align: center;
+		}
+		.team-stat-item {
+			padding: 20px;
+		}
+		.team-stat-number {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #042338;
+			display: block;
+			margin-bottom: 10px;
+			line-height: 1;
+		}
+		.team-stat-label {
+			font-size: 1rem;
+			color: #666;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		
+		.leadership-section {
+			padding: 100px 0;
+			background: #f8f9fa;
+		}
+		.section-header {
+			text-align: center;
+			margin-bottom: 70px;
+		}
+		.section-badge {
+			display: inline-block;
+			padding: 8px 20px;
+			background: rgba(4, 35, 56, 0.1);
+			border-radius: 50px;
+			color: #042338;
+			font-size: 0.85rem;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 20px;
+		}
+		.section-title {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #042338;
+			margin-bottom: 20px;
+		}
+		.section-subtitle {
+			font-size: 1.2rem;
+			color: #666;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		.leadership-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+			gap: 40px;
+			margin-top: 60px;
+		}
+		.leadership-card {
+			background: #ffffff;
+			border-radius: 30px;
+			padding: 50px 40px;
+			text-align: center;
+			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			position: relative;
+			overflow: hidden;
+		}
+		.leadership-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 6px;
+			background: linear-gradient(90deg, #042338, #FEE74A);
+			transform: scaleX(0);
+			transition: transform 0.4s ease;
+		}
+		.leadership-card:hover::before {
+			transform: scaleX(1);
+		}
+		.leadership-card:hover {
+			transform: translateY(-15px);
+			box-shadow: 0 25px 60px rgba(4, 35, 56, 0.15);
+		}
+		.leadership-avatar {
+			width: 150px;
+			height: 150px;
+			margin: 0 auto 30px;
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 3.5rem;
+			font-weight: 700;
+			color: #FEE74A;
+			position: relative;
+			overflow: hidden;
+		}
+		.leadership-avatar::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(circle, rgba(254, 231, 74, 0.3) 0%, transparent 70%);
+			top: 0;
+			left: 0;
+		}
+		.leadership-name {
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 10px;
+		}
+		.leadership-role {
+			font-size: 1.1rem;
+			color: #FEE74A;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+		.leadership-bio {
+			font-size: 1rem;
+			color: #666;
+			line-height: 1.8;
+			margin-bottom: 25px;
+		}
+		.leadership-social {
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+		}
+		.leadership-social a {
+			width: 40px;
+			height: 40px;
+			background: #f8f9fa;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #042338;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		.leadership-social a:hover {
+			background: #042338;
+			color: #FEE74A;
+			transform: translateY(-3px);
+		}
+		
+		.team-members-section {
+			padding: 100px 0;
+			background: #ffffff;
+		}
+		.team-filter {
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+			margin-bottom: 60px;
+			flex-wrap: wrap;
+		}
+		.filter-btn {
+			padding: 12px 30px;
+			background: #f8f9fa;
+			border: 2px solid transparent;
+			border-radius: 50px;
+			color: #666;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		.filter-btn:hover,
+		.filter-btn.active {
+			background: #042338;
+			color: #ffffff;
+			border-color: #042338;
+		}
+		.team-members-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			gap: 35px;
+		}
+		.team-member-card {
+			background: #ffffff;
+			border: 2px solid #e9ecef;
+			border-radius: 25px;
+			padding: 40px 30px;
+			text-align: center;
+			transition: all 0.4s ease;
+			position: relative;
+			overflow: hidden;
+		}
+		.team-member-card::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: linear-gradient(90deg, #042338, #FEE74A);
+			transform: scaleX(0);
+			transition: transform 0.4s ease;
+		}
+		.team-member-card:hover::after {
+			transform: scaleX(1);
+		}
+		.team-member-card:hover {
+			border-color: #042338;
+			transform: translateY(-10px);
+			box-shadow: 0 20px 50px rgba(4, 35, 56, 0.15);
+		}
+		.member-avatar {
+			width: 120px;
+			height: 120px;
+			margin: 0 auto 25px;
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2.5rem;
+			font-weight: 700;
+			color: #FEE74A;
+		}
+		.member-name {
+			font-size: 1.4rem;
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 8px;
+		}
+		.member-role {
+			font-size: 1rem;
+			color: #666;
+			margin-bottom: 15px;
+		}
+		.member-specialty {
+			font-size: 0.9rem;
+			color: #FEE74A;
+			font-weight: 600;
+			background: rgba(4, 35, 56, 0.1);
+			padding: 6px 15px;
+			border-radius: 20px;
+			display: inline-block;
+		}
+		
+		.culture-section {
+			padding: 100px 0;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			color: #ffffff;
+		}
+		.culture-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 40px;
+			margin-top: 60px;
+		}
+		.culture-card {
+			background: rgba(255, 255, 255, 0.05);
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: 25px;
+			padding: 50px 40px;
+			text-align: center;
+			transition: all 0.3s ease;
+		}
+		.culture-card:hover {
+			background: rgba(255, 255, 255, 0.1);
+			transform: translateY(-5px);
+		}
+		.culture-icon {
+			font-size: 3.5rem;
+			color: #FEE74A;
+			margin-bottom: 25px;
+		}
+		.culture-title {
+			font-size: 1.6rem;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+		.culture-text {
+			font-size: 1.05rem;
+			line-height: 1.8;
+			color: rgba(255, 255, 255, 0.9);
+		}
+		
+		@media (max-width: 768px) {
+			.team-hero-title {
+				font-size: 2.8rem;
+			}
+			.leadership-grid,
+			.team-members-grid {
+				grid-template-columns: 1fr;
+			}
+			.section-title {
+				font-size: 2.5rem;
+			}
+		}
+	</style>
 	
 </head>
 <body>
@@ -106,14 +468,14 @@
 							<a href="index.html"><img src="images/logo-white.png" alt=""></a>
 						</div>
 						<ul class="nav navbar-nav">	
-							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li>
 								<a href="javascript:;">Pages <i class="fas fa-plus"></i></a>
 								<ul class="sub-menu">
 									<li class="add-menu-left">
 										<ul>
 											<li><a href="about-us.html"><span>About Us</span></a></li>
-											<li><a href="team.html"><span>Our Team</span></a></li>
+											<li class="active"><a href="team.html"><span>Our Team</span></a></li>
 											<li><a href="faq.html"><span>FAQ's</span></a></li>
 										</ul>
 									</li>
@@ -152,552 +514,201 @@
  
 	<main class="page-content">
 		
-		<!-- begin::Main Banner -->
-		<div class="main-banner" style="background-image:linear-gradient(140deg,rgba(5,26,47,.95),rgba(13,66,109,.9)),url(images/testimonials/pic4.jpg); background-size:cover; background-position:center;">
-			<div class="container inner-content">
-				<div class="row align-items-center">
-					<div class="col-lg-7 col-md-6 col-sm-7">
-						<span class="title-ext">Humans Behind The Help</span>
-						<h1>Meet The DocnDoor<br>Care Collective</h1>
-						<p>Registered nurses, therapists, house captains, and coordinators collaborate daily so every visit feels choreographed and personal.</p>
-						<a href="#team" class="btn btn-primary">View Team</a>
-						<a href="#careers" class="btn btn-outline-primary ms-lg-2 mt-3 mt-lg-0">Join Us</a>
-					</div>
-					<div class="col-lg-5 col-md-6 col-sm-5">
-						<div class="banner-img">
-							<img src="images/testimonials/pic6.jpg" class="rounded-4 shadow-lg" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate1" src="images/shap/trangle-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/square-blue.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/chicle-blue-2.png" alt="">
-			<img class="pt-img4 animate4" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img5 animate-wave" src="images/shap/wave-orange.png" alt="">
-		</div>
-		<!-- end::Main Banner -->
-		
-		<section class="page-meta-bar" style="background:rgba(255,255,255,0.08); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.15);">
+		<!-- begin::Team Hero Minimal -->
+		<section class="team-hero-minimal">
 			<div class="container">
-				<div class="row align-items-center gy-3">
-					<div class="col-lg-6">
-						<p class="m-0 text-white-50">Pods of clinicians + house captains keep DocnDoor nimble.</p>
-					</div>
-					<div class="col-lg-6">
-						<div class="d-flex flex-wrap gap-2 justify-content-lg-end">
-							<a href="#pods" class="btn btn-outline-light btn-sm">Pods</a>
-							<a href="#perks" class="btn btn-outline-light btn-sm">Culture</a>
-							<a href="#cities" class="btn btn-outline-light btn-sm">Cities</a>
-							<a href="#careers" class="btn btn-outline-light btn-sm">Careers</a>
-						</div>
-					</div>
+				<div class="team-hero-content">
+					<span class="team-hero-badge">Expert Professionals</span>
+					<h1 class="team-hero-title">Meet Our<br>Care Collective</h1>
+					<p class="team-hero-subtitle">A dedicated team of licensed clinicians, skilled coordinators, and experienced house-care specialists working together to deliver exceptional care to your doorstep.</p>
 				</div>
 			</div>
 		</section>
+		<!-- end::Team Hero Minimal -->
 		
-		<!-- begin::About Us -->
-		<section id="pods" class="section-sp1 about-area">
+		<!-- begin::Team Stats Bar -->
+		<section class="team-stats-bar">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-6 mb-30">
-						<div class="about-thumb-area">
-							<ul>
-								<li><img class="about-thumb1" src="images/about/pic-1.jpg" alt=""></li>
-								<li><img class="about-thumb2" src="images/about/pic-2.jpg" alt=""></li>
-								<li><img class="about-thumb3" src="images/about/pic-3.jpg" alt=""></li>
-								<li><div class="exp-bx">20<span>Year Experience</span></div></li>
-							</ul>
-						</div>
+				<div class="team-stats-container">
+					<div class="team-stat-item">
+						<span class="team-stat-number">500+</span>
+						<span class="team-stat-label">Expert Professionals</span>
 					</div>
-					<div class="col-lg-6 mb-30">
-						<div class="heading-bx">
-							<span class="title-ext text-primary">Clinical + House Pros</span>
-							<h2 class="title">One Roster, Dual Expertise</h2>
-							<p>Each DocnDoor pod pairs a lead nurse with a house-care captain, backed by coordinators, therapists, and quality coaches. Together we cover medication management, infection control, organizing, and sparkling resets.</p>
-						</div>
-						<div class="row gx-20 mb-30 mb-sm-10">
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/professional-team.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">120+ Licensed Clinicians</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/service.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Service Captains</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/pricing.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Coordinators & Ops</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/eco-friendly.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Quality Coaches</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a href="#team" class="btn btn-primary me-3 mb-2">Meet The Team</a>
-						<a href="#careers" class="btn btn-outline-primary mb-2">Careers</a>
+					<div class="team-stat-item">
+						<span class="team-stat-number">120+</span>
+						<span class="team-stat-label">Licensed Clinicians</span>
+					</div>
+					<div class="team-stat-item">
+						<span class="team-stat-number">50K+</span>
+						<span class="team-stat-label">Families Served</span>
+					</div>
+					<div class="team-stat-item">
+						<span class="team-stat-number">99%</span>
+						<span class="team-stat-label">Satisfaction Rate</span>
 					</div>
 				</div>
 			</div>
-			<img class="pt-img1 animate-wave" src="images/shap/wave-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/chicle-blue-2.png" alt="">
-			<img class="pt-img3 animate-rotate" src="images/shap/line-circle-blue.png" alt="">
-			<img class="pt-img4 animate-wave" src="images/shap/square-dots-orange.png" alt="">
-			<img class="pt-img5 animate2" src="images/shap/square-blue.png" alt="">
 		</section>
-		<!-- end::About Us -->
+		<!-- end::Team Stats Bar -->
 		
-		<!-- begin::Culture Snapshot -->
-		<section id="perks" class="section-sp1">
+		<!-- begin::Leadership Section -->
+		<section class="leadership-section">
 			<div class="container">
-				<div class="heading-bx text-center mb-5">
-					<span class="title-ext text-primary">Life At DocnDoor</span>
-					<h2 class="title">Culture Snapshots</h2>
+				<div class="section-header">
+					<span class="section-badge">Executive Leadership</span>
+					<h2 class="section-title">Visionary Leaders</h2>
+					<p class="section-subtitle">Our leadership team brings decades of combined experience in healthcare, operations, and service excellence to guide DocnDoor's mission.</p>
 				</div>
-				<div class="row gx-20">
-					<div class="col-md-4 mb-4">
-						<div class="feature-container feature-bx1 text-center">
-							<div class="icon-md">
-								<span class="icon-cell">
-									<img src="images/icon/service.svg" alt="">
-								</span> 
-							</div>
-							<div class="icon-content">
-								<h4 class="ld-title">“Shadow Days”</h4>
-								<p>Every new hire shadows both a clinician and a house-care captain to understand dual-care teamwork.</p>
-							</div>
+				<div class="leadership-grid">
+					<div class="leadership-card">
+						<div class="leadership-avatar">AS</div>
+						<h3 class="leadership-name">Amelia Shaw</h3>
+						<p class="leadership-role">Chief Medical Officer</p>
+						<p class="leadership-bio">Board-certified physician with 15+ years in home healthcare, specializing in care coordination and clinical excellence.</p>
+						<div class="leadership-social">
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fas fa-envelope"></i></a>
 						</div>
 					</div>
-					<div class="col-md-4 mb-4">
-						<div class="feature-container feature-bx1 text-center">
-							<div class="icon-md">
-								<span class="icon-cell">
-									<img src="images/icon/professional-team.svg" alt="">
-								</span> 
-							</div>
-							<div class="icon-content">
-								<h4 class="ld-title">Quarterly Labs</h4>
-								<p>We shut down service for half a day to practice new skills—vent care, stain removal, empathy drills.</p>
-							</div>
+					<div class="leadership-card">
+						<div class="leadership-avatar">JA</div>
+						<h3 class="leadership-name">Julian Avery</h3>
+						<p class="leadership-role">Head of Home Care</p>
+						<p class="leadership-bio">Operations expert with a passion for creating seamless service experiences and building high-performing teams.</p>
+						<div class="leadership-social">
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fas fa-envelope"></i></a>
 						</div>
 					</div>
-					<div class="col-md-4 mb-4">
-						<div class="feature-container feature-bx1 text-center">
-							<div class="icon-md">
-								<span class="icon-cell">
-									<img src="images/icon/pricing.svg" alt="">
-								</span> 
-							</div>
-							<div class="icon-content">
-								<h4 class="ld-title">Transparent Growth</h4>
-								<p>Pods celebrate promotions publicly so everyone sees the milestones available in every track.</p>
-							</div>
+					<div class="leadership-card">
+						<div class="leadership-avatar">PM</div>
+						<h3 class="leadership-name">Priya Martinez</h3>
+						<p class="leadership-role">Operations Director</p>
+						<p class="leadership-bio">Strategic leader focused on scaling operations while maintaining the highest standards of quality and client satisfaction.</p>
+						<div class="leadership-social">
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fas fa-envelope"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Culture Snapshot -->
+		<!-- end::Leadership Section -->
 		
-		<!-- begin::Working Process -->
-		<section class="section-area section-sp5 work-area" style="background-image: url(images/background/line-bg1.png); background-repeat: no-repeat; background-position: center; background-size: 100%;">
-			<div class="container-sm">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Team Playbook</span>
-					<h2 class="title">How We Work Together</h2>
-				</div>
-				<div class="row justify-content-center">
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx">
-							<div class="work-num-bx">01</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Pod Huddles</h5>
-								<p>Nurses, therapists, and house captains plan the visit together—aligning vitals goals with tidy-up checklists.</p>
-							</div>
-							<a href="#team" class="btn btn-primary light">See Pods <i class="btn-icon-bx fas fa-chevron-right"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx active">
-							<div class="work-num-bx">02</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Field Execution</h5>
-								<p>Clinical leads handle meds and monitoring while house captains refresh zones, all synced via our shared app.</p>
-							</div>
-							<a href="medical-care.html" class="btn btn-primary light">Medical Ops <i class="btn-icon-bx fas fa-chevron-right"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx">
-							<div class="work-num-bx">03</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Recap & Coaching</h5>
-								<p>Coordinators debrief each visit, log data, and schedule refreshers so quality stays high.</p>
-							</div>
-							<a href="contact-us.html" class="btn btn-primary light">Talk To Recruiting <i class="btn-icon-bx fas fa-chevron-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate1" src="images/shap/circle-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/circle-dots.png" alt="">
-		</section>
-		<!-- end::Working Process -->
-		
-		<section id="cities" class="section-sp1" style="background:linear-gradient(135deg,#041c32,#0a3a5c);">
+		<!-- begin::Team Members Section -->
+		<section class="team-members-section">
 			<div class="container">
-				<div class="heading-bx text-center text-white">
-					<span class="title-ext text-primary">Hiring Footprint</span>
-					<h2 class="title">Cities Where Pods Are Growing</h2>
+				<div class="section-header">
+					<span class="section-badge">Our Specialists</span>
+					<h2 class="section-title">Expert Team Members</h2>
+					<p class="section-subtitle">Meet the dedicated professionals who make DocnDoor's integrated care model possible.</p>
 				</div>
-				<div class="row gy-4">
-					<div class="col-md-4">
-						<div class="card h-100 shadow p-4">
-							<h4>New York</h4>
-							<p>Flagship pod HQ with oncology nurses, luxury-condo house captains, and multilingual concierges.</p>
-							<span class="text-primary">Open Roles: RN, Concierge, Captain</span>
-						</div>
+				<div class="team-filter">
+					<button class="filter-btn active" data-filter="all">All Team</button>
+					<button class="filter-btn" data-filter="medical">Medical Care</button>
+					<button class="filter-btn" data-filter="house">House Care</button>
+					<button class="filter-btn" data-filter="coordination">Coordination</button>
+				</div>
+				<div class="team-members-grid">
+					<div class="team-member-card" data-category="medical">
+						<div class="member-avatar">MP</div>
+						<h3 class="member-name">Maya Patel</h3>
+						<p class="member-role">Lead Nurse, RN</p>
+						<span class="member-specialty">Post-Surgical Care</span>
 					</div>
-					<div class="col-md-4">
-						<div class="card h-100 shadow p-4">
-							<h4>Austin</h4>
-							<p>Hybrid market specializing in post-surgical care plus short-term rental flips for tech travelers.</p>
-							<span class="text-primary">Open Roles: PT, Scheduler</span>
-						</div>
+					<div class="team-member-card" data-category="medical">
+						<div class="member-avatar">LA</div>
+						<h3 class="member-name">Leo Aranda</h3>
+						<p class="member-role">Physical Therapist</p>
+						<span class="member-specialty">Neuro & Ortho</span>
 					</div>
-					<div class="col-md-4">
-						<div class="card h-100 shadow p-4">
-							<h4>Seattle</h4>
-							<p>Green-certified crews and telehealth-heavy nursing pods support busy biotech families.</p>
-							<span class="text-primary">Open Roles: RN, House Captain</span>
-						</div>
+					<div class="team-member-card" data-category="house">
+						<div class="member-avatar">IR</div>
+						<h3 class="member-name">Imani Rhodes</h3>
+						<p class="member-role">House Care Captain</p>
+						<span class="member-specialty">Luxury Residences</span>
+					</div>
+					<div class="team-member-card" data-category="coordination">
+						<div class="member-avatar">NM</div>
+						<h3 class="member-name">Noah Mendes</h3>
+						<p class="member-role">Client Concierge</p>
+						<span class="member-specialty">Scheduling & Support</span>
+					</div>
+					<div class="team-member-card" data-category="medical">
+						<div class="member-avatar">TQ</div>
+						<h3 class="member-name">Dr. Tara Quinn</h3>
+						<p class="member-role">Medical Director</p>
+						<span class="member-specialty">Clinical Leadership</span>
+					</div>
+					<div class="team-member-card" data-category="house">
+						<div class="member-avatar">OL</div>
+						<h3 class="member-name">Oscar Lee</h3>
+						<p class="member-role">Quality Coach</p>
+						<span class="member-specialty">Quality Assurance</span>
+					</div>
+					<div class="team-member-card" data-category="medical">
+						<div class="member-avatar">SK</div>
+						<h3 class="member-name">Sarah Kim</h3>
+						<p class="member-role">Wound Care Specialist</p>
+						<span class="member-specialty">Advanced Wound Care</span>
+					</div>
+					<div class="team-member-card" data-category="house">
+						<div class="member-avatar">DJ</div>
+						<h3 class="member-name">David Johnson</h3>
+						<p class="member-role">Deep Clean Specialist</p>
+						<span class="member-specialty">Eco-Friendly Cleaning</span>
 					</div>
 				</div>
 			</div>
 		</section>
+		<!-- end::Team Members Section -->
 		
-		<!-- begin::Book Service -->
-		<section id="careers" class="section-area account-wraper1">
-			<div class="container-fluid">
-				<div class="appointment-inner section-sp2" style="background-image: url(images/appointment/line-bg.png); background-repeat: no-repeat; background-position: 20px 140px;">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-5 col-lg-6 col-md-6">
-								<div class="appointment-form form-wraper">
-									<h3 class="title">Apply To Join DocnDoor</h3>
-									<form action="#">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Your Name" required>
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Your Email Address" required>
-										</div>
-										<div class="form-group">
-											<input type="number" class="form-control" placeholder="Phone Numbers" required>
-										</div>
-										<div class="form-group">
-											<input type="date" id="datePicker" class="form-control" required>
-										</div>
-										<div class="form-group">
-											<select class="form-select form-control nice-select">
-												<option selected>Desired Track</option>
-												<option value="Clinical">Clinical (RN, LVN, Therapist)</option>
-												<option value="House Care">House Care Captain</option>
-												<option value="Operations">Operations & Coordination</option>
-												<option value="Leadership">Leadership</option>
-											</select>
-										</div>
-										<div class="form-group">
-											<textarea class="form-control" rows="4" placeholder="Share your standout experience or why you’d like to join"></textarea>
-										</div>
-										<button type="submit" class="btn btn-primary">Submit Application</button>
-									</form>
-								</div>
-							</div>
-							<div class="col-xl-7 col-lg-6 col-md-6">
-								<div class="appointment-thumb">
-									<img src="images/appointment/mobile.png" alt="">
-									<div class="images-group">
-										<img class="img1" src="images/appointment/women.png" alt="">
-										<img class="img2" src="images/appointment/map-pin.png" alt="">
-										<img class="img3" src="images/appointment/setting.png" alt="">
-										<img class="img4" src="images/appointment/check.png" alt="">
-										<img class="img5" src="images/appointment/chat.png" alt="">
-									</div>
-								</div>
-							</div>
-						</div>					
-					</div>	
-					<img class="pt-img1 animate1" src="images/shap/trangle-orange.png" alt="">
-					<img class="pt-img2 animate-wave" src="images/shap/wave-orange.png" alt="">
-					<img class="pt-img4 animate2" src="images/shap/circle-orange.png" alt="">
-				</div>					
-			</div>
-		</section>
-		<!-- end::Book Service -->
-		
-		<!-- begin::Services -->
-		<section id="team" class="section-area section-sp1 service-wraper">
-			<div class="row align-items-center">
-				<div class="col-xl-4 col-lg-7 mb-30">	
-					<div class="heading-bx">
-						<span class="title-ext text-primary">Leads & Pods</span>
-						<h2 class="title">Specialists Guiding Every Visit</h2>
-						<p>Each card represents a real DocnDoor lead and the type of pod they manage. Together they cover every part of your home journey.</p>
-					</div>
-					<a href="#careers" class="btn btn-secondary">Join The Crew</a>
-				</div>
-				<div class="col-xl-8 mb-15">	
-					<div class="swiper service-slide">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature1">
-									<div class="feature-box-xl mb-30">
-										<span class="icon-cell">
-											<img src="images/icon/floor-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Maya Patel, RN</h3>
-										<p>Lead nurse for post-surgical pods, championing evidence-based wound care and telehealth rounds.</p>
-										<a href="medical-care.html" class="btn btn-primary light">Medical Pods</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/gutter-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Leo Aranda, PT</h3>
-										<p>Neuro and ortho physical therapist aligning mobility plans with safe-space housekeeping requests.</p>
-										<a href="medical-care.html" class="btn btn-primary light">Therapy Pods</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature3">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/kitchen-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Imani Rhodes</h3>
-										<p>House Care Captain for luxury residences—masters decluttering, laundry labs, and scent styling.</p>
-										<a href="house-care.html" class="btn btn-primary light">House Pods</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature1">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/toilet-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Noah Mendes</h3>
-										<p>Client concierge syncing scheduling, pharmacy runs, and family updates across time zones.</p>
-										<a href="contact-us.html" class="btn btn-primary light">Client Success</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/room-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Dr. Tara Quinn</h3>
-										<p>Medical director overseeing physician partnerships, infection control, and complex case reviews.</p>
-										<a href="medical-care.html" class="btn btn-primary light">Clinical Leadership</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/office-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Oscar Lee</h3>
-										<p>Quality coach auditing supplies, eco products, and documentation to keep standards high.</p>
-										<a href="house-care.html" class="btn btn-primary light">Quality Ops</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>					
-				</div>	 
-			</div>
-			<img class="pt-img2 animate2" src="images/shap/square-dots-orange.png" alt="">
-			<img class="pt-img4 animate1" src="images/shap/square-rotate.png" alt="">
-		</section>
-		<!-- end::Services -->
-		
-		<!-- begin::Testimonial -->
-		<section class="section-area section-sp3 testimonial-wraper">
+		<!-- begin::Culture Section -->
+		<section class="culture-section">
 			<div class="container">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Voices From The Field</span>
-					<h2 class="title m-b0">What Clients Say About Our Crew</h2>
+				<div class="section-header" style="color: #ffffff;">
+					<span class="section-badge" style="background: rgba(254, 231, 74, 0.2); color: #FEE74A;">Our Culture</span>
+					<h2 class="section-title" style="color: #ffffff;">What Makes Us Different</h2>
+					<p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">The values and principles that guide our team every day.</p>
 				</div>
-				<div class="row align-items-center">
-					<div class="col-lg-6 text-center">
-						<div class="thumb-wraper">
-							<img class="bg-img" src="images/testimonials/shape.png" alt="">
-							<ul>
-								<li data-member="1"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic1.jpg" alt=""></a></li>
-								<li data-member="2"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic2.jpg" alt=""></a></li>
-								<li data-member="3"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic3.jpg" alt=""></a></li>
-								<li data-member="4"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic4.jpg" alt=""></a></li>
-								<li data-member="5"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic5.jpg" alt=""></a></li>
-								<li data-member="6"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic6.jpg" alt=""></a></li>
-							</ul>
-						</div>
+				<div class="culture-grid">
+					<div class="culture-card">
+						<div class="culture-icon"><i class="fas fa-heart"></i></div>
+						<h3 class="culture-title">Compassionate Care</h3>
+						<p class="culture-text">Every team member is selected not just for their skills, but for their genuine commitment to making a positive impact in people's lives.</p>
 					</div>
-					<div class="col-lg-6">
-						<div class="swiper testimonial-slide">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide" data-rel="1">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Their nurse and house captain showed up already aware of our family quirks. That only happens when a team communicates.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Emily Davis</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="2">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Even during staffing shortages DocnDoor never missed a visit—backup pods stepped in seamlessly.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Ryan Wilson</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="3">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“As a partner clinic, we trust their clinicians because the leadership team keeps training sharp.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">David Brown</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="4">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“The recruiting team matched my mom with bilingual caregivers, making her recovery feel like home.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Michael Johnson</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="5">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Attention to detail is unreal—from PPE audits to how the laundry is folded. That comes from solid leadership.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Daniel Smith</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="6">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Joining DocnDoor was the best career move. Pods collaborate like family and growth plans are clear.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">James Carter</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-button-prev test-btn-prev"><i class="las la-arrow-left"></i></div>
-							<div class="swiper-button-next test-btn-next"><i class="las la-arrow-right"></i></div>
-							<div class="swiper-pagination"></div>
-						</div>
+					<div class="culture-card">
+						<div class="culture-icon"><i class="fas fa-users"></i></div>
+						<h3 class="culture-title">Collaborative Pods</h3>
+						<p class="culture-text">Our pod structure ensures seamless communication between medical and house care teams, creating a unified care experience.</p>
+					</div>
+					<div class="culture-card">
+						<div class="culture-icon"><i class="fas fa-graduation-cap"></i></div>
+						<h3 class="culture-title">Continuous Learning</h3>
+						<p class="culture-text">We invest in ongoing training and professional development to ensure our team stays at the forefront of care innovation.</p>
+					</div>
+					<div class="culture-card">
+						<div class="culture-icon"><i class="fas fa-shield-alt"></i></div>
+						<h3 class="culture-title">Quality First</h3>
+						<p class="culture-text">Rigorous quality standards and regular audits ensure every visit meets our high expectations for safety and excellence.</p>
+					</div>
+					<div class="culture-card">
+						<div class="culture-icon"><i class="fas fa-handshake"></i></div>
+						<h3 class="culture-title">Transparent Growth</h3>
+						<p class="culture-text">Clear career paths and public recognition of achievements create an environment where everyone can thrive and advance.</p>
+					</div>
+					<div class="culture-card">
+						<div class="culture-icon"><i class="fas fa-leaf"></i></div>
+						<h3 class="culture-title">Eco-Conscious</h3>
+						<p class="culture-text">We're committed to sustainable practices, using eco-friendly products and methods that protect both your home and the environment.</p>
 					</div>
 				</div>
 			</div>
-			<img class="pt-img1 animate1" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/square-blue.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/circle-dots.png" alt="">
-			<img class="pt-img4 animate4" src="images/shap/chicle-blue-2.png" alt="">
 		</section>
-		<!-- end::Testimonial -->
+		<!-- end::Culture Section -->
 		
 	</main>
 	
@@ -734,7 +745,7 @@
 								<li><a href="booking.html"><span>Booking</span></a></li>
 								<li><a href="faq.html"><span>Faq's</span></a></li>
 								<li><a href="blog-grid.html"><span>Blogs</span></a></li>
-								<li><a href="team.html"><span>Out Team</span></a></li>
+								<li><a href="team.html"><span>Our Team</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -809,7 +820,23 @@
 <script src="vendor/swiper/swiper.min.js"></script>
 <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
 <script src="js/functions.js"></script>
-<script src="js/contact.js"></script>
+<script>
+	// Team filter functionality
+	document.querySelectorAll('.filter-btn').forEach(btn => {
+		btn.addEventListener('click', function() {
+			document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+			this.classList.add('active');
+			const filter = this.getAttribute('data-filter');
+			document.querySelectorAll('.team-member-card').forEach(card => {
+				if (filter === 'all' || card.getAttribute('data-category') === filter) {
+					card.style.display = 'block';
+				} else {
+					card.style.display = 'none';
+				}
+			});
+		});
+	});
+</script>
 <!-- end::Javascript Files -->
 </body>
 </html>

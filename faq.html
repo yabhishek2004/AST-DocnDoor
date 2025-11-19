@@ -9,7 +9,7 @@
 	<meta name="author" content="LayoutDrop" >
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keywords" content="DocnDoor FAQ, Medical Care Questions, House Care Questions, Support, Help Center">
-	<meta name="description" content="Find answers about DocnDoor’s medical care, house care, scheduling, and billing processes." >
+	<meta name="description" content="Find answers about DocnDoor's medical care, house care, scheduling, and billing processes." >
 	<!-- end::Meta Basic -->
 	
 	<!-- begin::Meta Social -->
@@ -17,8 +17,8 @@
 	<meta property="og:site_name" content="DocnDoor">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="en_us">
-	<meta property="og:title" content="DocnDoor" >
-	<meta property="og:description" content="Find answers about DocnDoor’s medical care, house care, scheduling, and billing processes.">
+	<meta property="og:title" content="FAQ | DocnDoor - Frequently Asked Questions" >
+	<meta property="og:description" content="Find answers about DocnDoor's medical care, house care, scheduling, and billing processes.">
 	<meta property="og:image" content="https://brighter.layoutdrop.com/demo/preview.png" >
 	<!-- end::Meta Social -->
 	
@@ -26,8 +26,8 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:url" content="https://brighter.layoutdrop.com/demo/">
 	<meta name="twitter:creator" content="@layoutdrop">
-	<meta name="twitter:title" content="DocnDoor">
-	<meta name="twitter:description" content="Find answers about DocnDoor’s medical care, house care, scheduling, and billing processes.">
+	<meta name="twitter:title" content="FAQ | DocnDoor">
+	<meta name="twitter:description" content="Find answers about DocnDoor's medical care, house care, scheduling, and billing processes.">
 	<!-- end::Meta Twitter -->
 	
 	<!-- begin::Favicons Icons -->
@@ -36,7 +36,7 @@
 	<!-- end::Favicons Icons -->
 	
 	<!-- begin::Page Title -->
-	<title>DocnDoor | FAQ</title>
+	<title>FAQ | DocnDoor - Frequently Asked Questions</title>
 	<!-- end::Page Title -->
 	
 	<!-- begin::Mobile Specific -->
@@ -49,6 +49,289 @@
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 	<!-- end::Plugins All CSS -->
+	
+	<style>
+		.faq-hero-centered {
+			min-height: 60vh;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 100px 20px;
+			position: relative;
+			overflow: hidden;
+		}
+		.faq-hero-centered::before {
+			content: '';
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			background: radial-gradient(circle, rgba(254, 231, 74, 0.1) 0%, transparent 70%);
+			top: -250px;
+			right: -250px;
+			border-radius: 50%;
+		}
+		.faq-hero-content {
+			position: relative;
+			z-index: 2;
+			max-width: 700px;
+		}
+		.faq-hero-icon {
+			font-size: 5rem;
+			color: #FEE74A;
+			margin-bottom: 30px;
+		}
+		.faq-hero-title {
+			font-size: 4rem;
+			font-weight: 800;
+			color: #ffffff;
+			margin-bottom: 20px;
+		}
+		.faq-hero-subtitle {
+			font-size: 1.2rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.8;
+		}
+		
+		.faq-search-section {
+			background: #ffffff;
+			padding: 60px 0;
+			margin-top: -50px;
+			position: relative;
+			z-index: 3;
+		}
+		.faq-search-wrapper {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		.faq-search-box {
+			position: relative;
+		}
+		.faq-search-input {
+			width: 100%;
+			padding: 25px 70px 25px 30px;
+			border: 3px solid #e9ecef;
+			border-radius: 50px;
+			font-size: 1.1rem;
+			transition: all 0.3s ease;
+		}
+		.faq-search-input:focus {
+			outline: none;
+			border-color: #042338;
+			box-shadow: 0 0 0 6px rgba(4, 35, 56, 0.1);
+		}
+		.faq-search-btn {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 50px;
+			height: 50px;
+			background: #042338;
+			border: none;
+			border-radius: 50%;
+			color: #ffffff;
+			font-size: 1.2rem;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		.faq-search-btn:hover {
+			background: #FEE74A;
+			color: #042338;
+			transform: translateY(-50%) scale(1.1);
+		}
+		
+		.faq-categories-section {
+			padding: 80px 0;
+			background: #f8f9fa;
+		}
+		.faq-categories-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 30px;
+			margin-top: 50px;
+		}
+		.faq-category-card {
+			background: #ffffff;
+			border-radius: 20px;
+			padding: 40px 30px;
+			text-align: center;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			border: 2px solid transparent;
+		}
+		.faq-category-card:hover {
+			border-color: #042338;
+			transform: translateY(-5px);
+			box-shadow: 0 15px 40px rgba(4, 35, 56, 0.15);
+		}
+		.faq-category-icon {
+			font-size: 3rem;
+			color: #042338;
+			margin-bottom: 20px;
+		}
+		.faq-category-title {
+			font-size: 1.3rem;
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 10px;
+		}
+		.faq-category-count {
+			font-size: 0.9rem;
+			color: #666;
+		}
+		
+		.faq-accordion-section {
+			padding: 100px 0;
+			background: #ffffff;
+		}
+		.faq-accordion-container {
+			max-width: 900px;
+			margin: 0 auto;
+		}
+		.faq-accordion-item {
+			background: #ffffff;
+			border: 2px solid #e9ecef;
+			border-radius: 15px;
+			margin-bottom: 20px;
+			overflow: hidden;
+			transition: all 0.3s ease;
+		}
+		.faq-accordion-item.active {
+			border-color: #042338;
+			box-shadow: 0 10px 30px rgba(4, 35, 56, 0.1);
+		}
+		.faq-accordion-header {
+			padding: 25px 30px;
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			transition: all 0.3s ease;
+		}
+		.faq-accordion-item.active .faq-accordion-header {
+			background: #f8f9fa;
+		}
+		.faq-accordion-question {
+			font-size: 1.2rem;
+			font-weight: 700;
+			color: #042338;
+			flex: 1;
+			padding-right: 20px;
+		}
+		.faq-accordion-icon {
+			width: 40px;
+			height: 40px;
+			background: #f8f9fa;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #042338;
+			font-size: 1.2rem;
+			transition: all 0.3s ease;
+			flex-shrink: 0;
+		}
+		.faq-accordion-item.active .faq-accordion-icon {
+			background: #042338;
+			color: #FEE74A;
+			transform: rotate(180deg);
+		}
+		.faq-accordion-content {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease;
+		}
+		.faq-accordion-item.active .faq-accordion-content {
+			max-height: 500px;
+		}
+		.faq-accordion-answer {
+			padding: 0 30px 25px;
+			font-size: 1.05rem;
+			color: #666;
+			line-height: 1.8;
+		}
+		
+		.faq-contact-section {
+			padding: 100px 0;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			text-align: center;
+		}
+		.faq-contact-content {
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		.faq-contact-icon {
+			font-size: 4rem;
+			color: #FEE74A;
+			margin-bottom: 30px;
+		}
+		.faq-contact-title {
+			font-size: 3rem;
+			font-weight: 800;
+			color: #ffffff;
+			margin-bottom: 20px;
+		}
+		.faq-contact-text {
+			font-size: 1.2rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.8;
+			margin-bottom: 40px;
+		}
+		.faq-contact-buttons {
+			display: flex;
+			gap: 20px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.faq-contact-btn {
+			padding: 18px 40px;
+			border-radius: 50px;
+			font-size: 1.1rem;
+			font-weight: 700;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+		}
+		.faq-contact-btn-primary {
+			background: #FEE74A;
+			color: #042338;
+		}
+		.faq-contact-btn-primary:hover {
+			background: #ffffff;
+			transform: translateY(-3px);
+			box-shadow: 0 10px 30px rgba(254, 231, 74, 0.3);
+		}
+		.faq-contact-btn-secondary {
+			background: transparent;
+			color: #ffffff;
+			border: 2px solid #ffffff;
+		}
+		.faq-contact-btn-secondary:hover {
+			background: #ffffff;
+			color: #042338;
+			transform: translateY(-3px);
+		}
+		
+		@media (max-width: 768px) {
+			.faq-hero-title {
+				font-size: 2.5rem;
+			}
+			.faq-categories-grid {
+				grid-template-columns: 1fr;
+			}
+			.faq-contact-title {
+				font-size: 2rem;
+			}
+			.faq-contact-buttons {
+				flex-direction: column;
+			}
+			.faq-contact-btn {
+				width: 100%;
+			}
+		}
+	</style>
 	
 </head>
 <body>
@@ -106,7 +389,7 @@
 							<a href="index.html"><img src="images/logo-white.png" alt=""></a>
 						</div>
 						<ul class="nav navbar-nav">	
-							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li>
 								<a href="javascript:;">Pages <i class="fas fa-plus"></i></a>
 								<ul class="sub-menu">
@@ -114,7 +397,7 @@
 										<ul>
 											<li><a href="about-us.html"><span>About Us</span></a></li>
 											<li><a href="team.html"><span>Our Team</span></a></li>
-											<li><a href="faq.html"><span>FAQ's</span></a></li>
+											<li class="active"><a href="faq.html"><span>FAQ's</span></a></li>
 										</ul>
 									</li>
 								</ul>
@@ -152,534 +435,213 @@
  
 	<main class="page-content">
 		
-		<!-- begin::Main Banner -->
-		<div class="main-banner" style="background-image:linear-gradient(125deg,rgba(6,61,79,.95),rgba(6,17,51,.95)),url(images/background/line-bg1.png); background-size:cover; background-position:center;">
-			<div class="container inner-content">
-				<div class="row align-items-center">
-					<div class="col-lg-7 col-md-6 col-sm-7">
-						<span class="title-ext">Help Center</span>
-						<h1>Questions About<br>DocnDoor Care?</h1>
-						<p>Browse the answers families ask most about our medical support, house care resets, scheduling, and billing. Need more help? Our concierge team is a chat away.</p>
-						<a href="#faq" class="btn btn-primary">View FAQs</a>
-						<a href="contact-us.html" class="btn btn-outline-primary ms-lg-2 mt-3 mt-lg-0">Contact Support</a>
-					</div>
-					<div class="col-lg-5 col-md-6 col-sm-5">
-						<div class="banner-img">
-							<img src="images/appointment/chat.png" class="rounded-4 shadow-lg" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate1" src="images/shap/trangle-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/square-blue.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/chicle-blue-2.png" alt="">
-			<img class="pt-img4 animate4" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img5 animate-wave" src="images/shap/wave-orange.png" alt="">
-		</div>
-		<!-- end::Main Banner -->
-		
-		<section class="page-meta-bar" style="background:rgba(255,255,255,0.08); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.15);">
+		<!-- begin::FAQ Hero Centered -->
+		<section class="faq-hero-centered">
 			<div class="container">
-				<div class="row align-items-center gy-3">
-					<div class="col-lg-6">
-						<p class="m-0 text-white-50">One concierge desk, multiple ways to get answers fast.</p>
-					</div>
-					<div class="col-lg-6">
-						<div class="d-flex flex-wrap gap-2 justify-content-lg-end">
-							<a href="#guide" class="btn btn-outline-light btn-sm">How It Works</a>
-							<a href="#faq-topics" class="btn btn-outline-light btn-sm">FAQ</a>
-							<a href="#stories" class="btn btn-outline-light btn-sm">Stories</a>
-							<a href="#submit-question" class="btn btn-outline-light btn-sm">Ask Us</a>
-						</div>
-					</div>
+				<div class="faq-hero-content">
+					<div class="faq-hero-icon"><i class="fas fa-question-circle"></i></div>
+					<h1 class="faq-hero-title">Frequently Asked<br>Questions</h1>
+					<p class="faq-hero-subtitle">Find quick answers to common questions about our medical care, house care services, scheduling, billing, and more.</p>
 				</div>
 			</div>
 		</section>
+		<!-- end::FAQ Hero Centered -->
 		
-		<!-- begin::About Us -->
-		<section id="guide" class="section-sp1 about-area">
+		<!-- begin::FAQ Search Section -->
+		<section class="faq-search-section">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-6 mb-30">
-						<div class="about-thumb-area">
-							<ul>
-								<li><img class="about-thumb1" src="images/about/pic-1.jpg" alt=""></li>
-								<li><img class="about-thumb2" src="images/about/pic-2.jpg" alt=""></li>
-								<li><img class="about-thumb3" src="images/about/pic-3.jpg" alt=""></li>
-								<li><div class="exp-bx">20<span>Year Experience</span></div></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-6 mb-30">
-						<div class="heading-bx">
-							<span class="title-ext text-primary">How It Works</span>
-							<h2 class="title">Two Service Lines, One Concierge</h2>
-							<p>DocnDoor combines medical care pods and house care crews under a single coordination team. That means one intake, one schedule, and one bill even if you book both service types.</p>
-						</div>
-						<div class="row gx-20 mb-30 mb-sm-10">
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/professional-team.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Clinical & Home Experts</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/service.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Right-on-Time Visits</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/pricing.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Transparent Pricing</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/eco-friendly.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Eco Friendly</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a href="#faq" class="btn btn-primary me-3 mb-2">Jump To FAQs</a>
-						<a href="contact-us.html" class="btn btn-outline-primary mb-2">Ask Support</a>
+				<div class="faq-search-wrapper">
+					<div class="faq-search-box">
+						<input type="text" class="faq-search-input" placeholder="Search for answers..." id="faqSearch">
+						<button type="button" class="faq-search-btn"><i class="fas fa-search"></i></button>
 					</div>
 				</div>
 			</div>
-			<img class="pt-img1 animate-wave" src="images/shap/wave-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/chicle-blue-2.png" alt="">
-			<img class="pt-img3 animate-rotate" src="images/shap/line-circle-blue.png" alt="">
-			<img class="pt-img4 animate-wave" src="images/shap/square-dots-orange.png" alt="">
-			<img class="pt-img5 animate2" src="images/shap/square-blue.png" alt="">
 		</section>
-		<!-- end::About Us -->
+		<!-- end::FAQ Search Section -->
 		
-		<!-- begin::Working Process -->
-		<section class="section-area section-sp5 work-area" style="background-image: url(images/background/line-bg1.png); background-repeat: no-repeat; background-position: center; background-size: 100%;">
-			<div class="container-sm">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">FAQ Snapshot</span>
-					<h2 class="title">Top Questions We Hear Daily</h2>
-				</div>
-				<div class="row justify-content-center">
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx">
-							<div class="work-num-bx">01</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Can I book medical and house care together?</h5>
-								<p>Yes. One intake captures both needs and we dispatch paired teams so care plans and cleaning checklists support each other.</p>
-							</div>
-							<a href="#faq" class="btn btn-primary light">More FAQs <i class="btn-icon-bx fas fa-chevron-right"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx active">
-							<div class="work-num-bx">02</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Are the clinicians licensed?</h5>
-								<p>All medical staff hold active licenses, background checks, and ongoing simulation training with our partner hospitals.</p>
-							</div>
-							<a href="medical-care.html" class="btn btn-primary light">Medical Standards <i class="btn-icon-bx fas fa-chevron-right"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx">
-							<div class="work-num-bx">03</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">How does billing work?</h5>
-								<p>We send one digital invoice with itemized medical and house-care services, plus documentation for reimbursement if applicable.</p>
-							</div>
-							<a href="contact-us.html" class="btn btn-primary light">Ask Billing <i class="btn-icon-bx fas fa-chevron-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate1" src="images/shap/circle-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/circle-dots.png" alt="">
-		</section>
-		<!-- end::Working Process -->
-		
-		<!-- begin::Book Service -->
-		<section id="submit-question" class="section-area account-wraper1">
-			<div class="container-fluid">
-				<div class="appointment-inner section-sp2" style="background-image: url(images/appointment/line-bg.png); background-repeat: no-repeat; background-position: 20px 140px;">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-5 col-lg-6 col-md-6">
-								<div class="appointment-form form-wraper">
-									<h3 class="title">Still Need Answers?</h3>
-									<form action="#">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Your Name" required>
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Your Email Address" required>
-										</div>
-										<div class="form-group">
-											<input type="number" class="form-control" placeholder="Phone Numbers" required>
-										</div>
-										<div class="form-group">
-											<input type="date" id="datePicker" class="form-control" required>
-										</div>
-										<div class="form-group">
-											<select class="form-select form-control nice-select">
-												<option selected>Topic</option>
-												<option value="Medical Care">Medical Care</option>
-												<option value="House Care">House Care</option>
-												<option value="Scheduling">Scheduling</option>
-												<option value="Billing">Billing</option>
-											</select>
-										</div>
-										<button type="submit" class="btn btn-primary">Send Question</button>
-									</form>
-								</div>
-							</div>
-							<div class="col-xl-7 col-lg-6 col-md-6">
-								<div class="appointment-thumb">
-									<img src="images/appointment/mobile.png" alt="">
-									<div class="images-group">
-										<img class="img1" src="images/appointment/women.png" alt="">
-										<img class="img2" src="images/appointment/map-pin.png" alt="">
-										<img class="img3" src="images/appointment/setting.png" alt="">
-										<img class="img4" src="images/appointment/check.png" alt="">
-										<img class="img5" src="images/appointment/chat.png" alt="">
-									</div>
-								</div>
-							</div>
-						</div>					
-					</div>	
-					<img class="pt-img1 animate1" src="images/shap/trangle-orange.png" alt="">
-					<img class="pt-img2 animate-wave" src="images/shap/wave-orange.png" alt="">
-					<img class="pt-img4 animate2" src="images/shap/circle-orange.png" alt="">
-				</div>					
-			</div>
-		</section>
-		<!-- end::Book Service -->
-		
-		<!-- begin::Services -->
-		<section id="faq" class="section-area section-sp1 service-wraper">
-			<div class="row align-items-center">
-				<div class="col-xl-4 col-lg-7 mb-30">	
-					<div class="heading-bx">
-						<span class="title-ext text-primary">FAQ Library</span>
-						<h2 class="title">Answers, Organized By Topic</h2>
-						<p>Scroll through quick explanations for the most common scheduling, safety, and pricing questions. Click through to contact us if you need a custom plan.</p>
-					</div>
-					<a href="contact-us.html" class="btn btn-secondary">Ask Another Question</a>
-				</div>
-				<div class="col-xl-8 mb-15">	
-					<div class="swiper service-slide">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature1">
-									<div class="feature-box-xl mb-30">
-										<span class="icon-cell">
-											<img src="images/icon/floor-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Medical Coverage</h3>
-										<p>We provide post-surgical, chronic, infusion, and therapy support. Insurance reimbursement depends on your carrier and state.</p>
-										<a href="medical-care.html" class="btn btn-primary light">Medical Details</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/gutter-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">House Care Scope</h3>
-										<p>Crews tackle kitchens, baths, laundry, closets, rental flips, and allergy mitigation with eco products included.</p>
-										<a href="house-care.html" class="btn btn-primary light">House Care</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature3">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/kitchen-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Scheduling</h3>
-										<p>We operate 7 days a week with rush response for clinical cases. Bookings can be one-time or recurring.</p>
-										<a href="contact-us.html" class="btn btn-primary light">Schedule Help</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature1">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/toilet-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Safety & Vetting</h3>
-										<p>All team members complete federal background checks, health screenings, and recurring competency labs.</p>
-										<a href="about-us.html" class="btn btn-primary light">Our Standards</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/room-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Supplies & Equipment</h3>
-										<p>DocnDoor provides medical PPE, cleaning kits, and laundry essentials. Specialty items can be billed at cost.</p>
-										<a href="contact-us.html" class="btn btn-primary light">Request List</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/office-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Cancellations</h3>
-										<p>Need to reschedule? Give us 12 hours’ notice to avoid fees. Emergencies are always accommodated.</p>
-										<a href="contact-us.html" class="btn btn-primary light">Update Booking</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>					
-				</div>	 
-			</div>
-			<img class="pt-img2 animate2" src="images/shap/square-dots-orange.png" alt="">
-			<img class="pt-img4 animate1" src="images/shap/square-rotate.png" alt="">
-		</section>
-		<!-- end::Services -->
-		
-		<section id="faq-topics" class="section-sp1">
+		<!-- begin::FAQ Categories Section -->
+		<section class="faq-categories-section">
 			<div class="container">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Deep Dive</span>
-					<h2 class="title">Still Curious? Expand A Topic</h2>
+				<div class="section-header">
+					<span class="section-badge">Browse by Category</span>
+					<h2 class="section-title">Find Answers by Topic</h2>
+					<p class="section-subtitle">Select a category to quickly find relevant questions and answers.</p>
 				</div>
-				<div class="row gy-4">
-					<div class="col-md-6">
-						<details class="faq-detail p-4 rounded border">
-							<summary class="fw-bold">How do medical and house-care schedules stay coordinated?</summary>
-							<p class="mt-3 mb-0 text-muted">One concierge owns your calendar. Nursing visits always get priority and house-care resets are layered around recovery windows. We share the live itinerary with your whole family.</p>
-						</details>
+				<div class="faq-categories-grid">
+					<div class="faq-category-card" data-category="medical">
+						<div class="faq-category-icon"><i class="fas fa-heartbeat"></i></div>
+						<h3 class="faq-category-title">Medical Care</h3>
+						<p class="faq-category-count">12 Questions</p>
 					</div>
-					<div class="col-md-6">
-						<details class="faq-detail p-4 rounded border">
-							<summary class="fw-bold">Can you work with my existing physician or clinic?</summary>
-							<p class="mt-3 mb-0 text-muted">Yes. We set up secure tele-rounds or simply follow written orders. Most hospitals appreciate our daily vitals reports and photos, which we send through encrypted links.</p>
-						</details>
+					<div class="faq-category-card" data-category="house">
+						<div class="faq-category-icon"><i class="fas fa-home"></i></div>
+						<h3 class="faq-category-title">House Care</h3>
+						<p class="faq-category-count">10 Questions</p>
 					</div>
-					<div class="col-md-6">
-						<details class="faq-detail p-4 rounded border">
-							<summary class="fw-bold">What about products for allergies or newborns?</summary>
-							<p class="mt-3 mb-0 text-muted">Our house-care captains stock unscented, pediatric-safe, and green products. If you have a favorite brand we’ll catalog it and train your pod on exactly how to use it.</p>
-						</details>
+					<div class="faq-category-card" data-category="scheduling">
+						<div class="faq-category-icon"><i class="fas fa-calendar-alt"></i></div>
+						<h3 class="faq-category-title">Scheduling</h3>
+						<p class="faq-category-count">8 Questions</p>
 					</div>
-					<div class="col-md-6">
-						<details class="faq-detail p-4 rounded border">
-							<summary class="fw-bold">Do you travel outside city centers?</summary>
-							<p class="mt-3 mb-0 text-muted">We cover the greater metro area plus select suburbs. When we travel farther, we build a custom mileage add-on so crews are fairly paid and you know the cost upfront.</p>
-						</details>
+					<div class="faq-category-card" data-category="billing">
+						<div class="faq-category-icon"><i class="fas fa-credit-card"></i></div>
+						<h3 class="faq-category-title">Billing & Payment</h3>
+						<p class="faq-category-count">6 Questions</p>
+					</div>
+					<div class="faq-category-card" data-category="general">
+						<div class="faq-category-icon"><i class="fas fa-info-circle"></i></div>
+						<h3 class="faq-category-title">General</h3>
+						<p class="faq-category-count">9 Questions</p>
 					</div>
 				</div>
 			</div>
 		</section>
+		<!-- end::FAQ Categories Section -->
 		
-		<!-- begin::Testimonial -->
-		<section class="section-area section-sp3 testimonial-wraper d-none">
+		<!-- begin::FAQ Accordion Section -->
+		<section class="faq-accordion-section">
 			<div class="container">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Client Voices</span>
-					<h2 class="title m-b0">Support Experiences Families Mention</h2>
-				</div>
-				<div class="row align-items-center">
-					<div class="col-lg-6 text-center">
-						<div class="thumb-wraper">
-							<img class="bg-img" src="images/testimonials/shape.png" alt="">
-							<ul>
-								<li data-member="1"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic1.jpg" alt=""></a></li>
-								<li data-member="2"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic2.jpg" alt=""></a></li>
-								<li data-member="3"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic3.jpg" alt=""></a></li>
-								<li data-member="4"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic4.jpg" alt=""></a></li>
-								<li data-member="5"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic5.jpg" alt=""></a></li>
-								<li data-member="6"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic6.jpg" alt=""></a></li>
-							</ul>
+				<div class="faq-accordion-container">
+					<div class="faq-accordion-item" data-category="medical">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">What types of medical care services does DocnDoor provide?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
 						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="swiper testimonial-slide">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide" data-rel="1">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecena ssuspendisse ultrices gravida.</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Emily Davis</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="2">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecena ssuspendisse ultrices gravida.</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Ryan Wilson</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="3">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecena ssuspendisse ultrices gravida.</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">David Brown</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="4">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecena ssuspendisse ultrices gravida.</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Michael Johnson</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="5">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecena ssuspendisse ultrices gravida.</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Daniel Smith</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="6">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecena ssuspendisse ultrices gravida.</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">James Carter</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								DocnDoor offers a comprehensive range of medical care services including in-home nursing support, medication management, wound care, vital signs monitoring, physical therapy, post-surgical care, and coordination with your primary care physician. Our licensed clinicians are trained to handle various medical conditions and can provide hospital-level care in the comfort of your home.
 							</div>
-							<div class="swiper-button-prev test-btn-prev"><i class="las la-arrow-left"></i></div>
-							<div class="swiper-button-next test-btn-next"><i class="las la-arrow-right"></i></div>
-							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					
+					<div class="faq-accordion-item" data-category="medical">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">Are your medical staff licensed and certified?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								Yes, absolutely. All our medical staff are fully licensed, certified, and background-checked. Our team includes registered nurses (RNs), licensed practical nurses (LPNs), physical therapists, and other healthcare professionals who meet state licensing requirements. We regularly verify credentials and provide ongoing training to ensure the highest standards of care.
+							</div>
+						</div>
+					</div>
+					
+					<div class="faq-accordion-item" data-category="house">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">What house care services are included in your offerings?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								Our house care services include deep cleaning, regular maintenance cleaning, laundry services, organization and decluttering, meal preparation, grocery shopping, pet care, and specialized cleaning for post-medical situations. We use eco-friendly products and can customize our services to meet your specific needs and preferences.
+							</div>
+						</div>
+					</div>
+					
+					<div class="faq-accordion-item" data-category="scheduling">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">How far in advance do I need to schedule a visit?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								For routine visits, we recommend scheduling at least 24-48 hours in advance to ensure availability. However, we understand that medical needs can be urgent, so we offer same-day scheduling for emergency medical situations. For house care services, same-day or next-day appointments are often available depending on your location and service requirements.
+							</div>
+						</div>
+					</div>
+					
+					<div class="faq-accordion-item" data-category="billing">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">What payment methods do you accept?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								We accept all major credit cards, debit cards, and digital payment methods. We also work with insurance providers for eligible medical care services. Payment is typically processed after service completion, and you'll receive a detailed invoice. For recurring services, we offer convenient auto-pay options.
+							</div>
+						</div>
+					</div>
+					
+					<div class="faq-accordion-item" data-category="general">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">Can I combine medical care and house care services in one visit?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								Yes! One of DocnDoor's unique advantages is our ability to coordinate both medical and house care services. Our care coordinators can schedule a medical professional and house care specialist to visit on the same day, or even coordinate their efforts for a seamless experience. This integrated approach ensures comprehensive care while maximizing convenience.
+							</div>
+						</div>
+					</div>
+					
+					<div class="faq-accordion-item" data-category="medical">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">Do you provide services for seniors and individuals with chronic conditions?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								Absolutely. We specialize in providing care for seniors and individuals managing chronic conditions. Our team is experienced in managing conditions such as diabetes, heart disease, mobility issues, and post-surgical recovery. We work closely with families and primary care physicians to create comprehensive care plans tailored to each individual's needs.
+							</div>
+						</div>
+					</div>
+					
+					<div class="faq-accordion-item" data-category="house">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">Are your cleaning products safe for homes with children and pets?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								Yes, we prioritize safety and use eco-friendly, non-toxic cleaning products that are safe for children and pets. All our house care specialists are trained in safe cleaning practices and can accommodate specific product preferences or allergies. We're happy to discuss your concerns and customize our cleaning approach to meet your family's needs.
+							</div>
+						</div>
+					</div>
+					
+					<div class="faq-accordion-item" data-category="scheduling">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">What is your cancellation policy?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								We understand that plans can change. You can cancel or reschedule appointments up to 24 hours in advance at no charge. Cancellations made less than 24 hours before the scheduled visit may incur a fee, though we're flexible for emergencies and medical situations. For recurring services, you can modify or pause your schedule at any time through your client portal.
+							</div>
+						</div>
+					</div>
+					
+					<div class="faq-accordion-item" data-category="general">
+						<div class="faq-accordion-header">
+							<div class="faq-accordion-question">How do I get started with DocnDoor services?</div>
+							<div class="faq-accordion-icon"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="faq-accordion-content">
+							<div class="faq-accordion-answer">
+								Getting started is easy! Simply contact our concierge team via phone, email, or our online contact form. We'll schedule a consultation to understand your needs, discuss service options, and create a customized care plan. Once you approve the plan, we'll match you with the appropriate specialists and schedule your first visit. The entire process typically takes just a few days.
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<img class="pt-img1 animate1" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/square-blue.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/circle-dots.png" alt="">
-			<img class="pt-img4 animate4" src="images/shap/chicle-blue-2.png" alt="">
 		</section>
-		<!-- end::Testimonial -->
+		<!-- end::FAQ Accordion Section -->
 		
-		<!-- begin::Help Stories -->
-		<section id="stories" class="section-area section-sp1">
+		<!-- begin::FAQ Contact Section -->
+		<section class="faq-contact-section">
 			<div class="container">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Real Conversations</span>
-					<h2 class="title m-b0">What Families Told Our Concierge</h2>
-				</div>
-				<div class="row gy-4">
-					<div class="col-lg-4 col-md-6">
-						<div class="card h-100 shadow-sm p-4">
-							<h4>Insurance Puzzles</h4>
-							<p>“Support hopped on a three-way call with my insurer. We submitted forms before lunch.”</p>
-							<span class="text-primary">—Mina, Oncology Care</span>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="card h-100 shadow-sm p-4">
-							<h4>Schedule Chaos</h4>
-							<p>“They coordinated nurse visits around my kids’ exams and even texted reminders to grandparents.”</p>
-							<span class="text-primary">—Carson Family</span>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="card h-100 shadow-sm p-4">
-							<h4>Rental Flip Support</h4>
-							<p>“Within ten minutes the house-care desk booked an emergency turnover crew and restocked amenities.”</p>
-							<span class="text-primary">—Lena, Host</span>
-						</div>
+				<div class="faq-contact-content">
+					<div class="faq-contact-icon"><i class="fas fa-headset"></i></div>
+					<h2 class="faq-contact-title">Still Have Questions?</h2>
+					<p class="faq-contact-text">Our friendly support team is here to help. Reach out anytime and we'll get back to you promptly.</p>
+					<div class="faq-contact-buttons">
+						<a href="contact-us.html" class="faq-contact-btn faq-contact-btn-primary">Contact Support</a>
+						<a href="tel:+916302989942" class="faq-contact-btn faq-contact-btn-secondary">Call Us Now</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Help Stories -->
+		<!-- end::FAQ Contact Section -->
 		
 	</main>
 	
@@ -696,7 +658,7 @@
 								<a href="index.html" aria-label="Footer Logo"><img src="images/logo.png" alt=""></a>
 							</div>
 							<div class="ft-contact">
-								<p>Need more info? Our concierge lines stay open 7 days a week for medical and house-care questions alike.</p>
+								<p>DocnDoor unites medical teams and home specialists so every client feels supported, safe, and truly at home.</p>
 								<div class="contact-bx">
 									<div class="icon"><i class="fas fa-phone-alt"></i></div>
 									<div class="contact-number">
@@ -716,7 +678,7 @@
 								<li><a href="booking.html"><span>Booking</span></a></li>
 								<li><a href="faq.html"><span>Faq's</span></a></li>
 								<li><a href="blog-grid.html"><span>Blogs</span></a></li>
-								<li><a href="team.html"><span>Out Team</span></a></li>
+								<li><a href="team.html"><span>Our Team</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -791,7 +753,55 @@
 <script src="vendor/swiper/swiper.min.js"></script>
 <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
 <script src="js/functions.js"></script>
-<script src="js/contact.js"></script>
+<script>
+	// FAQ Accordion functionality
+	document.querySelectorAll('.faq-accordion-header').forEach(header => {
+		header.addEventListener('click', function() {
+			const item = this.parentElement;
+			const isActive = item.classList.contains('active');
+			
+			// Close all items
+			document.querySelectorAll('.faq-accordion-item').forEach(i => {
+				i.classList.remove('active');
+			});
+			
+			// Open clicked item if it wasn't active
+			if (!isActive) {
+				item.classList.add('active');
+			}
+		});
+	});
+	
+	// FAQ Search functionality
+	document.getElementById('faqSearch').addEventListener('input', function(e) {
+		const searchTerm = e.target.value.toLowerCase();
+		document.querySelectorAll('.faq-accordion-item').forEach(item => {
+			const question = item.querySelector('.faq-accordion-question').textContent.toLowerCase();
+			const answer = item.querySelector('.faq-accordion-answer').textContent.toLowerCase();
+			if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+				item.style.display = 'block';
+			} else {
+				item.style.display = 'none';
+			}
+		});
+	});
+	
+	// Category filter
+	document.querySelectorAll('.faq-category-card').forEach(card => {
+		card.addEventListener('click', function() {
+			const category = this.getAttribute('data-category');
+			document.querySelectorAll('.faq-accordion-item').forEach(item => {
+				if (category === 'all' || item.getAttribute('data-category') === category) {
+					item.style.display = 'block';
+				} else {
+					item.style.display = 'none';
+				}
+			});
+			// Scroll to accordion section
+			document.querySelector('.faq-accordion-section').scrollIntoView({ behavior: 'smooth' });
+		});
+	});
+</script>
 <!-- end::Javascript Files -->
 </body>
 </html>
