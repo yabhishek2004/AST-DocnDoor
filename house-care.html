@@ -8,8 +8,8 @@
 	<meta name="robots" content="index, follow">
 	<meta name="author" content="LayoutDrop" >
 	<meta name="format-detection" content="telephone=no">
-	<meta name="keywords" content="House Care, Home Cleaning, Deep Cleaning, Laundry Service, Organizing, Eco Friendly Cleaning, Home Support">
-	<meta name="description" content="DocnDoor House Care delivers premium cleaning crews, organizing specialists, and eco-friendly routines so every room stays spotless and stress-free." >
+	<meta name="keywords" content="House Cleaning, Home Care, Deep Cleaning, Laundry Services, Home Maintenance, Eco-Friendly Cleaning">
+	<meta name="description" content="DocnDoor House Care provides hotel-grade cleaning professionals for laundry, deep cleans, and weekly resets. Eco-safe supplies, background-checked teams, and sparkling results." >
 	<!-- end::Meta Basic -->
 	
 	<!-- begin::Meta Social -->
@@ -17,8 +17,8 @@
 	<meta property="og:site_name" content="DocnDoor">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="en_us">
-	<meta property="og:title" content="DocnDoor" >
-	<meta property="og:description" content="DocnDoor House Care delivers premium cleaning crews, organizing specialists, and eco-friendly routines so every room stays spotless and stress-free.">
+	<meta property="og:title" content="House Care | DocnDoor - Premium Home Services" >
+	<meta property="og:description" content="DocnDoor House Care provides hotel-grade cleaning professionals for laundry, deep cleans, and weekly resets. Eco-safe supplies, background-checked teams, and sparkling results.">
 	<meta property="og:image" content="https://brighter.layoutdrop.com/demo/preview.png" >
 	<!-- end::Meta Social -->
 	
@@ -26,8 +26,8 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:url" content="https://brighter.layoutdrop.com/demo/">
 	<meta name="twitter:creator" content="@layoutdrop">
-	<meta name="twitter:title" content="DocnDoor">
-	<meta name="twitter:description" content="DocnDoor House Care delivers premium cleaning crews, organizing specialists, and eco-friendly routines so every room stays spotless and stress-free.">
+	<meta name="twitter:title" content="House Care | DocnDoor">
+	<meta name="twitter:description" content="DocnDoor House Care provides hotel-grade cleaning professionals for laundry, deep cleans, and weekly resets. Eco-safe supplies, background-checked teams, and sparkling results.">
 	<!-- end::Meta Twitter -->
 	
 	<!-- begin::Favicons Icons -->
@@ -36,7 +36,7 @@
 	<!-- end::Favicons Icons -->
 	
 	<!-- begin::Page Title -->
-	<title>DocnDoor | House Care</title>
+	<title>House Care | DocnDoor - Premium Home Services</title>
 	<!-- end::Page Title -->
 	
 	<!-- begin::Mobile Specific -->
@@ -49,6 +49,387 @@
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 	<!-- end::Plugins All CSS -->
+	
+	<style>
+		.house-hero-fullwidth {
+			min-height: 90vh;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 150px 20px;
+			position: relative;
+			overflow: hidden;
+		}
+		.house-hero-fullwidth::before {
+			content: '';
+			position: absolute;
+			width: 800px;
+			height: 800px;
+			background: radial-gradient(circle, rgba(254, 231, 74, 0.1) 0%, transparent 70%);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+		}
+		.house-hero-content {
+			position: relative;
+			z-index: 2;
+			max-width: 900px;
+		}
+		.house-hero-badge {
+			display: inline-block;
+			padding: 12px 30px;
+			background: rgba(254, 231, 74, 0.2);
+			border: 1px solid rgba(254, 231, 74, 0.4);
+			border-radius: 50px;
+			color: #FEE74A;
+			font-size: 0.9rem;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 30px;
+		}
+		.house-hero-title {
+			font-size: 5rem;
+			font-weight: 800;
+			color: #ffffff;
+			line-height: 1.2;
+			margin-bottom: 30px;
+		}
+		.house-hero-text {
+			font-size: 1.4rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.8;
+			margin-bottom: 50px;
+		}
+		
+		.house-services-masonry {
+			padding: 100px 0;
+			background: #f8f9fa;
+		}
+		.masonry-header {
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		.masonry-badge {
+			display: inline-block;
+			padding: 8px 20px;
+			background: rgba(4, 35, 56, 0.1);
+			border-radius: 50px;
+			color: #042338;
+			font-size: 0.85rem;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 20px;
+		}
+		.masonry-title {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #042338;
+			margin-bottom: 20px;
+		}
+		.masonry-subtitle {
+			font-size: 1.2rem;
+			color: #666;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		.masonry-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+			gap: 30px;
+			margin-top: 60px;
+		}
+		.masonry-card {
+			background: #ffffff;
+			border-radius: 25px;
+			overflow: hidden;
+			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+			transition: all 0.4s ease;
+			display: flex;
+			flex-direction: column;
+		}
+		.masonry-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 25px 60px rgba(4, 35, 56, 0.15);
+		}
+		.masonry-card-image {
+			width: 100%;
+			height: 250px;
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 4rem;
+			color: #FEE74A;
+			position: relative;
+			overflow: hidden;
+		}
+		.masonry-card-image::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(circle, rgba(254, 231, 74, 0.2) 0%, transparent 70%);
+			top: 0;
+			left: 0;
+		}
+		.masonry-card-content {
+			padding: 40px 35px;
+			flex: 1;
+		}
+		.masonry-card-title {
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 15px;
+		}
+		.masonry-card-description {
+			font-size: 1.05rem;
+			color: #666;
+			line-height: 1.8;
+			margin-bottom: 25px;
+		}
+		.masonry-card-features {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 30px 0;
+		}
+		.masonry-card-features li {
+			padding: 8px 0;
+			color: #666;
+			font-size: 0.95rem;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+		.masonry-card-features li::before {
+			content: '→';
+			color: #FEE74A;
+			font-weight: 700;
+			font-size: 1.2rem;
+		}
+		.masonry-card-btn {
+			display: inline-block;
+			padding: 12px 30px;
+			background: #042338;
+			color: #ffffff;
+			border-radius: 50px;
+			text-decoration: none;
+			font-weight: 600;
+			transition: all 0.3s ease;
+		}
+		.masonry-card-btn:hover {
+			background: #FEE74A;
+			color: #042338;
+			transform: translateX(5px);
+		}
+		
+		.house-packages-section {
+			padding: 100px 0;
+			background: #ffffff;
+		}
+		.packages-header {
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		.packages-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 40px;
+		}
+		.package-card {
+			background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+			border: 2px solid #e9ecef;
+			border-radius: 30px;
+			padding: 50px 40px;
+			text-align: center;
+			transition: all 0.4s ease;
+			position: relative;
+		}
+		.package-card:hover {
+			border-color: #042338;
+			transform: translateY(-10px);
+			box-shadow: 0 25px 60px rgba(4, 35, 56, 0.15);
+		}
+		.package-card.featured {
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			border-color: #FEE74A;
+			color: #ffffff;
+		}
+		.package-card.featured .package-title,
+		.package-card.featured .package-price,
+		.package-card.featured .package-feature {
+			color: #ffffff;
+		}
+		.package-icon {
+			font-size: 3.5rem;
+			color: #FEE74A;
+			margin-bottom: 25px;
+		}
+		.package-card.featured .package-icon {
+			color: #FEE74A;
+		}
+		.package-title {
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 20px;
+		}
+		.package-price {
+			font-size: 3rem;
+			font-weight: 800;
+			color: #042338;
+			margin-bottom: 10px;
+		}
+		.package-period {
+			font-size: 1rem;
+			color: #666;
+			margin-bottom: 30px;
+		}
+		.package-card.featured .package-period {
+			color: rgba(255, 255, 255, 0.8);
+		}
+		.package-features {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 40px 0;
+			text-align: left;
+		}
+		.package-feature {
+			padding: 12px 0;
+			color: #666;
+			font-size: 1rem;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		.package-card.featured .package-feature {
+			color: rgba(255, 255, 255, 0.9);
+		}
+		.package-feature::before {
+			content: '✓';
+			width: 25px;
+			height: 25px;
+			background: #FEE74A;
+			color: #042338;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 700;
+			font-size: 0.9rem;
+			flex-shrink: 0;
+		}
+		.package-card.featured .package-feature::before {
+			background: #FEE74A;
+			color: #042338;
+		}
+		.package-btn {
+			width: 100%;
+			padding: 18px;
+			border-radius: 50px;
+			font-size: 1.1rem;
+			font-weight: 700;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+		}
+		.package-btn-primary {
+			background: #042338;
+			color: #ffffff;
+		}
+		.package-btn-primary:hover {
+			background: #FEE74A;
+			color: #042338;
+			transform: translateY(-3px);
+		}
+		.package-card.featured .package-btn-primary {
+			background: #FEE74A;
+			color: #042338;
+		}
+		.package-card.featured .package-btn-primary:hover {
+			background: #ffffff;
+			color: #042338;
+		}
+		
+		.house-cta-section {
+			padding: 100px 0;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			text-align: center;
+		}
+		.house-cta-content {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		.house-cta-icon {
+			font-size: 4rem;
+			color: #FEE74A;
+			margin-bottom: 30px;
+		}
+		.house-cta-title {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #ffffff;
+			margin-bottom: 25px;
+		}
+		.house-cta-text {
+			font-size: 1.2rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.8;
+			margin-bottom: 40px;
+		}
+		.house-cta-buttons {
+			display: flex;
+			gap: 20px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.house-cta-btn {
+			padding: 18px 40px;
+			border-radius: 50px;
+			font-size: 1.1rem;
+			font-weight: 700;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+		}
+		.house-cta-btn-primary {
+			background: #FEE74A;
+			color: #042338;
+		}
+		.house-cta-btn-primary:hover {
+			background: #ffffff;
+			transform: translateY(-3px);
+			box-shadow: 0 10px 30px rgba(254, 231, 74, 0.3);
+		}
+		.house-cta-btn-secondary {
+			background: transparent;
+			color: #ffffff;
+			border: 2px solid #ffffff;
+		}
+		.house-cta-btn-secondary:hover {
+			background: #ffffff;
+			color: #042338;
+			transform: translateY(-3px);
+		}
+		
+		@media (max-width: 768px) {
+			.house-hero-title {
+				font-size: 3rem;
+			}
+			.masonry-grid {
+				grid-template-columns: 1fr;
+			}
+			.masonry-title {
+				font-size: 2.5rem;
+			}
+			.house-cta-title {
+				font-size: 2.5rem;
+			}
+		}
+	</style>
 	
 </head>
 <body>
@@ -106,7 +487,7 @@
 							<a href="index.html"><img src="images/logo-white.png" alt=""></a>
 						</div>
 						<ul class="nav navbar-nav">	
-							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li>
 								<a href="javascript:;">Pages <i class="fas fa-plus"></i></a>
 								<ul class="sub-menu">
@@ -125,7 +506,7 @@
 									<li class="add-menu-left">
 										<ul>
 											<li><a href="medical-care.html"><span>Medical Care</span></a></li>
-											<li><a href="house-care.html"><span>House Care</span></a></li>
+											<li class="active"><a href="house-care.html"><span>House Care</span></a></li>
 										</ul>
 									</li>
 								</ul>
@@ -152,565 +533,197 @@
  
 	<main class="page-content">
 		
-		<!-- begin::Main Banner -->
-		<div class="main-banner" style="background-image:linear-gradient(120deg,rgba(6,34,71,.95),rgba(10,78,147,.9)),url(images/background/line-bg2.png); background-size:cover; background-position:center;">
-			<div class="container inner-content">
-				<div class="row align-items-center">
-					<div class="col-lg-7 col-md-6 col-sm-7">
-						<span class="title-ext">Trusted Home Detailing Crew</span>
-						<h1>House Care<br>Whenever You Need It</h1>
-						<p>Book hotel-grade cleaning pros for laundry flips, appliance scrubs, and weekly resets. We pack eco-safe supplies, background-checked teams, and sparkling results into every visit.</p>
-						<a href="#book-house-care" class="btn btn-primary">Plan A Visit</a>
-					</div>
-					<div class="col-lg-5 col-md-6 col-sm-5">
-						<div class="banner-img">
-							<img src="images/main-banner/banner.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate1" src="images/shap/trangle-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/square-blue.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/chicle-blue-2.png" alt="">
-			<img class="pt-img4 animate4" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img5 animate-wave" src="images/shap/wave-orange.png" alt="">
-		</div>
-		<!-- end::Main Banner -->
-		
-		<section class="page-meta-bar" style="background:rgba(255,255,255,0.08); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.15);">
+		<!-- begin::House Hero Fullwidth -->
+		<section class="house-hero-fullwidth">
 			<div class="container">
-				<div class="row align-items-center gy-3">
-					<div class="col-lg-6">
-						<p class="m-0 text-white-50">From loft resets to estate detailing—pick your perfect finish.</p>
-					</div>
-					<div class="col-lg-6">
-						<div class="d-flex flex-wrap gap-2 justify-content-lg-end">
-							<a href="#workflow" class="btn btn-outline-light btn-sm">Flow</a>
-							<a href="#metrics" class="btn btn-outline-light btn-sm">Stats</a>
-							<a href="#packages" class="btn btn-outline-light btn-sm">Packages</a>
-							<a href="#book-house-care" class="btn btn-outline-light btn-sm">Reserve</a>
-						</div>
-					</div>
+				<div class="house-hero-content">
+					<span class="house-hero-badge">Hotel-Grade Home Services</span>
+					<h1 class="house-hero-title">House Care<br>Whenever You Need It</h1>
+					<p class="house-hero-text">Book professional cleaning pros for laundry, deep cleans, and weekly resets. We pack eco-safe supplies, background-checked teams, and sparkling results into every visit.</p>
+					<a href="#services" class="btn btn-primary" style="padding: 18px 40px; font-size: 1.1rem; font-weight: 700;">Explore Services</a>
 				</div>
 			</div>
 		</section>
+		<!-- end::House Hero Fullwidth -->
 		
-		<!-- begin::About Us -->
-		<section class="section-sp1 about-area">
+		<!-- begin::House Services Masonry -->
+		<section id="services" class="house-services-masonry">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-6 mb-30">
-						<div class="about-thumb-area">
-							<ul>
-								<li><img class="about-thumb1" src="images/about/pic-1.jpg" alt=""></li>
-								<li><img class="about-thumb2" src="images/about/pic-2.jpg" alt=""></li>
-								<li><img class="about-thumb3" src="images/about/pic-3.jpg" alt=""></li>
-								<li><div class="exp-bx">20<span>Year Experience</span></div></li>
+				<div class="masonry-header">
+					<span class="masonry-badge">Premium Home Services</span>
+					<h2 class="masonry-title">Detail-Oriented Crews,<br>Delightfully Tidy Rooms</h2>
+					<p class="masonry-subtitle">DocnDoor House Care blends concierge-level service with reliable routines. From kid zones and pet dens to short-term rentals, we map every surface, declutter plan, and scent profile so your space always feels freshly reset.</p>
+				</div>
+				<div class="masonry-grid">
+					<div class="masonry-card">
+						<div class="masonry-card-image">
+							<i class="fas fa-broom"></i>
+						</div>
+						<div class="masonry-card-content">
+							<h3 class="masonry-card-title">Deep Cleaning</h3>
+							<p class="masonry-card-description">Comprehensive deep cleaning service that covers every corner of your home, from baseboards to ceiling fans.</p>
+							<ul class="masonry-card-features">
+								<li>Kitchen deep clean</li>
+								<li>Bathroom sanitization</li>
+								<li>Baseboard & window cleaning</li>
+								<li>Appliance deep clean</li>
 							</ul>
+							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
 						</div>
 					</div>
-					<div class="col-lg-6 mb-30">
-						<div class="heading-bx">
-							<span class="title-ext text-primary">About House Care</span>
-							<h2 class="title">Detail-Oriented Crews, Delightfully Tidy Rooms</h2>
-							<p>DocnDoor House Care blends concierge-level service with reliable routines. From kid zones and pet dens to short-term rentals, we map every surface, declutter plan, and scent profile so your space always feels freshly reset.</p>
+					<div class="masonry-card">
+						<div class="masonry-card-image">
+							<i class="fas fa-tshirt"></i>
 						</div>
-						<div class="row gx-20 mb-30 mb-sm-10">
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/professional-team.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Vetted Cleaning Leads</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/service.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Right-on-Time Visits</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/pricing.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Flat-Rate Packages</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/eco-friendly.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Eco Friendly Kits</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a href="contact-us.html" class="btn btn-primary">Talk To A Planner</a>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate-wave" src="images/shap/wave-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/chicle-blue-2.png" alt="">
-			<img class="pt-img3 animate-rotate" src="images/shap/line-circle-blue.png" alt="">
-			<img class="pt-img4 animate-wave" src="images/shap/square-dots-orange.png" alt="">
-			<img class="pt-img5 animate2" src="images/shap/square-blue.png" alt="">
-		</section>
-		<!-- end::About Us -->
-		
-		<!-- begin::Working Process -->
-		<section id="workflow" class="section-area section-sp5 work-area" style="background-image: url(images/background/line-bg1.png); background-repeat: no-repeat; background-position: center; background-size: 100%;">
-			<div class="container-sm">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">House Care Flow</span>
-					<h2 class="title">How Your Clean Resets Happen</h2>
-				</div>
-				<div class="row justify-content-center">
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx">
-							<div class="work-num-bx">01</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Customize Checklist</h5>
-								<p>Select rooms, surfaces, fragrances, and any add-ons. We create a shared digital checklist so expectations match outcomes.</p>
-							</div>
-							<a href="#book-house-care" class="btn btn-primary light">Build Checklist <i class="btn-icon-bx fas fa-chevron-right"></i></a>
+						<div class="masonry-card-content">
+							<h3 class="masonry-card-title">Laundry Services</h3>
+							<p class="masonry-card-description">Professional laundry and folding services that keep your wardrobe fresh and organized.</p>
+							<ul class="masonry-card-features">
+								<li>Wash, dry & fold</li>
+								<li>Delicate item care</li>
+								<li>Ironing & pressing</li>
+								<li>Closet organization</li>
+							</ul>
+							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx active">
-							<div class="work-num-bx">02</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Precision Cleaning</h5>
-								<p>Lead specialists rotate through zones—degunking grout, steam-sanitizing upholstery, and replenishing supplies with eco formulas.</p>
-							</div>
-							<a href="#services" class="btn btn-primary light">Explore Services <i class="btn-icon-bx fas fa-chevron-right"></i></a>
+					<div class="masonry-card">
+						<div class="masonry-card-image">
+							<i class="fas fa-home"></i>
+						</div>
+						<div class="masonry-card-content">
+							<h3 class="masonry-card-title">Regular Maintenance</h3>
+							<p class="masonry-card-description">Weekly or bi-weekly cleaning routines to keep your home consistently clean and organized.</p>
+							<ul class="masonry-card-features">
+								<li>Weekly/bi-weekly schedules</li>
+								<li>Surface cleaning & dusting</li>
+								<li>Vacuuming & mopping</li>
+								<li>Trash removal</li>
+							</ul>
+							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx">
-							<div class="work-num-bx">03</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Photo Handover</h5>
-								<p>Before we leave you get time-stamped photos, supply notes, and recommended cadence for the next refresh.</p>
-							</div>
-							<a href="contact-us.html" class="btn btn-primary light">Chat With Us <i class="btn-icon-bx fas fa-chevron-right"></i></a>
+					<div class="masonry-card">
+						<div class="masonry-card-image">
+							<i class="fas fa-boxes"></i>
+						</div>
+						<div class="masonry-card-content">
+							<h3 class="masonry-card-title">Organization & Decluttering</h3>
+							<p class="masonry-card-description">Transform cluttered spaces into organized, functional areas with our professional organization services.</p>
+							<ul class="masonry-card-features">
+								<li>Room organization</li>
+								<li>Closet & storage solutions</li>
+								<li>Decluttering assistance</li>
+								<li>Space optimization</li>
+							</ul>
+							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
+						</div>
+					</div>
+					<div class="masonry-card">
+						<div class="masonry-card-image">
+							<i class="fas fa-utensils"></i>
+						</div>
+						<div class="masonry-card-content">
+							<h3 class="masonry-card-title">Meal Preparation</h3>
+							<p class="masonry-card-description">Healthy meal prep services that save you time while ensuring nutritious, delicious meals.</p>
+							<ul class="masonry-card-features">
+								<li>Meal planning</li>
+								<li>Grocery shopping</li>
+								<li>Meal preparation</li>
+								<li>Kitchen cleanup</li>
+							</ul>
+							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
+						</div>
+					</div>
+					<div class="masonry-card">
+						<div class="masonry-card-image">
+							<i class="fas fa-leaf"></i>
+						</div>
+						<div class="masonry-card-content">
+							<h3 class="masonry-card-title">Eco-Friendly Cleaning</h3>
+							<p class="masonry-card-description">Environmentally conscious cleaning using safe, non-toxic products that protect your family and pets.</p>
+							<ul class="masonry-card-features">
+								<li>Non-toxic products</li>
+								<li>Safe for children & pets</li>
+								<li>Sustainable practices</li>
+								<li>Allergy-friendly options</li>
+							</ul>
+							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<img class="pt-img1 animate1" src="images/shap/circle-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/circle-dots.png" alt="">
 		</section>
-		<!-- end::Working Process -->
+		<!-- end::House Services Masonry -->
 		
-		<!-- begin::House Metrics -->
-		<section id="metrics" class="section-sp1 about-area">
+		<!-- begin::House Packages Section -->
+		<section class="house-packages-section">
 			<div class="container">
-				<div class="row text-center">
-					<div class="col-md-4 mb-30">
-						<div class="feature-container feature-bx1">
-							<div class="icon-md">
-								<span class="icon-cell">
-									<img src="images/icon/service.svg" alt="">
-								</span> 
-							</div>
-							<div class="icon-content">
-								<h2 class="title">450+</h2>
-								<p>Recurring households on DocnDoor shine plans every month.</p>
-							</div>
-						</div>
+				<div class="packages-header">
+					<span class="masonry-badge">Service Packages</span>
+					<h2 class="masonry-title">Choose Your Perfect<br>Cleaning Plan</h2>
+					<p class="masonry-subtitle">Flexible packages designed to meet your specific needs, from one-time deep cleans to ongoing maintenance.</p>
+				</div>
+				<div class="packages-grid">
+					<div class="package-card">
+						<div class="package-icon"><i class="fas fa-sparkles"></i></div>
+						<h3 class="package-title">One-Time Deep Clean</h3>
+						<div class="package-price">$199</div>
+						<p class="package-period">One-time service</p>
+						<ul class="package-features">
+							<li class="package-feature">Full home deep clean</li>
+							<li class="package-feature">All rooms included</li>
+							<li class="package-feature">Eco-friendly products</li>
+							<li class="package-feature">4-6 hour service</li>
+						</ul>
+						<a href="contact-us.html" class="package-btn package-btn-primary">Book Now</a>
 					</div>
-					<div class="col-md-4 mb-30">
-						<div class="feature-container feature-bx1">
-							<div class="icon-md">
-								<span class="icon-cell">
-									<img src="images/icon/pricing.svg" alt="">
-								</span> 
-							</div>
-							<div class="icon-content">
-								<h2 class="title">32</h2>
-								<p>Eco-certified products stocked in every crew kit for safe surfaces.</p>
-							</div>
-						</div>
+					<div class="package-card featured">
+						<div class="package-icon"><i class="fas fa-star"></i></div>
+						<h3 class="package-title">Weekly Maintenance</h3>
+						<div class="package-price">$149</div>
+						<p class="package-period">Per week</p>
+						<ul class="package-features">
+							<li class="package-feature">Weekly scheduled visits</li>
+							<li class="package-feature">Regular maintenance</li>
+							<li class="package-feature">Priority scheduling</li>
+							<li class="package-feature">10% discount on extras</li>
+						</ul>
+						<a href="contact-us.html" class="package-btn package-btn-primary">Book Now</a>
 					</div>
-					<div class="col-md-4 mb-30">
-						<div class="feature-container feature-bx1">
-							<div class="icon-md">
-								<span class="icon-cell">
-									<img src="images/icon/eco-friendly.svg" alt="">
-								</span> 
-							</div>
-							<div class="icon-content">
-								<h2 class="title">98%</h2>
-								<p>Clients who rate their space “hotel fresh” after each visit.</p>
-							</div>
-						</div>
+					<div class="package-card">
+						<div class="package-icon"><i class="fas fa-calendar-alt"></i></div>
+						<h3 class="package-title">Bi-Weekly Plan</h3>
+						<div class="package-price">$129</div>
+						<p class="package-period">Per visit</p>
+						<ul class="package-features">
+							<li class="package-feature">Every other week</li>
+							<li class="package-feature">Comprehensive cleaning</li>
+							<li class="package-feature">Flexible scheduling</li>
+							<li class="package-feature">Consistent service</li>
+						</ul>
+						<a href="contact-us.html" class="package-btn package-btn-primary">Book Now</a>
 					</div>
 				</div>
 			</div>
-			<img class="pt-img1 animate-wave" src="images/shap/wave-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/chicle-blue-2.png" alt="">
 		</section>
-		<!-- end::House Metrics -->
+		<!-- end::House Packages Section -->
 		
-		<section id="packages" class="section-sp1" style="background:linear-gradient(120deg,#041c32,#062b53);">
+		<!-- begin::House CTA Section -->
+		<section class="house-cta-section">
 			<div class="container">
-				<div class="heading-bx text-center text-white">
-					<span class="title-ext text-primary">Curation Menu</span>
-					<h2 class="title">Choose A Finish That Fits Your Space</h2>
-				</div>
-				<div class="row gy-4">
-					<div class="col-md-4">
-						<div class="card h-100 shadow p-4">
-							<h4>Essential Shine</h4>
-							<p>Weekly or bi-weekly tidy-ups keeping baths, kitchens, and entryways spotless.</p>
-							<ul class="list-unstyled mb-3">
-								<li>• 2 crew members</li>
-								<li>• Hypoallergenic products</li>
-								<li>• Digital checklist photos</li>
-							</ul>
-							<span class="text-primary">From $189 / visit</span>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card h-100 shadow-lg p-4 border border-primary">
-							<h4>Signature Reset</h4>
-							<p>Deep refresh with grout scrubs, wardrobe resets, and linen concierge service.</p>
-							<ul class="list-unstyled mb-3">
-								<li>• 3–4 crew members</li>
-								<li>• Steam + enzyme treatments</li>
-								<li>• Personalized scent profile</li>
-							</ul>
-							<span class="text-primary">From $349 / visit</span>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card h-100 shadow p-4">
-							<h4>Estate Detail</h4>
-							<p>White-glove service for estates or show homes, including staging and amenity restock.</p>
-							<ul class="list-unstyled mb-3">
-								<li>• Lead captain onsite</li>
-								<li>• Custom linen & floral program</li>
-								<li>• Owner briefing + gallery</li>
-							</ul>
-							<span class="text-primary">Custom proposal</span>
-						</div>
+				<div class="house-cta-content">
+					<div class="house-cta-icon"><i class="fas fa-sparkles"></i></div>
+					<h2 class="house-cta-title">Ready To Transform<br>Your Home?</h2>
+					<p class="house-cta-text">Schedule a consultation with our house care specialists to discuss your needs and create a customized cleaning plan that fits your lifestyle.</p>
+					<div class="house-cta-buttons">
+						<a href="contact-us.html" class="house-cta-btn house-cta-btn-primary">Schedule Service</a>
+						<a href="tel:+916302989942" class="house-cta-btn house-cta-btn-secondary">Call Us Now</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		
-		<!-- begin::Book Service -->
-		<section id="book-house-care" class="section-area account-wraper1">
-			<div class="container-fluid">
-				<div class="appointment-inner section-sp2" style="background-image: url(images/appointment/line-bg.png); background-repeat: no-repeat; background-position: 20px 140px;">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-5 col-lg-6 col-md-6">
-								<div class="appointment-form form-wraper">
-									<h3 class="title">Reserve A House Care Slot</h3>
-									<form action="#">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Your Name" required>
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Your Email Address" required>
-										</div>
-										<div class="form-group">
-											<input type="number" class="form-control" placeholder="Phone Numbers" required>
-										</div>
-										<div class="form-group">
-											<input type="date" id="datePicker" class="form-control" required>
-										</div>
-										<div class="form-group">
-											<select class="form-select form-control nice-select">
-												<option selected>Select Service</option>
-												<option value="Weekly Shine">Weekly Shine (bath, kitchen, floors)</option>
-												<option value="Deep Clean Reset">Deep Clean Reset</option>
-												<option value="Move-In / Move-Out">Move-In / Move-Out Detailing</option>
-												<option value="Laundry & Linen Care">Laundry & Linen Care</option>
-												<option value="Closet & Pantry Reset">Closet & Pantry Reset</option>
-												<option value="Short-Term Rental Flip">Short-Term Rental Flip</option>
-											</select>
-										</div>
-										<div class="form-group">
-											<textarea class="form-control" rows="4" placeholder="Tell us about pets, preferred scents, or special areas"></textarea>
-										</div>
-										<button type="submit" class="btn btn-primary">Plan My Visit</button>
-									</form>
-								</div>
-							</div>
-							<div class="col-xl-7 col-lg-6 col-md-6">
-								<div class="appointment-thumb">
-									<img src="images/appointment/mobile.png" alt="">
-									<div class="images-group">
-										<img class="img1" src="images/appointment/women.png" alt="">
-										<img class="img2" src="images/appointment/map-pin.png" alt="">
-										<img class="img3" src="images/appointment/setting.png" alt="">
-										<img class="img4" src="images/appointment/check.png" alt="">
-										<img class="img5" src="images/appointment/chat.png" alt="">
-									</div>
-								</div>
-							</div>
-						</div>					
-					</div>	
-					<img class="pt-img1 animate1" src="images/shap/trangle-orange.png" alt="">
-					<img class="pt-img2 animate-wave" src="images/shap/wave-orange.png" alt="">
-					<img class="pt-img4 animate2" src="images/shap/circle-orange.png" alt="">
-				</div>					
-			</div>
-		</section>
-		<!-- end::Book Service -->
-		
-		<!-- begin::Services -->
-		<section id="services" class="section-area section-sp1 service-wraper">
-			<div class="row align-items-center">
-				<div class="col-xl-4 col-lg-7 mb-30">	
-					<div class="heading-bx">
-						<span class="title-ext text-primary">House Care Menu</span>
-						<h2 class="title">Your Home, Exactly The Way You Imagine</h2>
-						<p>From quarterly deep cleans to daily tidy-ups, we stage every visit with scent profiles, product preferences, and checklist photos so resets stay consistent.</p>
-					</div>
-					<a href="#book-house-care" class="btn btn-secondary">Reserve Crew</a>
-				</div>
-				<div class="col-xl-8 mb-15">	
-					<div class="swiper service-slide">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature1">
-									<div class="feature-box-xl mb-30">
-										<span class="icon-cell">
-											<img src="images/icon/floor-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Deep Clean Reset</h3>
-										<p>Detailers scrub grout, polish fixtures, and dust high-touch zones for a seasonal-level refresh.</p>
-										<a href="#book-house-care" class="btn btn-primary light">Book Crew</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/gutter-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Laundry & Linen Lab</h3>
-										<p>We sort, wash, press, and stage linens and wardrobes so every drawer feels boutique-level.</p>
-										<a href="#book-house-care" class="btn btn-primary light">Book Crew</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature3">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/kitchen-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Kitchen Concierge</h3>
-										<p>Appliance gurus descale dishwashers, degrease ovens, and reorganize pantries for maximum flow.</p>
-										<a href="#book-house-care" class="btn btn-primary light">Book Crew</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature1">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/toilet-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Move Prep Specialists</h3>
-										<p>Whether staging to sell or unpacking, our teams box, label, and deep clean for a seamless move.</p>
-										<a href="#book-house-care" class="btn btn-primary light">Book Crew</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/room-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Rental Flip Squad</h3>
-										<p>Short-term rental owners rely on us for lightning-fast turnovers, amenity restocks, and inspection reports.</p>
-										<a href="#book-house-care" class="btn btn-primary light">Book Crew</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/office-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Pet & Allergy Shield</h3>
-										<p>HEPA vacuums, enzyme treatments, and fabric protection keep dander low and fabrics fresh.</p>
-										<a href="#book-house-care" class="btn btn-primary light">Book Crew</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>					
-				</div>	 
-			</div>
-			<img class="pt-img2 animate2" src="images/shap/square-dots-orange.png" alt="">
-			<img class="pt-img4 animate1" src="images/shap/square-rotate.png" alt="">
-		</section>
-		<!-- end::Services -->
-		
-		<!-- begin::Testimonial -->
-		<section class="section-area section-sp3 testimonial-wraper">
-			<div class="container">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Testimonial</span>
-					<h2 class="title m-b0">We are Very Happy for<br> Client’s Reviews.</h2>
-				</div>
-				<div class="row align-items-center">
-					<div class="col-lg-6 text-center">
-						<div class="thumb-wraper">
-							<img class="bg-img" src="images/testimonials/shape.png" alt="">
-							<ul>
-								<li data-member="1"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic1.jpg" alt=""></a></li>
-								<li data-member="2"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic2.jpg" alt=""></a></li>
-								<li data-member="3"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic3.jpg" alt=""></a></li>
-								<li data-member="4"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic4.jpg" alt=""></a></li>
-								<li data-member="5"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic5.jpg" alt=""></a></li>
-								<li data-member="6"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic6.jpg" alt=""></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="swiper testimonial-slide">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide" data-rel="1">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Our rental guests rave about the scent profile and welcome baskets every single turnover. DocnDoor handles it end to end.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Emily Davis</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="2">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“The laundry and linen program means I never have to think about towels, pressing, or folding—hotel quality at home.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Ryan Wilson</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="3">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“They cataloged my pantry, labeled bins, and even set up a QR checklist so my teens keep things tidy between visits.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">David Brown</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="4">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Move-in day felt effortless because the DocnDoor team unpacked, broke down boxes, and staged each room while we handled paperwork.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Michael Johnson</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="5">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“They remember every preference, from which plants need misting to how the dog’s bowls are arranged. True peace of mind.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Daniel Smith</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="6">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Allergy flare-ups disappeared after the Pet & Allergy Shield service—HEPA vacuums plus enzyme treatment is a game changer.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">James Carter</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-button-prev test-btn-prev"><i class="las la-arrow-left"></i></div>
-							<div class="swiper-button-next test-btn-next"><i class="las la-arrow-right"></i></div>
-							<div class="swiper-pagination"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate1" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/square-blue.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/circle-dots.png" alt="">
-			<img class="pt-img4 animate4" src="images/shap/chicle-blue-2.png" alt="">
-		</section>
-		<!-- end::Testimonial -->
+		<!-- end::House CTA Section -->
 		
 	</main>
 	
@@ -727,7 +740,7 @@
 								<a href="index.html" aria-label="Footer Logo"><img src="images/logo.png" alt=""></a>
 							</div>
 							<div class="ft-contact">
-								<p>From weekly shine sessions to move-out resets, DocnDoor House Care keeps every surface spotless with eco supplies and insured, detail-loving crews.</p>
+								<p>DocnDoor unites medical teams and home specialists so every client feels supported, safe, and truly at home.</p>
 								<div class="contact-bx">
 									<div class="icon"><i class="fas fa-phone-alt"></i></div>
 									<div class="contact-number">
@@ -747,7 +760,7 @@
 								<li><a href="booking.html"><span>Booking</span></a></li>
 								<li><a href="faq.html"><span>Faq's</span></a></li>
 								<li><a href="blog-grid.html"><span>Blogs</span></a></li>
-								<li><a href="team.html"><span>Out Team</span></a></li>
+								<li><a href="team.html"><span>Our Team</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -822,7 +835,6 @@
 <script src="vendor/swiper/swiper.min.js"></script>
 <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
 <script src="js/functions.js"></script>
-<script src="js/contact.js"></script>
 <!-- end::Javascript Files -->
 </body>
 </html>

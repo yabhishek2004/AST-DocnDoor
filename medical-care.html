@@ -17,7 +17,7 @@
 	<meta property="og:site_name" content="DocnDoor">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="en_us">
-	<meta property="og:title" content="DocnDoor" >
+	<meta property="og:title" content="Medical Care | DocnDoor - Hospital-Level Care at Home" >
 	<meta property="og:description" content="DocnDoor Medical Care brings licensed nurses, therapists, and coordinators to your home for vitals monitoring, recovery support, and compassionate clinical programs tailored to every family.">
 	<meta property="og:image" content="https://brighter.layoutdrop.com/demo/preview.png" >
 	<!-- end::Meta Social -->
@@ -26,7 +26,7 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:url" content="https://brighter.layoutdrop.com/demo/">
 	<meta name="twitter:creator" content="@layoutdrop">
-	<meta name="twitter:title" content="DocnDoor">
+	<meta name="twitter:title" content="Medical Care | DocnDoor">
 	<meta name="twitter:description" content="DocnDoor Medical Care brings licensed nurses, therapists, and coordinators to your home for vitals monitoring, recovery support, and compassionate clinical programs tailored to every family.">
 	<!-- end::Meta Twitter -->
 	
@@ -36,7 +36,7 @@
 	<!-- end::Favicons Icons -->
 	
 	<!-- begin::Page Title -->
-	<title>DocnDoor | Medical Care</title>
+	<title>Medical Care | DocnDoor - Hospital-Level Care at Home</title>
 	<!-- end::Page Title -->
 	
 	<!-- begin::Mobile Specific -->
@@ -49,6 +49,303 @@
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 	<!-- end::Plugins All CSS -->
+	
+	<style>
+		.medical-hero-asymmetric {
+			min-height: 85vh;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 50%, #2d5a7e 100%);
+			display: flex;
+			align-items: center;
+			padding: 120px 0;
+			position: relative;
+			overflow: hidden;
+		}
+		.medical-hero-asymmetric::before {
+			content: '';
+			position: absolute;
+			width: 600px;
+			height: 600px;
+			background: radial-gradient(circle, rgba(254, 231, 74, 0.15) 0%, transparent 70%);
+			bottom: -300px;
+			right: -300px;
+			border-radius: 50%;
+		}
+		.medical-hero-content {
+			position: relative;
+			z-index: 2;
+		}
+		.medical-hero-badge {
+			display: inline-block;
+			padding: 10px 25px;
+			background: rgba(254, 231, 74, 0.2);
+			border: 1px solid rgba(254, 231, 74, 0.4);
+			border-radius: 50px;
+			color: #FEE74A;
+			font-size: 0.9rem;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 30px;
+		}
+		.medical-hero-title {
+			font-size: 4.5rem;
+			font-weight: 800;
+			color: #ffffff;
+			line-height: 1.2;
+			margin-bottom: 25px;
+		}
+		.medical-hero-text {
+			font-size: 1.3rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.8;
+			margin-bottom: 40px;
+			max-width: 600px;
+		}
+		.medical-hero-image {
+			position: relative;
+			z-index: 2;
+		}
+		.medical-hero-image img {
+			border-radius: 30px;
+			box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+		}
+		
+		.medical-services-showcase {
+			padding: 100px 0;
+			background: #ffffff;
+		}
+		.services-header {
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		.services-badge {
+			display: inline-block;
+			padding: 8px 20px;
+			background: rgba(4, 35, 56, 0.1);
+			border-radius: 50px;
+			color: #042338;
+			font-size: 0.85rem;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 20px;
+		}
+		.services-title {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #042338;
+			margin-bottom: 20px;
+		}
+		.services-subtitle {
+			font-size: 1.2rem;
+			color: #666;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		.services-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+			gap: 40px;
+			margin-top: 60px;
+		}
+		.service-feature-card {
+			background: #ffffff;
+			border: 2px solid #e9ecef;
+			border-radius: 30px;
+			padding: 50px 40px;
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			position: relative;
+			overflow: hidden;
+		}
+		.service-feature-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 6px;
+			background: linear-gradient(90deg, #042338, #FEE74A, #042338);
+			transform: scaleX(0);
+			transition: transform 0.4s ease;
+		}
+		.service-feature-card:hover::before {
+			transform: scaleX(1);
+		}
+		.service-feature-card:hover {
+			border-color: #042338;
+			transform: translateY(-10px);
+			box-shadow: 0 25px 60px rgba(4, 35, 56, 0.15);
+		}
+		.service-icon-wrapper {
+			width: 100px;
+			height: 100px;
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			border-radius: 25px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 30px;
+			font-size: 2.5rem;
+			color: #FEE74A;
+			transition: transform 0.3s ease;
+		}
+		.service-feature-card:hover .service-icon-wrapper {
+			transform: scale(1.1) rotate(5deg);
+		}
+		.service-feature-title {
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 15px;
+		}
+		.service-feature-description {
+			font-size: 1.05rem;
+			color: #666;
+			line-height: 1.8;
+			margin-bottom: 25px;
+		}
+		.service-feature-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.service-feature-list li {
+			padding: 10px 0;
+			color: #666;
+			font-size: 1rem;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		.service-feature-list li::before {
+			content: '✓';
+			width: 25px;
+			height: 25px;
+			background: #FEE74A;
+			color: #042338;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 700;
+			font-size: 0.9rem;
+			flex-shrink: 0;
+		}
+		
+		.medical-standards-section {
+			padding: 100px 0;
+			background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+		}
+		.standards-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 30px;
+		}
+		.standard-card {
+			background: #ffffff;
+			border-radius: 25px;
+			padding: 40px 30px;
+			text-align: center;
+			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+			transition: all 0.3s ease;
+		}
+		.standard-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 20px 50px rgba(4, 35, 56, 0.15);
+		}
+		.standard-number {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #042338;
+			line-height: 1;
+			margin-bottom: 20px;
+		}
+		.standard-title {
+			font-size: 1.4rem;
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 15px;
+		}
+		.standard-text {
+			font-size: 1rem;
+			color: #666;
+			line-height: 1.8;
+		}
+		
+		.medical-cta-section {
+			padding: 100px 0;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			text-align: center;
+		}
+		.medical-cta-content {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		.medical-cta-icon {
+			font-size: 4rem;
+			color: #FEE74A;
+			margin-bottom: 30px;
+		}
+		.medical-cta-title {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #ffffff;
+			margin-bottom: 25px;
+		}
+		.medical-cta-text {
+			font-size: 1.2rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.8;
+			margin-bottom: 40px;
+		}
+		.medical-cta-buttons {
+			display: flex;
+			gap: 20px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.medical-cta-btn {
+			padding: 18px 40px;
+			border-radius: 50px;
+			font-size: 1.1rem;
+			font-weight: 700;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+		}
+		.medical-cta-btn-primary {
+			background: #FEE74A;
+			color: #042338;
+		}
+		.medical-cta-btn-primary:hover {
+			background: #ffffff;
+			transform: translateY(-3px);
+			box-shadow: 0 10px 30px rgba(254, 231, 74, 0.3);
+		}
+		.medical-cta-btn-secondary {
+			background: transparent;
+			color: #ffffff;
+			border: 2px solid #ffffff;
+		}
+		.medical-cta-btn-secondary:hover {
+			background: #ffffff;
+			color: #042338;
+			transform: translateY(-3px);
+		}
+		
+		@media (max-width: 768px) {
+			.medical-hero-title {
+				font-size: 2.8rem;
+			}
+			.services-grid {
+				grid-template-columns: 1fr;
+			}
+			.services-title {
+				font-size: 2.5rem;
+			}
+			.medical-cta-title {
+				font-size: 2.5rem;
+			}
+		}
+	</style>
 	
 </head>
 <body>
@@ -106,7 +403,7 @@
 							<a href="index.html"><img src="images/logo-white.png" alt=""></a>
 						</div>
 						<ul class="nav navbar-nav">	
-							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li>
 								<a href="javascript:;">Pages <i class="fas fa-plus"></i></a>
 								<ul class="sub-menu">
@@ -124,7 +421,7 @@
 								<ul class="sub-menu">
 									<li class="add-menu-left">
 										<ul>
-											<li><a href="medical-care.html"><span>Medical Care</span></a></li>
+											<li class="active"><a href="medical-care.html"><span>Medical Care</span></a></li>
 											<li><a href="house-care.html"><span>House Care</span></a></li>
 										</ul>
 									</li>
@@ -152,547 +449,169 @@
  
 	<main class="page-content">
 		
-		<!-- begin::Main Banner -->
-		<div class="main-banner" style="background-image:linear-gradient(135deg,rgba(2,46,63,.95),rgba(19,114,137,.9)),url(images/background/line-bg3.png); background-size:cover; background-position:center;">
-			<div class="container inner-content">
-				<div class="row align-items-center">
-					<div class="col-lg-7 col-md-6 col-sm-7">
-						<span class="title-ext">Licensed Nurses. Rapid Response.</span>
-						<h1>Medical Care<br>Delivered At Home</h1>
-						<p>Skip waiting rooms. Our critical-care nurses, therapists, and case coordinators stabilize vitals, coordinate providers, and deliver hospital-grade support right where you recover fastest—home.</p>
-						<a href="#booking" class="btn btn-primary">Book A Clinical Visit</a>
-					</div>
-					<div class="col-lg-5 col-md-6 col-sm-5">
-						<div class="banner-img">
-							<img src="images/appointment/women.png" class="rounded-4 shadow-lg" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate1" src="images/shap/trangle-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/square-blue.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/chicle-blue-2.png" alt="">
-			<img class="pt-img4 animate4" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img5 animate-wave" src="images/shap/wave-orange.png" alt="">
-		</div>
-		<!-- end::Main Banner -->
-		
-		<section class="page-meta-bar" style="background:rgba(255,255,255,0.08); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.15);">
+		<!-- begin::Medical Hero Asymmetric -->
+		<section class="medical-hero-asymmetric">
 			<div class="container">
-				<div class="row align-items-center gy-3">
+				<div class="row align-items-center">
 					<div class="col-lg-6">
-						<p class="m-0 text-white-50">ICU-trained nurses, therapists, and remote physicians on one signal.</p>
-					</div>
-					<div class="col-lg-6">
-						<div class="d-flex flex-wrap gap-2 justify-content-lg-end">
-							<a href="#overview" class="btn btn-outline-light btn-sm">Overview</a>
-							<a href="#standards" class="btn btn-outline-light btn-sm">Standards</a>
-							<a href="#programs" class="btn btn-outline-light btn-sm">Programs</a>
-							<a href="#booking" class="btn btn-outline-light btn-sm">Book</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<!-- begin::About Us -->
-		<section id="overview" class="section-sp1 about-area">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-6 mb-30">
-						<div class="about-thumb-area">
-							<ul>
-								<li><img class="about-thumb1" src="images/about/pic-1.jpg" alt=""></li>
-								<li><img class="about-thumb2" src="images/about/pic-2.jpg" alt=""></li>
-								<li><img class="about-thumb3" src="images/about/pic-3.jpg" alt=""></li>
-								<li><div class="exp-bx">20<span>Year Experience</span></div></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-6 mb-30">
-						<div class="heading-bx">
-							<span class="title-ext text-primary">About Medical Care</span>
-							<h2 class="title">Hospital-Level Expertise Without The Ward</h2>
-							<p>DocnDoor mobilizes ICU-trained nurses, wound-care specialists, and remote physicians to manage complex cases at home. We interpret labs, adjust care plans with your doctor, and keep families informed every step.</p>
-						</div>
-						<div class="row gx-20 mb-30 mb-sm-10">
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/professional-team.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">ICU-Trained Teams</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/service.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Same-Day Start</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/pricing.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Care Plans & Pricing</h4>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6 mb-20 mb-sm-20">
-								<div class="feature-container feature-bx1">
-									<div class="icon-md">
-										<span class="icon-cell">
-											<img src="images/icon/eco-friendly.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h4 class="ld-title">Sterile, Safe Protocols</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a href="contact-us.html" class="btn btn-primary">Talk With A Nurse</a>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate-wave" src="images/shap/wave-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/chicle-blue-2.png" alt="">
-			<img class="pt-img3 animate-rotate" src="images/shap/line-circle-blue.png" alt="">
-			<img class="pt-img4 animate-wave" src="images/shap/square-dots-orange.png" alt="">
-			<img class="pt-img5 animate2" src="images/shap/square-blue.png" alt="">
-		</section>
-		<!-- end::About Us -->
-		
-		<!-- begin::Working Process -->
-		<section class="section-area section-sp5 work-area" style="background-image: url(images/background/line-bg1.png); background-repeat: no-repeat; background-position: center; background-size: 100%;">
-			<div class="container-sm">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Care Pathway</span>
-					<h2 class="title">How Medical Support Starts</h2>
-				</div>
-				<div class="row justify-content-center">
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx">
-							<div class="work-num-bx">01</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Clinical Intake</h5>
-								<p>Share hospital notes, meds, and vitals. Our nurse concierge assembles a chart and alerts the on-call medical lead.</p>
-							</div>
-							<a href="#booking" class="btn btn-primary light">Start Intake <i class="btn-icon-bx fas fa-chevron-right"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx active">
-							<div class="work-num-bx">02</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">At-Home Treatment</h5>
-								<p>Nurses stabilize vitals, coordinate labs, and keep physicians looped in with secure tele-rounds and daily status logs.</p>
-							</div>
-							<a href="medical-care.html" class="btn btn-primary light">Clinical Programs <i class="btn-icon-bx fas fa-chevron-right"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6 mb-30">
-						<div class="work-bx">
-							<div class="work-num-bx">03</div>
-							<div class="work-content">
-								<h5 class="title text-primary mb-10">Progress Tracking</h5>
-								<p>Families receive digital visit summaries, vitals trends, and escalation alerts so decisions stay proactive.</p>
-							</div>
-							<a href="contact-us.html" class="btn btn-primary light">Talk To Care Lead <i class="btn-icon-bx fas fa-chevron-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate1" src="images/shap/circle-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/circle-dots.png" alt="">
-		</section>
-		<!-- end::Working Process -->
-		
-		<!-- begin::Care Stats -->
-		<section class="section-sp1 about-area">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-md-4 mb-30">
-						<div class="feature-container feature-bx1">
-							<div class="icon-md">
-								<span class="icon-cell">
-									<img src="images/icon/pricing.svg" alt="">
-								</span> 
-							</div>
-							<div class="icon-content">
-								<h2 class="title">2.5 hrs</h2>
-								<p>Average response time from intake to first nurse visit.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 mb-30">
-						<div class="feature-container feature-bx1">
-							<div class="icon-md">
-								<span class="icon-cell">
-									<img src="images/icon/service.svg" alt="">
-								</span> 
-							</div>
-							<div class="icon-content">
-								<h2 class="title">96%</h2>
-								<p>Clients who keep DocnDoor as their long-term clinical partner.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 mb-30">
-						<div class="feature-container feature-bx1">
-							<div class="icon-md">
-								<span class="icon-cell">
-									<img src="images/icon/eco-friendly.svg" alt="">
-								</span> 
-							</div>
-							<div class="icon-content">
-								<h2 class="title">14</h2>
-								<p>Specialties represented across our nurse and therapist roster.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="pt-img1 animate-wave" src="images/shap/wave-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/chicle-blue-2.png" alt="">
-		</section>
-		<!-- end::Care Stats -->
-		
-		<section id="standards" class="section-sp1" style="background:linear-gradient(135deg,#032236,#094667);">
-			<div class="container">
-				<div class="heading-bx text-center text-white">
-					<span class="title-ext text-primary">Clinical Standards</span>
-					<h2 class="title">Layers Of Safety We Never Skip</h2>
-				</div>
-				<div class="row gy-4">
-					<div class="col-md-4">
-						<div class="card h-100 shadow p-4">
-							<h4>Governance Board</h4>
-							<p>Weekly rounds with our Medical Director and partner physicians review active cases and update playbooks.</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card h-100 shadow p-4">
-							<h4>Sterile Supply Chain</h4>
-							<p>Infusion meds, wound kits, and PPE are logged, sealed, and temperature-tracked until they reach your door.</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card h-100 shadow p-4">
-							<h4>Telehealth Bridge</h4>
-							<p>Secure video rounds keep hospitalists looped in so care never drifts from doctor orders.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<!-- begin::Book Service -->
-		<section id="booking" class="section-area account-wraper1">
-			<div class="container-fluid">
-				<div class="appointment-inner section-sp2" style="background-image: url(images/appointment/line-bg.png); background-repeat: no-repeat; background-position: 20px 140px;">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-5 col-lg-6 col-md-6">
-								<div class="appointment-form form-wraper">
-									<h3 class="title">Schedule A Medical Visit</h3>
-									<form action="#">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Your Name" required>
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Your Email Address" required>
-										</div>
-										<div class="form-group">
-											<input type="number" class="form-control" placeholder="Phone Numbers" required>
-										</div>
-										<div class="form-group">
-											<input type="date" id="datePicker" class="form-control" required>
-										</div>
-										<div class="form-group">
-											<select class="form-select form-control nice-select">
-												<option selected>Select Program</option>
-												<option value="Post-Surgery Recovery">Post-Surgery Recovery</option>
-												<option value="Chronic Condition Management">Chronic Condition Management</option>
-												<option value="Medication & Infusion Support">Medication & Infusion Support</option>
-												<option value="Physiotherapy & Rehab">Physiotherapy & Rehab</option>
-												<option value="Telehealth Physician Round">Telehealth Physician Round</option>
-												<option value="Lab & Diagnostics At Home">Lab & Diagnostics At Home</option>
-											</select>
-										</div>
-										<div class="form-group">
-											<textarea class="form-control" rows="4" placeholder="Share medical history, preferred visit windows, or doctor requests"></textarea>
-										</div>
-										<button type="submit" class="btn btn-primary">Book Now</button>
-									</form>
-								</div>
-							</div>
-							<div class="col-xl-7 col-lg-6 col-md-6">
-								<div class="appointment-thumb">
-									<img src="images/appointment/mobile.png" alt="">
-									<div class="images-group">
-										<img class="img1" src="images/appointment/women.png" alt="">
-										<img class="img2" src="images/appointment/map-pin.png" alt="">
-										<img class="img3" src="images/appointment/setting.png" alt="">
-										<img class="img4" src="images/appointment/check.png" alt="">
-										<img class="img5" src="images/appointment/chat.png" alt="">
-									</div>
-								</div>
-							</div>
-						</div>					
-					</div>	
-					<img class="pt-img1 animate1" src="images/shap/trangle-orange.png" alt="">
-					<img class="pt-img2 animate-wave" src="images/shap/wave-orange.png" alt="">
-					<img class="pt-img4 animate2" src="images/shap/circle-orange.png" alt="">
-				</div>					
-			</div>
-		</section>
-		<!-- end::Book Service -->
-		
-		<!-- begin::Services -->
-		<section id="programs" class="section-area section-sp1 service-wraper">
-			<div class="row align-items-center">
-				<div class="col-xl-4 col-lg-7 mb-30">	
-					<div class="heading-bx">
-						<span class="title-ext text-primary">Medical Programs</span>
-						<h2 class="title">Why Families Choose DocnDoor Clinicians</h2>
-						<p>We combine hospital-grade equipment, remote physician oversight, and daily reporting so every infusion, wound dressing, or rehab milestone is clinically verified at home.</p>
-					</div>
-					<a href="#booking" class="btn btn-secondary">Schedule Care</a>
-				</div>
-				<div class="col-xl-8 mb-15">	
-					<div class="swiper service-slide">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature1">
-									<div class="feature-box-xl mb-30">
-										<span class="icon-cell">
-											<img src="images/icon/floor-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Acute Recovery Nursing</h3>
-										<p>ICU-trained nurses provide wound care, IV therapy, and vitals surveillance for post-surgery patients.</p>
-										<a href="#booking" class="btn btn-primary light">Book Program</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/gutter-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Advanced Physiotherapy</h3>
-										<p>Neurological and ortho specialists rebuild strength using progressive rehab plans and digital tracking.</p>
-										<a href="#booking" class="btn btn-primary light">Book Program</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature3">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/kitchen-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Chronic Disease Navigation</h3>
-										<p>Coordinators align medications, diet, and remote monitoring for cardiac, diabetic, and oncology patients.</p>
-										<a href="#booking" class="btn btn-primary light">Book Program</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature1">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/toilet-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Medication & Infusion</h3>
-										<p>Certified infusion nurses prep sterile meds, manage pumps, and log adherence for prescribing doctors.</p>
-										<a href="#booking" class="btn btn-primary light">Book Program</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/room-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Telehealth Coordination</h3>
-										<p>We arrange hybrid rounds so your physician, pharmacist, and family review outcomes in one secure call.</p>
-										<a href="#booking" class="btn btn-primary light">Book Program</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="feature-container feature-bx2 feature2">
-									<div class="feature-box-xl mb-20">
-										<span class="icon-cell">
-											<img src="images/icon/office-cleaning.svg" alt="">
-										</span> 
-									</div>
-									<div class="icon-content">
-										<h3 class="ld-title">Lab & Diagnostics</h3>
-										<p>Phlebotomists collect labs, ECGs, and rapid tests at home, then push results to your care team.</p>
-										<a href="#booking" class="btn btn-primary light">Book Program</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>					
-				</div>	 
-			</div>
-			<img class="pt-img2 animate2" src="images/shap/square-dots-orange.png" alt="">
-			<img class="pt-img4 animate1" src="images/shap/square-rotate.png" alt="">
-		</section>
-		<!-- end::Services -->
-		
-		<!-- begin::Testimonial -->
-		<section class="section-area section-sp3 testimonial-wraper">
-			<div class="container">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Testimonial</span>
-					<h2 class="title m-b0">We are Very Happy for<br> Client’s Reviews.</h2>
-				</div>
-				<div class="row align-items-center">
-					<div class="col-lg-6 text-center">
-						<div class="thumb-wraper">
-							<img class="bg-img" src="images/testimonials/shape.png" alt="">
-							<ul>
-								<li data-member="1"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic1.jpg" alt=""></a></li>
-								<li data-member="2"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic2.jpg" alt=""></a></li>
-								<li data-member="3"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic3.jpg" alt=""></a></li>
-								<li data-member="4"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic4.jpg" alt=""></a></li>
-								<li data-member="5"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic5.jpg" alt=""></a></li>
-								<li data-member="6"><a href="javascript:void(0);" role="button" aria-label="thumbnail"><img src="images/testimonials/pic6.jpg" alt=""></a></li>
-							</ul>
+						<div class="medical-hero-content">
+							<span class="medical-hero-badge">Hospital-Level Care at Home</span>
+							<h1 class="medical-hero-title">Medical Care<br>Delivered To Your Doorstep</h1>
+							<p class="medical-hero-text">Skip waiting rooms. Our ICU-trained nurses, therapists, and case coordinators stabilize vitals, coordinate providers, and deliver hospital-grade support right where you recover fastest—home.</p>
+							<a href="#services" class="btn btn-primary" style="padding: 18px 40px; font-size: 1.1rem; font-weight: 700;">Explore Services</a>
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="swiper testimonial-slide">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide" data-rel="1">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“The DocnDoor nurse team mirrored the hospital floor—IV meds, vitals dashboards, and daily tele-rounds with my surgeon. Recovery finally felt calm.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Emily Davis</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="2">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Within 24 hours we had respiratory therapy, lab draws, and medication reconciliation completed at home. Their coordination saved multiple ER visits.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Ryan Wilson</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="3">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Their chronic-care navigator synced my cardiologist and endocrinologist. I finally understand my numbers and meds thanks to the daily summaries.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">David Brown</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="4">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Mom’s wound vac and feeding tube maintenance felt overwhelming until DocnDoor scheduled rotating nurses who trained our family step-by-step.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Michael Johnson</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="5">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Having lab techs and pharmacists come to our apartment meant my chemo cycles stayed on track even during immune-compromised weeks.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">Daniel Smith</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" data-rel="6">
-									<div class="testimonial-bx">
-										<div class="testimonial-content">
-											<p>“Telehealth rounds hosted by DocnDoor let our siblings dial in from different cities. Decisions felt unified and compassionate.”</p>
-										</div>
-										<div class="client-info">
-											<h5 class="name">James Carter</h5>
-											<p>Client</p>
-										</div>
-										<div class="quote-icon">
-											<i class="fas fa-quote-left"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-button-prev test-btn-prev"><i class="las la-arrow-left"></i></div>
-							<div class="swiper-button-next test-btn-next"><i class="las la-arrow-right"></i></div>
-							<div class="swiper-pagination"></div>
+						<div class="medical-hero-image">
+							<img src="images/appointment/women.png" alt="Medical Care" class="img-fluid">
 						</div>
 					</div>
 				</div>
 			</div>
-			<img class="pt-img1 animate1" src="images/shap/plus-orange.png" alt="">
-			<img class="pt-img2 animate2" src="images/shap/square-blue.png" alt="">
-			<img class="pt-img3 animate3" src="images/shap/circle-dots.png" alt="">
-			<img class="pt-img4 animate4" src="images/shap/chicle-blue-2.png" alt="">
 		</section>
-		<!-- end::Testimonial -->
+		<!-- end::Medical Hero Asymmetric -->
+		
+		<!-- begin::Medical Services Showcase -->
+		<section id="services" class="medical-services-showcase">
+			<div class="container">
+				<div class="services-header">
+					<span class="services-badge">Comprehensive Medical Services</span>
+					<h2 class="services-title">Hospital-Level Expertise<br>Without The Ward</h2>
+					<p class="services-subtitle">DocnDoor mobilizes ICU-trained nurses, wound-care specialists, and remote physicians to manage complex cases at home. We interpret labs, adjust care plans with your doctor, and keep families informed every step.</p>
+				</div>
+				<div class="services-grid">
+					<div class="service-feature-card">
+						<div class="service-icon-wrapper">
+							<i class="fas fa-heartbeat"></i>
+						</div>
+						<h3 class="service-feature-title">Acute Recovery Nursing</h3>
+						<p class="service-feature-description">ICU-trained nurses provide comprehensive post-surgical care, wound management, and vital signs monitoring in the comfort of your home.</p>
+						<ul class="service-feature-list">
+							<li>Wound care & dressing changes</li>
+							<li>IV therapy & medication administration</li>
+							<li>Vital signs monitoring</li>
+							<li>Post-surgical recovery support</li>
+						</ul>
+					</div>
+					<div class="service-feature-card">
+						<div class="service-icon-wrapper">
+							<i class="fas fa-user-md"></i>
+						</div>
+						<h3 class="service-feature-title">Advanced Physiotherapy</h3>
+						<p class="service-feature-description">Neurological and orthopedic specialists rebuild strength using progressive rehabilitation plans and digital tracking systems.</p>
+						<ul class="service-feature-list">
+							<li>Neurological rehabilitation</li>
+							<li>Orthopedic therapy</li>
+							<li>Mobility training</li>
+							<li>Pain management techniques</li>
+						</ul>
+					</div>
+					<div class="service-feature-card">
+						<div class="service-icon-wrapper">
+							<i class="fas fa-pills"></i>
+						</div>
+						<h3 class="service-feature-title">Medication Management</h3>
+						<p class="service-feature-description">Expert coordination of medication schedules, dosage adjustments, and coordination with prescribing physicians.</p>
+						<ul class="service-feature-list">
+							<li>Medication reconciliation</li>
+							<li>Dosage monitoring</li>
+							<li>Drug interaction checks</li>
+							<li>Compliance tracking</li>
+						</ul>
+					</div>
+					<div class="service-feature-card">
+						<div class="service-icon-wrapper">
+							<i class="fas fa-stethoscope"></i>
+						</div>
+						<h3 class="service-feature-title">Chronic Disease Management</h3>
+						<p class="service-feature-description">Comprehensive care plans for managing chronic conditions like diabetes, heart disease, and respiratory issues.</p>
+						<ul class="service-feature-list">
+							<li>Diabetes care & monitoring</li>
+							<li>Cardiac health management</li>
+							<li>Respiratory therapy</li>
+							<li>Health education & coaching</li>
+						</ul>
+					</div>
+					<div class="service-feature-card">
+						<div class="service-icon-wrapper">
+							<i class="fas fa-laptop-medical"></i>
+						</div>
+						<h3 class="service-feature-title">Telehealth Coordination</h3>
+						<p class="service-feature-description">Seamless coordination with your primary care physician through secure telehealth platforms and daily status reports.</p>
+						<ul class="service-feature-list">
+							<li>Remote physician consultations</li>
+							<li>Secure video conferencing</li>
+							<li>Daily status reporting</li>
+							<li>Lab result interpretation</li>
+						</ul>
+					</div>
+					<div class="service-feature-card">
+						<div class="service-icon-wrapper">
+							<i class="fas fa-notes-medical"></i>
+						</div>
+						<h3 class="service-feature-title">Care Plan Development</h3>
+						<p class="service-feature-description">Personalized care plans developed in collaboration with your medical team, tailored to your specific needs and recovery goals.</p>
+						<ul class="service-feature-list">
+							<li>Individualized care planning</li>
+							<li>Family involvement</li>
+							<li>Progress tracking</li>
+							<li>Regular plan adjustments</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end::Medical Services Showcase -->
+		
+		<!-- begin::Medical Standards Section -->
+		<section class="medical-standards-section">
+			<div class="container">
+				<div class="services-header">
+					<span class="services-badge">Our Standards</span>
+					<h2 class="services-title">Why Families Trust<br>DocnDoor Medical Care</h2>
+					<p class="services-subtitle">We combine hospital-grade equipment, remote physician oversight, and daily reporting so every treatment is clinically verified at home.</p>
+				</div>
+				<div class="standards-grid">
+					<div class="standard-card">
+						<div class="standard-number">100%</div>
+						<h3 class="standard-title">Licensed Professionals</h3>
+						<p class="standard-text">All our medical staff are fully licensed, certified, and background-checked to ensure the highest standards of care.</p>
+					</div>
+					<div class="standard-card">
+						<div class="standard-number">24/7</div>
+						<h3 class="standard-title">Emergency Support</h3>
+						<p class="standard-text">Round-the-clock access to our clinical escalation team for urgent medical situations and critical care needs.</p>
+					</div>
+					<div class="standard-card">
+						<div class="standard-number">ICU</div>
+						<h3 class="standard-title">Trained Teams</h3>
+						<p class="standard-text">Our nurses have intensive care unit training, bringing hospital-level expertise directly to your home.</p>
+					</div>
+					<div class="standard-card">
+						<div class="standard-number">&lt;2hr</div>
+						<h3 class="standard-title">Response Time</h3>
+						<p class="standard-text">Rapid response for urgent medical needs, with same-day scheduling available for emergency situations.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end::Medical Standards Section -->
+		
+		<!-- begin::Medical CTA Section -->
+		<section class="medical-cta-section">
+			<div class="container">
+				<div class="medical-cta-content">
+					<div class="medical-cta-icon"><i class="fas fa-calendar-check"></i></div>
+					<h2 class="medical-cta-title">Ready To Start Your<br>Medical Care Journey?</h2>
+					<p class="medical-cta-text">Schedule a consultation with our care coordinators to discuss your medical needs and create a personalized care plan tailored to your recovery goals.</p>
+					<div class="medical-cta-buttons">
+						<a href="contact-us.html" class="medical-cta-btn medical-cta-btn-primary">Schedule Consultation</a>
+						<a href="tel:+916302989942" class="medical-cta-btn medical-cta-btn-secondary">Call Us Now</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end::Medical CTA Section -->
 		
 	</main>
 	
@@ -709,7 +628,7 @@
 								<a href="index.html" aria-label="Footer Logo"><img src="images/logo.png" alt=""></a>
 							</div>
 							<div class="ft-contact">
-								<p>DocnDoor Medical Care keeps families at home with round-the-clock nurses, telehealth physicians, and proactive monitoring that rivals top clinics.</p>
+								<p>DocnDoor unites medical teams and home specialists so every client feels supported, safe, and truly at home.</p>
 								<div class="contact-bx">
 									<div class="icon"><i class="fas fa-phone-alt"></i></div>
 									<div class="contact-number">
@@ -729,7 +648,7 @@
 								<li><a href="booking.html"><span>Booking</span></a></li>
 								<li><a href="faq.html"><span>Faq's</span></a></li>
 								<li><a href="blog-grid.html"><span>Blogs</span></a></li>
-								<li><a href="team.html"><span>Out Team</span></a></li>
+								<li><a href="team.html"><span>Our Team</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -804,7 +723,6 @@
 <script src="vendor/swiper/swiper.min.js"></script>
 <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
 <script src="js/functions.js"></script>
-<script src="js/contact.js"></script>
 <!-- end::Javascript Files -->
 </body>
 </html>
