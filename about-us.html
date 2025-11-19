@@ -51,244 +51,454 @@
 	<!-- end::Plugins All CSS -->
 	
 	<style>
-		.about-hero-modern {
-			min-height: 90vh;
-			display: flex;
-			align-items: center;
+		.about-hero-banner {
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 50%, #2d5a7e 100%);
+			padding: 120px 0 80px;
 			position: relative;
-			background: linear-gradient(135deg, #0a1929 0%, #1a3a5a 50%, #2d5a7e 100%);
 			overflow: hidden;
 		}
-		.about-hero-modern::before {
+		.about-hero-banner::before {
 			content: '';
 			position: absolute;
-			width: 200%;
-			height: 200%;
-			background: radial-gradient(circle, rgba(4, 31, 56, 0.3) 0%, transparent 70%);
-			animation: pulse 8s ease-in-out infinite;
+			width: 100%;
+			height: 100%;
+			background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+			opacity: 0.3;
 		}
-		@keyframes pulse {
-			0%, 100% { transform: scale(1); opacity: 0.5; }
-			50% { transform: scale(1.1); opacity: 0.8; }
+		.about-hero-title {
+			font-size: 4.5rem;
+			font-weight: 800;
+			color: #ffffff;
+			margin-bottom: 20px;
+			text-align: center;
 		}
-		.hero-content-modern {
+		.about-hero-subtitle {
+			font-size: 1.3rem;
+			color: rgba(255, 255, 255, 0.9);
+			text-align: center;
+			max-width: 700px;
+			margin: 0 auto 30px;
+			line-height: 1.8;
+		}
+		.breadcrumb-modern {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			color: rgba(255, 255, 255, 0.8);
+			font-size: 0.95rem;
+		}
+		.breadcrumb-modern a {
+			color: rgba(255, 255, 255, 0.8);
+			text-decoration: none;
+			transition: color 0.3s;
+		}
+		.breadcrumb-modern a:hover {
+			color: #FEE74A;
+		}
+		.breadcrumb-modern span {
+			color: rgba(255, 255, 255, 0.5);
+		}
+		
+		.about-content-section {
+			padding: 100px 0;
+		}
+		.about-content-card {
+			background: #ffffff;
+			border-radius: 30px;
+			padding: 60px;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+			margin-top: -80px;
 			position: relative;
 			z-index: 2;
 		}
-		.hero-badge {
-			display: inline-block;
-			padding: 8px 20px;
-			background: rgba(255, 255, 255, 0.1);
-			backdrop-filter: blur(10px);
-			border-radius: 50px;
-			border: 1px solid rgba(255, 255, 255, 0.2);
-			margin-bottom: 20px;
-			font-size: 14px;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-		}
-		.hero-title-modern {
-			font-size: 4.5rem;
+		.about-content-title {
+			font-size: 3rem;
 			font-weight: 800;
-			line-height: 1.1;
+			color: #042338;
 			margin-bottom: 30px;
-			background: linear-gradient(135deg, #ffffff 0%, #a8d5e2 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
+			line-height: 1.2;
 		}
-		.hero-subtitle-modern {
-			font-size: 1.3rem;
-			line-height: 1.8;
-			color: rgba(255, 255, 255, 0.9);
+		.about-content-text {
+			font-size: 1.1rem;
+			line-height: 1.9;
+			color: #555;
+			margin-bottom: 30px;
+		}
+		.tab-navigation {
+			display: flex;
+			gap: 15px;
 			margin-bottom: 40px;
-			max-width: 600px;
+			flex-wrap: wrap;
 		}
-		.stats-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			gap: 30px;
-			margin-top: 60px;
-		}
-		.stat-card-modern {
-			background: rgba(255, 255, 255, 0.05);
-			backdrop-filter: blur(10px);
-			border: 1px solid rgba(255, 255, 255, 0.1);
-			border-radius: 20px;
-			padding: 30px;
-			text-align: center;
+		.tab-button {
+			padding: 15px 35px;
+			border: none;
+			border-radius: 12px;
+			font-size: 1rem;
+			font-weight: 600;
+			cursor: pointer;
 			transition: all 0.3s ease;
+			background: #f8f9fa;
+			color: #042338;
 		}
-		.stat-card-modern:hover {
-			transform: translateY(-10px);
-			background: rgba(255, 255, 255, 0.1);
-			border-color: rgba(255, 255, 255, 0.3);
+		.tab-button.active {
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			color: #ffffff;
+			box-shadow: 0 5px 20px rgba(4, 35, 56, 0.3);
 		}
-		.stat-number {
-			font-size: 3.5rem;
-			font-weight: 800;
-			color: #FEE74A;
+		.tab-button:hover:not(.active) {
+			background: #e9ecef;
+		}
+		.tab-content {
+			display: none;
+		}
+		.tab-content.active {
 			display: block;
+			animation: fadeIn 0.5s ease;
+		}
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(10px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+		.about-image-card {
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 50%, #2d5a7e 100%);
+			border-radius: 25px;
+			padding: 40px;
+			position: relative;
+			overflow: hidden;
+			height: 100%;
+			min-height: 500px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.about-image-card img {
+			width: 100%;
+			height: auto;
+			border-radius: 20px;
+			object-fit: cover;
+		}
+		.online-status-card {
+			position: absolute;
+			bottom: 30px;
+			right: 30px;
+			background: rgba(255, 255, 255, 0.95);
+			backdrop-filter: blur(10px);
+			border-radius: 15px;
+			padding: 20px;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+			min-width: 200px;
+		}
+		.online-status-title {
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 15px;
+			font-size: 1.1rem;
+		}
+		.online-count {
+			font-size: 0.9rem;
+			color: #666;
+			margin-bottom: 15px;
+		}
+		.online-user {
+			display: flex;
+			align-items: center;
+			gap: 10px;
 			margin-bottom: 10px;
 		}
-		.stat-label {
-			color: rgba(255, 255, 255, 0.8);
-			font-size: 1rem;
-			text-transform: uppercase;
-			letter-spacing: 1px;
+		.online-user-avatar {
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #FEE74A;
+			font-weight: 700;
+			font-size: 0.9rem;
 		}
-		.mission-vision-grid {
+		.online-user-name {
+			font-size: 0.9rem;
+			color: #042338;
+			font-weight: 500;
+		}
+		
+		.video-showcase-section {
+			padding: 100px 0;
+			background: #f8f9fa;
+		}
+		.video-showcase-title {
+			font-size: 3rem;
+			font-weight: 800;
+			color: #042338;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.video-showcase-subtitle {
+			font-size: 1.1rem;
+			color: #666;
+			text-align: center;
+			max-width: 700px;
+			margin: 0 auto 60px;
+		}
+		.video-card {
+			position: relative;
+			border-radius: 25px;
+			overflow: hidden;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+			cursor: pointer;
+			transition: transform 0.3s ease;
+		}
+		.video-card:hover {
+			transform: scale(1.02);
+		}
+		.video-card img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		.play-button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 80px;
+			height: 80px;
+			background: #FEE74A;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0 10px 30px rgba(254, 231, 74, 0.4);
+			transition: all 0.3s ease;
+		}
+		.play-button:hover {
+			transform: translate(-50%, -50%) scale(1.1);
+			box-shadow: 0 15px 40px rgba(254, 231, 74, 0.6);
+		}
+		.play-button i {
+			color: #042338;
+			font-size: 2rem;
+			margin-left: 5px;
+		}
+		
+		.stats-section {
+			padding: 80px 0;
+			background: #ffffff;
+		}
+		.stats-container {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 40px;
+		}
+		.stat-item {
+			text-align: center;
+			flex: 1;
+			min-width: 200px;
+		}
+		.stat-number {
+			font-size: 4rem;
+			font-weight: 800;
+			color: #042338;
+			display: block;
+			margin-bottom: 10px;
+			line-height: 1;
+		}
+		.stat-label {
+			font-size: 1.1rem;
+			color: #666;
+			font-weight: 500;
+		}
+		.stat-divider {
+			width: 1px;
+			height: 80px;
+			background: #e9ecef;
+		}
+		
+		.team-section {
+			padding: 100px 0;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+		}
+		.team-title {
+			font-size: 3rem;
+			font-weight: 800;
+			color: #ffffff;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.team-subtitle {
+			font-size: 1.1rem;
+			color: rgba(255, 255, 255, 0.9);
+			text-align: center;
+			max-width: 700px;
+			margin: 0 auto 60px;
+		}
+		.team-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 30px;
+		}
+		.team-card {
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+			border-radius: 25px;
+			padding: 30px;
+			text-align: center;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			transition: all 0.3s ease;
+		}
+		.team-card:hover {
+			transform: translateY(-10px);
+			background: rgba(255, 255, 255, 0.15);
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+		}
+		.team-avatar {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			margin: 0 auto 20px;
+			background: linear-gradient(135deg, #FEE74A, #ffd700);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 3rem;
+			color: #042338;
+			font-weight: 800;
+			border: 5px solid rgba(255, 255, 255, 0.3);
+		}
+		.team-name {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: #ffffff;
+			margin-bottom: 10px;
+		}
+		.team-role {
+			font-size: 1rem;
+			color: rgba(255, 255, 255, 0.8);
+		}
+		
+		.features-section {
+			padding: 100px 0;
+			background: #ffffff;
+		}
+		.features-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 			gap: 40px;
-			margin-top: 80px;
 		}
-		.mission-card {
-			background: #ffffff;
-			border-radius: 30px;
-			padding: 50px;
-			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-			position: relative;
-			overflow: hidden;
-		}
-		.mission-card::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 5px;
-			background: linear-gradient(90deg, #042338, #FEE74A, #042338);
-		}
-		.mission-icon {
-			width: 80px;
-			height: 80px;
-			background: linear-gradient(135deg, #042338, #1a3a5a);
-			border-radius: 20px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-bottom: 30px;
-			font-size: 2.5rem;
-			color: #FEE74A;
-		}
-		.timeline-modern {
-			position: relative;
-			padding: 80px 0;
-		}
-		.timeline-line {
-			position: absolute;
-			left: 50%;
-			top: 0;
-			bottom: 0;
-			width: 3px;
-			background: linear-gradient(180deg, #042338, #FEE74A, #042338);
-			transform: translateX(-50%);
-		}
-		.timeline-item {
-			display: flex;
-			margin-bottom: 60px;
-			position: relative;
-		}
-		.timeline-item:nth-child(odd) {
-			flex-direction: row;
-		}
-		.timeline-item:nth-child(even) {
-			flex-direction: row-reverse;
-		}
-		.timeline-content {
-			flex: 1;
-			background: #ffffff;
-			border-radius: 20px;
-			padding: 40px;
-			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-			margin: 0 30px;
-			position: relative;
-		}
-		.timeline-dot {
-			width: 20px;
-			height: 20px;
-			background: #FEE74A;
-			border: 5px solid #042338;
-			border-radius: 50%;
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			z-index: 2;
-		}
-		.values-mosaic {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			gap: 25px;
-			margin-top: 60px;
-		}
-		.value-tile {
-			background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-			border-radius: 25px;
+		.feature-card {
+			text-align: center;
 			padding: 40px 30px;
-			text-align: center;
-			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			border: 2px solid transparent;
 		}
-		.value-tile:hover {
-			transform: scale(1.05) rotate(2deg);
-			border-color: #042338;
-			box-shadow: 0 15px 50px rgba(4, 35, 56, 0.2);
-		}
-		.value-icon-wrapper {
-			width: 100px;
-			height: 100px;
-			margin: 0 auto 25px;
-			background: linear-gradient(135deg, #042338, #1a3a5a);
-			border-radius: 50%;
+		.feature-icon {
+			width: 120px;
+			height: 120px;
+			margin: 0 auto 30px;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			border-radius: 25px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-size: 2.5rem;
+			font-size: 3.5rem;
 			color: #FEE74A;
+			box-shadow: 0 10px 30px rgba(4, 35, 56, 0.2);
+			transition: transform 0.3s ease;
 		}
-		.cta-modern {
+		.feature-card:hover .feature-icon {
+			transform: scale(1.1) rotate(5deg);
+		}
+		.feature-title {
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 20px;
+		}
+		.feature-description {
+			font-size: 1.05rem;
+			line-height: 1.8;
+			color: #666;
+		}
+		
+		.cta-section {
+			padding: 100px 0;
 			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
-			border-radius: 40px;
-			padding: 80px 60px;
-			text-align: center;
-			position: relative;
-			overflow: hidden;
 		}
-		.cta-modern::before {
-			content: '';
-			position: absolute;
-			width: 300px;
-			height: 300px;
-			background: radial-gradient(circle, rgba(254, 231, 74, 0.1) 0%, transparent 70%);
-			top: -150px;
-			right: -150px;
+		.cta-content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+			align-items: center;
 		}
-		.cta-modern::after {
-			content: '';
-			position: absolute;
-			width: 300px;
-			height: 300px;
-			background: radial-gradient(circle, rgba(254, 231, 74, 0.1) 0%, transparent 70%);
-			bottom: -150px;
-			left: -150px;
+		.cta-title {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #ffffff;
+			line-height: 1.2;
+			margin-bottom: 30px;
 		}
+		.cta-text {
+			font-size: 1.2rem;
+			line-height: 1.9;
+			color: rgba(255, 255, 255, 0.9);
+			margin-bottom: 30px;
+		}
+		.cta-benefits {
+			list-style: none;
+			padding: 0;
+		}
+		.cta-benefits li {
+			font-size: 1.1rem;
+			color: rgba(255, 255, 255, 0.9);
+			margin-bottom: 15px;
+			display: flex;
+			align-items: center;
+			gap: 15px;
+		}
+		.cta-benefits li i {
+			color: #FEE74A;
+			font-size: 1.3rem;
+		}
+		.cta-button {
+			background: #FEE74A;
+			color: #042338;
+			padding: 18px 45px;
+			border-radius: 12px;
+			font-size: 1.1rem;
+			font-weight: 700;
+			border: none;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			text-decoration: none;
+			display: inline-block;
+		}
+		.cta-button:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 10px 30px rgba(254, 231, 74, 0.4);
+		}
+		
 		@media (max-width: 768px) {
-			.hero-title-modern {
+			.about-hero-title {
 				font-size: 2.5rem;
 			}
-			.timeline-line {
-				left: 30px;
+			.about-content-card {
+				padding: 40px 30px;
+				margin-top: -40px;
 			}
-			.timeline-item {
-				flex-direction: column !important;
+			.about-content-title {
+				font-size: 2rem;
 			}
-			.timeline-content {
-				margin-left: 60px;
-				margin-right: 0;
+			.cta-content {
+				grid-template-columns: 1fr;
 			}
-			.timeline-dot {
-				left: 30px;
+			.cta-title {
+				font-size: 2.5rem;
+			}
+			.stat-divider {
+				display: none;
 			}
 		}
 	</style>
@@ -350,7 +560,7 @@
 						</div>
 						<ul class="nav navbar-nav">	
 							<li><a href="index.html">Home</a></li>
-							<li>
+							<li class="active">
 								<a href="javascript:;">Pages <i class="fas fa-plus"></i></a>
 								<ul class="sub-menu">
 									<li class="add-menu-left">
@@ -395,244 +605,200 @@
  
 	<main class="page-content">
 		
-		<!-- begin::Modern Hero Section -->
-		<section class="about-hero-modern">
+		<!-- begin::About Hero Banner -->
+		<section class="about-hero-banner">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-8 hero-content-modern">
-						<span class="hero-badge text-white">Since 2015</span>
-						<h1 class="hero-title-modern">Redefining Home Healthcare Through Innovation & Compassion</h1>
-						<p class="hero-subtitle-modern">We're not just another care service. DocnDoor is a movement that bridges the gap between clinical excellence and everyday comfort, creating a holistic ecosystem where medical professionals and home specialists work in perfect harmony.</p>
-						<div class="stats-grid">
-							<div class="stat-card-modern">
-								<span class="stat-number">50K+</span>
-								<span class="stat-label">Families Served</span>
-							</div>
-							<div class="stat-card-modern">
-								<span class="stat-number">500+</span>
-								<span class="stat-label">Expert Professionals</span>
-							</div>
-							<div class="stat-card-modern">
-								<span class="stat-number">98%</span>
-								<span class="stat-label">Satisfaction Rate</span>
-							</div>
-							<div class="stat-card-modern">
-								<span class="stat-number">24/7</span>
-								<span class="stat-label">Support Available</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- end::Modern Hero Section -->
-		
-		<!-- begin::Mission & Vision -->
-		<section class="section-sp1" style="background: #f8f9fa;">
-			<div class="container">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Our Foundation</span>
-					<h2 class="title">What Drives Us Forward</h2>
-				</div>
-				<div class="mission-vision-grid">
-					<div class="mission-card">
-						<div class="mission-icon">
-							<i class="fas fa-bullseye"></i>
-						</div>
-						<h3 class="title mb-3">Our Mission</h3>
-						<p>To democratize access to premium healthcare and home services by creating an integrated platform that makes professional medical care and household support accessible, affordable, and seamlessly coordinated for every family, regardless of their circumstances.</p>
-					</div>
-					<div class="mission-card">
-						<div class="mission-icon">
-							<i class="fas fa-eye"></i>
-						</div>
-						<h3 class="title mb-3">Our Vision</h3>
-						<p>To become the global standard for integrated home care, where every household has access to a unified network of medical experts and home specialists, working together to enhance quality of life, promote wellness, and provide peace of mind.</p>
-					</div>
-					<div class="mission-card">
-						<div class="mission-icon">
-							<i class="fas fa-handshake"></i>
-						</div>
-						<h3 class="title mb-3">Our Promise</h3>
-						<p>We commit to maintaining the highest standards of care, transparency in all interactions, continuous innovation in service delivery, and unwavering dedication to the well-being and satisfaction of every individual and family we serve.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- end::Mission & Vision -->
-		
-		<!-- begin::Our Story Timeline -->
-		<section class="timeline-modern section-sp1">
-			<div class="container">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">Our Journey</span>
-					<h2 class="title">The Evolution of DocnDoor</h2>
-				</div>
-				<div class="timeline-line"></div>
 				<div class="row">
 					<div class="col-12">
-						<div class="timeline-item">
-							<div class="timeline-dot" style="top: 50px;"></div>
-							<div class="timeline-content col-lg-5">
-								<h4 class="title text-primary mb-3">2015 - The Spark</h4>
-								<p>Founded by a team of healthcare professionals who recognized the disconnect between hospital care and home recovery. Started with a simple idea: what if medical care and home support worked as one unified system?</p>
-							</div>
-						</div>
-						<div class="timeline-item">
-							<div class="timeline-dot" style="top: 50px;"></div>
-							<div class="timeline-content col-lg-5">
-								<h4 class="title text-primary mb-3">2017 - First Integration</h4>
-								<p>Launched our first integrated care program, combining post-surgical nursing with household management. The results were transformative - faster recovery times and significantly reduced stress for families.</p>
-							</div>
-						</div>
-						<div class="timeline-item">
-							<div class="timeline-dot" style="top: 50px;"></div>
-							<div class="timeline-content col-lg-5">
-								<h4 class="title text-primary mb-3">2019 - Technology Leap</h4>
-								<p>Introduced our proprietary care coordination platform, enabling real-time communication between medical teams, home specialists, and families. This innovation set a new industry standard.</p>
-							</div>
-						</div>
-						<div class="timeline-item">
-							<div class="timeline-dot" style="top: 50px;"></div>
-							<div class="timeline-content col-lg-5">
-								<h4 class="title text-primary mb-3">2022 - National Expansion</h4>
-								<p>Expanded operations across multiple cities, building a network of certified professionals and establishing partnerships with leading healthcare institutions and home service organizations.</p>
-							</div>
-						</div>
-						<div class="timeline-item">
-							<div class="timeline-dot" style="top: 50px;"></div>
-							<div class="timeline-content col-lg-5">
-								<h4 class="title text-primary mb-3">2025 - Innovation Leader</h4>
-								<p>Today, we're pioneering AI-assisted care planning, predictive health monitoring, and sustainable service models that make premium care accessible while maintaining our core values of compassion and excellence.</p>
-							</div>
+						<h1 class="about-hero-title">About Us</h1>
+						<p class="about-hero-subtitle">Discover how DocnDoor transforms home healthcare by seamlessly connecting medical professionals with household care specialists, creating a unified ecosystem of support and wellness.</p>
+						<div class="breadcrumb-modern">
+							<a href="index.html">Home</a>
+							<span>></span>
+							<span>About</span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Our Story Timeline -->
+		<!-- end::About Hero Banner -->
 		
-		<!-- begin::Core Values -->
-		<section class="section-sp1" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+		<!-- begin::About Content Section -->
+		<section class="about-content-section" style="background: #f8f9fa;">
 			<div class="container">
-				<div class="heading-bx text-center">
-					<span class="title-ext text-primary">What We Stand For</span>
-					<h2 class="title">Our Core Values</h2>
-					<p class="mb-5">These principles guide every decision, every interaction, and every service we deliver.</p>
-				</div>
-				<div class="values-mosaic">
-					<div class="value-tile">
-						<div class="value-icon-wrapper">
-							<i class="fas fa-heart"></i>
+				<div class="about-content-card">
+					<div class="row align-items-center">
+						<div class="col-lg-6 mb-4 mb-lg-0">
+							<h2 class="about-content-title">We Help Families Achieve Complete Home Wellness</h2>
+							<p class="about-content-text">At DocnDoor, we understand that true wellness extends beyond medical treatment. It encompasses the entire home environment—from clinical care to daily comfort. Our integrated platform brings together licensed healthcare professionals and skilled home care specialists, working in perfect harmony to support your family's complete well-being.</p>
+							
+							<div class="tab-navigation">
+								<button class="tab-button active" onclick="switchTab('mission')">Mission</button>
+								<button class="tab-button" onclick="switchTab('vision')">Vision</button>
+								<button class="tab-button" onclick="switchTab('values')">Our Values</button>
+							</div>
+							
+							<div id="mission" class="tab-content active">
+								<p class="about-content-text">Our mission is to bridge the critical gap between hospital care and home recovery. We recognize that managing medical needs while maintaining household operations can be overwhelming. That's why we've created a seamless integration of clinical expertise and home management services, ensuring that every aspect of your family's care is coordinated, professional, and compassionate.</p>
+								<p class="about-content-text">We're committed to making premium healthcare and home services accessible to every family, regardless of their circumstances. Through our innovative platform, we connect you with vetted professionals who understand that healing happens not just in treatment, but in the comfort and security of a well-managed home environment.</p>
+							</div>
+							
+							<div id="vision" class="tab-content">
+								<p class="about-content-text">We envision a future where home healthcare is not fragmented, but unified. Where medical professionals and home care specialists communicate seamlessly, sharing insights and coordinating efforts to create the most effective care plans possible.</p>
+								<p class="about-content-text">Our vision extends beyond service delivery—we're building a community where families feel empowered, supported, and confident in their ability to manage health challenges while maintaining the quality of life they deserve. We see a world where technology enhances human connection, making professional care more accessible, transparent, and effective.</p>
+							</div>
+							
+							<div id="values" class="tab-content">
+								<p class="about-content-text">Our values are the foundation of everything we do. <strong>Compassion</strong> drives our approach—we treat every family as our own. <strong>Excellence</strong> is non-negotiable—we maintain the highest standards in both medical and home care services.</p>
+								<p class="about-content-text"><strong>Innovation</strong> keeps us ahead—we continuously evolve our platform and services to better serve you. <strong>Transparency</strong> builds trust—we believe in clear communication, honest pricing, and open dialogue. <strong>Respect</strong> guides our interactions—we honor your preferences, privacy, and dignity in every interaction.</p>
+							</div>
 						</div>
-						<h4 class="title mb-3">Empathy First</h4>
-						<p>We understand that every family's situation is unique. Our approach is always personalized, respectful, and centered on your specific needs and preferences.</p>
-					</div>
-					<div class="value-tile">
-						<div class="value-icon-wrapper">
-							<i class="fas fa-shield-alt"></i>
+						<div class="col-lg-6">
+							<div class="about-image-card">
+								<img src="images/about/pic-1.jpg" alt="DocnDoor Care Team">
+								<div class="online-status-card">
+									<div class="online-status-title">Active Care Sessions</div>
+									<div class="online-count">12 Active Sessions</div>
+									<div class="online-user">
+										<div class="online-user-avatar">EH</div>
+										<div class="online-user-name">Esther Howard</div>
+									</div>
+									<div class="online-user">
+										<div class="online-user-avatar">RK</div>
+										<div class="online-user-name">Robert Kale</div>
+									</div>
+									<div class="online-user">
+										<div class="online-user-avatar">TJ</div>
+										<div class="online-user-name">Tyler Johns</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<h4 class="title mb-3">Uncompromising Safety</h4>
-						<p>Your safety and security are non-negotiable. Every team member undergoes rigorous background checks, continuous training, and adheres to the highest safety protocols.</p>
-					</div>
-					<div class="value-tile">
-						<div class="value-icon-wrapper">
-							<i class="fas fa-lightbulb"></i>
-						</div>
-						<h4 class="title mb-3">Innovation Driven</h4>
-						<p>We constantly evolve our services, adopting cutting-edge technologies and methodologies to improve outcomes and enhance the care experience.</p>
-					</div>
-					<div class="value-tile">
-						<div class="value-icon-wrapper">
-							<i class="fas fa-users"></i>
-						</div>
-						<h4 class="title mb-3">Collaborative Excellence</h4>
-						<p>We believe the best care happens when medical professionals, home specialists, and families work together as a unified team with shared goals.</p>
-					</div>
-					<div class="value-tile">
-						<div class="value-icon-wrapper">
-							<i class="fas fa-leaf"></i>
-						</div>
-						<h4 class="title mb-3">Sustainable Practices</h4>
-						<p>We're committed to environmental responsibility, using eco-friendly products and sustainable methods that protect both your health and our planet.</p>
-					</div>
-					<div class="value-tile">
-						<div class="value-icon-wrapper">
-							<i class="fas fa-chart-line"></i>
-						</div>
-						<h4 class="title mb-3">Continuous Improvement</h4>
-						<p>We never stop learning. Regular feedback, performance analysis, and industry research help us refine and enhance our services continuously.</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Core Values -->
+		<!-- end::About Content Section -->
 		
-		<!-- begin::Why Choose Us -->
-		<section class="section-sp1" style="background: #042338; color: #fff;">
+		<!-- begin::Video Showcase Section -->
+		<section class="video-showcase-section">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-6 mb-4 mb-lg-0">
-						<span class="title-ext" style="color: #FEE74A;">Why DocnDoor</span>
-						<h2 class="title text-white mb-4">The Difference That Matters</h2>
-						<div class="mb-4">
-							<h5 class="text-white mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Integrated Care Model</h5>
-							<p class="text-white-50">Unlike traditional services that operate in silos, we've built a unified ecosystem where medical care and home services communicate seamlessly, ensuring nothing falls through the cracks.</p>
-						</div>
-						<div class="mb-4">
-							<h5 class="text-white mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Technology-Enhanced Experience</h5>
-							<p class="text-white-50">Our smart platform enables real-time updates, predictive scheduling, and comprehensive care tracking, giving you complete visibility and control over all services.</p>
-						</div>
-						<div class="mb-4">
-							<h5 class="text-white mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Rigorously Vetted Professionals</h5>
-							<p class="text-white-50">Every team member is carefully selected, extensively trained, and continuously monitored to ensure they meet our exacting standards of professionalism and care quality.</p>
-						</div>
-						<a href="contact-us.html" class="btn btn-primary mt-3">Experience the Difference</a>
-					</div>
-					<div class="col-lg-6">
-						<div class="row g-3">
-							<div class="col-6">
-								<div class="p-4 bg-white bg-opacity-10 rounded-4 text-center border border-white border-opacity-20">
-									<i class="fas fa-user-md fa-3x text-primary mb-3"></i>
-									<h4 class="text-white">Certified Medical Staff</h4>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="p-4 bg-white bg-opacity-10 rounded-4 text-center border border-white border-opacity-20">
-									<i class="fas fa-home fa-3x text-primary mb-3"></i>
-									<h4 class="text-white">Home Care Experts</h4>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="p-4 bg-white bg-opacity-10 rounded-4 text-center border border-white border-opacity-20">
-									<i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
-									<h4 class="text-white">Digital Platform</h4>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="p-4 bg-white bg-opacity-10 rounded-4 text-center border border-white border-opacity-20">
-									<i class="fas fa-headset fa-3x text-primary mb-3"></i>
-									<h4 class="text-white">24/7 Support</h4>
-								</div>
+				<h2 class="video-showcase-title">Take A Vital Look At Our Platform In Action</h2>
+				<p class="video-showcase-subtitle">Experience how DocnDoor seamlessly integrates medical care with home services, creating a comprehensive support system for families nationwide.</p>
+				<div class="row">
+					<div class="col-lg-10 mx-auto">
+						<div class="video-card">
+							<img src="images/about/pic-2.jpg" alt="DocnDoor Platform Overview">
+							<div class="play-button">
+								<i class="fas fa-play"></i>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Why Choose Us -->
+		<!-- end::Video Showcase Section -->
+		
+		<!-- begin::Stats Section -->
+		<section class="stats-section">
+			<div class="container">
+				<div class="stats-container">
+					<div class="stat-item">
+						<span class="stat-number">10+</span>
+						<span class="stat-label">Years Experience</span>
+					</div>
+					<div class="stat-divider"></div>
+					<div class="stat-item">
+						<span class="stat-number">99%</span>
+						<span class="stat-label">Satisfaction Rate</span>
+					</div>
+					<div class="stat-divider"></div>
+					<div class="stat-item">
+						<span class="stat-number">50K+</span>
+						<span class="stat-label">Families Served</span>
+					</div>
+					<div class="stat-divider"></div>
+					<div class="stat-item">
+						<span class="stat-number">500+</span>
+						<span class="stat-label">Expert Professionals</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end::Stats Section -->
+		
+		<!-- begin::Team Section -->
+		<section class="team-section">
+			<div class="container">
+				<h2 class="team-title">Let's Meet Our Care Specialists</h2>
+				<p class="team-subtitle">Get comprehensive care consultation from DocnDoor. We're here to support you with medical expertise and home management solutions tailored to your unique needs.</p>
+				<div class="team-grid">
+					<div class="team-card">
+						<div class="team-avatar">AS</div>
+						<h3 class="team-name">Amelia Shaw</h3>
+						<p class="team-role">Chief Medical Officer</p>
+					</div>
+					<div class="team-card">
+						<div class="team-avatar">JA</div>
+						<h3 class="team-name">Julian Avery</h3>
+						<p class="team-role">Head of Home Care</p>
+					</div>
+					<div class="team-card">
+						<div class="team-avatar">PM</div>
+						<h3 class="team-name">Priya Martinez</h3>
+						<p class="team-role">Operations Director</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end::Team Section -->
+		
+		<!-- begin::Features Section -->
+		<section class="features-section">
+			<div class="container">
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="fas fa-user-md"></i>
+						</div>
+						<h3 class="feature-title">Integrated Medical Care</h3>
+						<p class="feature-description">Our platform connects you with licensed nurses, therapists, and medical professionals who provide clinical care in the comfort of your home. From post-surgical recovery to chronic condition management, we coordinate comprehensive medical support.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="fas fa-home"></i>
+						</div>
+						<h3 class="feature-title">We Set The Standard</h3>
+						<p class="feature-description">DocnDoor has established industry-leading protocols for integrated home care. Our rigorous vetting process, continuous training programs, and quality assurance systems ensure that every service meets the highest standards of excellence and safety.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="fas fa-heartbeat"></i>
+						</div>
+						<h3 class="feature-title">Holistic Wellness Approach</h3>
+						<p class="feature-description">We believe that true wellness combines medical treatment with environmental comfort. Our coordinated approach ensures that your home supports your recovery, with everything from meal preparation to deep cleaning managed by trusted professionals.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end::Features Section -->
 		
 		<!-- begin::CTA Section -->
-		<section class="section-sp1">
+		<section class="cta-section">
 			<div class="container">
-				<div class="cta-modern">
-					<div style="position: relative; z-index: 2;">
-						<h2 class="title text-white mb-4" style="font-size: 3rem;">Ready to Transform Your Home Care Experience?</h2>
-						<p class="text-white mb-5" style="font-size: 1.2rem; opacity: 0.9;">Join thousands of families who have discovered the power of integrated care. Let's discuss how DocnDoor can support your unique needs.</p>
-						<div class="d-flex flex-wrap gap-3 justify-content-center">
-							<a href="contact-us.html" class="btn btn-primary btn-lg">Schedule a Consultation</a>
-							<a href="medical-care.html" class="btn btn-outline-light btn-lg">Explore Services</a>
-						</div>
+				<div class="cta-content">
+					<div>
+						<h2 class="cta-title">The Future of Integrated Home Care</h2>
+					</div>
+					<div>
+						<p class="cta-text">Join thousands of families who have transformed their home care experience with DocnDoor. Our integrated platform offers:</p>
+						<ul class="cta-benefits">
+							<li><i class="fas fa-check-circle"></i> Rapid deployment of care teams</li>
+							<li><i class="fas fa-check-circle"></i> Expert medical and home care support</li>
+							<li><i class="fas fa-check-circle"></i> Enhanced family wellness and peace of mind</li>
+							<li><i class="fas fa-check-circle"></i> Streamlined coordination and communication</li>
+						</ul>
+						<a href="contact-us.html" class="cta-button">Get Started</a>
 					</div>
 				</div>
 			</div>
@@ -750,6 +916,25 @@
 <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/contact.js"></script>
+<script>
+	function switchTab(tabName) {
+		// Hide all tab contents
+		document.querySelectorAll('.tab-content').forEach(tab => {
+			tab.classList.remove('active');
+		});
+		
+		// Remove active class from all buttons
+		document.querySelectorAll('.tab-button').forEach(btn => {
+			btn.classList.remove('active');
+		});
+		
+		// Show selected tab content
+		document.getElementById(tabName).classList.add('active');
+		
+		// Add active class to clicked button
+		event.target.classList.add('active');
+	}
+</script>
 <!-- end::Javascript Files -->
 </body>
 </html>
