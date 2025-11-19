@@ -1,0 +1,45 @@
+/* ==================
+	8.2 Accordion
+=================== */
+.ld-accordion1{
+	.accordion-item{
+		border: 0;
+		margin-bottom: 15px;
+	    background: transparent;
+	}
+	.accordion-button{
+		background-color: var(--bs-primary);
+		font-weight: 600;
+		color: #fff;
+		border-radius: $border-radius-base!important;
+		border: 0;
+		padding: 18px 25px;
+		@include transitionMedium;
+		box-shadow:0px 2px 2px rgba(0, 60, 67, 0.1), 0px 5px 15px rgba(0, 60, 67, 0.05);
+	
+		&.collapsed{
+			background-color: #fff;			
+			color: $dark;			
+			&:after{
+				transform: rotateX(0);
+			}
+		}
+		&:after{
+			content: "\f078";
+			font-family: "Font Awesome 5 Free";
+			background-image: unset;
+			font-size: 14px;
+			transform: rotateX(-180deg);
+			width: auto;
+			height: auto;
+			@include transitionMedium;
+		}
+	}
+	.accordion-header {
+		margin-bottom: -5px;
+	}
+	.accordion-body{
+		font-size: 15px;
+		padding: 25px;
+	}
+}

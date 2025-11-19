@@ -1,0 +1,182 @@
+/* ==================
+	5. Page Banner
+=================== */
+.page-banner{
+	background:$light;
+    background-repeat: no-repeat;
+	background-size:cover;
+	position: relative;
+    overflow: hidden;
+	height: 500px;
+	width: 100%;
+	z-index: 1;
+	
+	@include respond('tab-port'){
+		height: 350px;
+	}
+	@include respond('phone-land'){
+		height: 300px;		
+	}
+	.container{
+		display: table;
+		height: 100%;
+	}
+	.page-banner-entry{
+		height: 500px;
+		vertical-align: middle;
+		display: table-cell;
+		padding-bottom: 60px;
+		
+		@include respond('tab-land'){
+			padding-bottom: 30px;
+		}
+		@include respond('tab-port'){
+			height: 350px;
+		}
+		@include respond('phone-land'){
+			height: 300px;
+			padding-bottom: 10px;
+		}
+	}
+	h1 {
+		font-weight: 700;
+		font-size: 80px;
+		margin-bottom: 20px;
+		color: #fff;
+		text-transform: capitalize;
+		
+		@include respond('laptop-small'){
+			font-size: 62px;
+		}
+		@include respond('tab-port'){
+			font-size: 52px;	
+		}
+		@include respond('phone-land'){
+			font-size: 42px;	
+			margin-bottom: 15px;
+		}
+	}
+	&:after{
+		content: "";
+		background-image: url(../images/banner/shape.png);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-size: contain;
+		z-index: -1;
+	}
+	&.banner-lg{
+		height: 550px;
+		
+		.page-banner-entry{
+			height: 550px;
+		}
+		@include respond('tab-port'){
+			height: 450px;
+			.page-banner-entry{
+				height: 450px;
+			}
+		}
+		@include respond('phone-land'){
+			height: 400px;
+			
+			.page-banner-entry{
+				height: 400px;
+			}
+		}
+	}
+	&.banner-md{
+		height: 450px;
+		.page-banner-entry{
+			height: 450px;
+		}
+	}
+	&.banner-sm{
+		height: 300px;
+		.page-banner-entry{
+			height: 300px;
+		}
+	}
+	.pt-img1{
+		left: 15%;
+		bottom: 50px;
+		z-index: 1;
+	}
+	.pt-img2{
+		left: 30px;
+		top: 100px;
+	}
+	.pt-img3{
+		right: 8%;
+		bottom: 30%;
+	}
+}
+
+/* ==================
+	6. Breadcrumb
+=================== */
+.breadcrumb-row{
+	box-shadow: 0px 5px 30px 0px rgba(86, 90, 207, 0.3);
+    background-color: #fee74a;
+    padding: 12px 30px;
+    border-radius: 10px;
+    display: inline-block;
+	
+	@include respond('phone-land'){
+		padding: 10px 24px;
+	}
+	ul {
+		background:transparent;
+		padding: 0;
+		justify-content: center;
+		margin:0;
+		li {
+			padding: 0;
+			display: inline-flex;
+			font-size: 16px;
+			font-weight: 500;
+			align-items: center;
+			color: $dark;
+			a{
+				color: $dark;
+				display: flex;
+				align-items: center;
+	
+				svg{
+					margin-right: 10px;
+					transform: translateY(-2px);
+				    width: 16px;
+				}
+			}
+			@include respond('laptop-small'){
+				font-size: 14px;
+			}
+		}
+	}
+}
+.breadcrumb-item + .breadcrumb-item{
+	padding-left: 10px;
+	color: $dark;
+	&::before{
+		color: $dark;
+		content: "\f101";
+		padding-right: 10px;
+		opacity: 1;
+		line-height: 20px;
+		margin-top: 0;
+		font-family: 'Line Awesome Free';
+		font-weight: 900;
+	}
+	@include respond('laptop-small'){
+		padding-left: 10px;
+		&::before {
+			font-size: 18px;
+			padding-right: 10px;
+			line-height: 18px;
+		}
+	}
+}

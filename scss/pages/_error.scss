@@ -1,0 +1,68 @@
+/* ==================
+	10.4 Error 404
+=================== */
+.error-404{
+	.inner-content{
+		text-align: center;
+		max-width: 550px;
+		margin: auto;
+	}
+	.error-title{
+		font-size: 280px;
+		line-height: 1;
+		margin-bottom: 15px;
+
+		
+		span {
+			width: 200px;
+			height: 250px;
+			display: inline-block;
+			background-image: url(../images/error.png);
+			background-size: 100%;
+			margin: 0 10px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+	.error-text{
+		margin-bottom: 15px;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+	
+	@include respond('tab-port'){
+		.error-title{
+			font-size: 250px;
+			
+			span{
+				width: 150px;
+				height: 200px;
+			}
+		}
+	}
+	@include respond('phone'){
+		.error-title{
+			font-size: 190px;
+			line-height: 190px;
+			
+			span {
+				width: 150px;
+				height: 150px;
+				margin: 0 5px;
+			}
+		}
+	}
+	@include respond('phone'){
+		.error-title{
+			font-size: 120px;
+			line-height: 120px;
+			
+			span {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+}
