@@ -51,313 +51,370 @@
 	<!-- end::Plugins All CSS -->
 	
 	<style>
-		.contact-hero-split {
-			min-height: 85vh;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			position: relative;
-		}
-		.contact-hero-left {
-			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 80px 60px;
-			position: relative;
-			overflow: hidden;
-		}
-		.contact-hero-left::before {
-			content: '';
-			position: absolute;
-			width: 400px;
-			height: 400px;
-			background: radial-gradient(circle, rgba(254, 231, 74, 0.1) 0%, transparent 70%);
-			top: -200px;
-			right: -200px;
-			border-radius: 50%;
-		}
-		.contact-hero-right {
-			background: #f8f9fa;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 80px 60px;
-		}
-		.contact-hero-content {
-			position: relative;
-			z-index: 2;
-		}
-		.contact-hero-badge {
-			display: inline-block;
-			padding: 10px 25px;
-			background: rgba(254, 231, 74, 0.2);
-			border: 1px solid rgba(254, 231, 74, 0.4);
-			border-radius: 50px;
-			color: #FEE74A;
-			font-size: 0.9rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-			margin-bottom: 30px;
-		}
-		.contact-hero-title {
-			font-size: 4rem;
-			font-weight: 800;
-			color: #ffffff;
-			line-height: 1.2;
-			margin-bottom: 25px;
-		}
-		.contact-hero-text {
-			font-size: 1.2rem;
-			color: rgba(255, 255, 255, 0.9);
-			line-height: 1.8;
-			margin-bottom: 40px;
-		}
-		.contact-quick-stats {
-			display: flex;
-			gap: 40px;
-			margin-top: 50px;
-		}
-		.quick-stat {
-			text-align: center;
-		}
-		.quick-stat-number {
-			font-size: 2.5rem;
-			font-weight: 800;
-			color: #FEE74A;
-			display: block;
-			margin-bottom: 5px;
-		}
-		.quick-stat-label {
-			font-size: 0.9rem;
-			color: rgba(255, 255, 255, 0.8);
-			text-transform: uppercase;
-			letter-spacing: 1px;
-		}
-		.contact-hero-image {
-			width: 100%;
-			max-width: 500px;
-			border-radius: 30px;
-			box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+		.contact-page-wrapper {
+			background: #ffffff;
 		}
 		
-		.contact-methods-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-			gap: 30px;
-			padding: 100px 0;
-			background: #ffffff;
-		}
-		.contact-method-card {
-			background: #ffffff;
-			border: 2px solid #e9ecef;
-			border-radius: 25px;
-			padding: 50px 40px;
-			text-align: center;
-			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		.contact-diagonal-hero {
+			min-height: 100vh;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
 			position: relative;
 			overflow: hidden;
+			display: flex;
+			align-items: center;
 		}
-		.contact-method-card::before {
+		.contact-diagonal-hero::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(45deg, transparent 30%, rgba(254, 231, 74, 0.1) 50%, transparent 70%);
+			transform: skewY(-5deg);
+			top: -50%;
+		}
+		.contact-diagonal-content {
+			position: relative;
+			z-index: 2;
+			padding: 100px 0;
+			text-align: center;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		.contact-diagonal-title {
+			font-size: 6rem;
+			font-weight: 900;
+			color: #ffffff;
+			margin-bottom: 30px;
+			line-height: 1.1;
+			letter-spacing: -3px;
+		}
+		.contact-diagonal-subtitle {
+			font-size: 1.5rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.8;
+			margin-bottom: 50px;
+		}
+		
+		.contact-channels-diagonal {
+			padding: 150px 0;
+			background: #ffffff;
+			position: relative;
+		}
+		.contact-channels-diagonal::before {
 			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 5px;
-			background: linear-gradient(90deg, #042338, #FEE74A, #042338);
-			transform: scaleX(0);
-			transition: transform 0.4s ease;
+			height: 200px;
+			background: linear-gradient(to bottom, #042338, transparent);
+			transform: skewY(-2deg);
+			transform-origin: top left;
 		}
-		.contact-method-card:hover::before {
-			transform: scaleX(1);
+		.channels-wrapper {
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 0 20px;
+			position: relative;
+			z-index: 2;
 		}
-		.contact-method-card:hover {
-			transform: translateY(-10px);
-			border-color: #042338;
-			box-shadow: 0 20px 60px rgba(4, 35, 56, 0.15);
+		.channels-header {
+			text-align: center;
+			margin-bottom: 100px;
 		}
-		.contact-method-icon {
-			width: 100px;
-			height: 100px;
-			margin: 0 auto 30px;
-			background: linear-gradient(135deg, #042338, #1a3a5a);
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 2.5rem;
-			color: #FEE74A;
-			transition: transform 0.3s ease;
-		}
-		.contact-method-card:hover .contact-method-icon {
-			transform: scale(1.1) rotate(5deg);
-		}
-		.contact-method-title {
-			font-size: 1.5rem;
-			font-weight: 700;
+		.channels-header h2 {
+			font-size: 4.5rem;
+			font-weight: 900;
 			color: #042338;
-			margin-bottom: 15px;
+			margin-bottom: 25px;
 		}
-		.contact-method-info {
-			font-size: 1.05rem;
+		.channels-header p {
+			font-size: 1.3rem;
 			color: #666;
-			line-height: 1.8;
+		}
+		.channels-diagonal-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0;
+			position: relative;
+		}
+		.channel-block {
+			padding: 80px 60px;
+			position: relative;
+			transition: all 0.4s ease;
+		}
+		.channel-block:nth-child(1) {
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			color: #ffffff;
+		}
+		.channel-block:nth-child(2) {
+			background: #f8f9fa;
+		}
+		.channel-block:nth-child(3) {
+			background: #ffffff;
+		}
+		.channel-block:nth-child(4) {
+			background: linear-gradient(135deg, #FEE74A, #ffd700);
+			color: #042338;
+		}
+		.channel-block:hover {
+			transform: scale(1.05);
+			z-index: 10;
+			box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+		}
+		.channel-icon-big {
+			font-size: 5rem;
+			margin-bottom: 30px;
+			opacity: 0.9;
+		}
+		.channel-block:nth-child(1) .channel-icon-big,
+		.channel-block:nth-child(4) .channel-icon-big {
+			color: #FEE74A;
+		}
+		.channel-block:nth-child(2) .channel-icon-big,
+		.channel-block:nth-child(3) .channel-icon-big {
+			color: #042338;
+		}
+		.channel-title {
+			font-size: 2.5rem;
+			font-weight: 800;
 			margin-bottom: 20px;
 		}
-		.contact-method-link {
-			color: #042338;
-			text-decoration: none;
-			font-weight: 600;
-			display: inline-flex;
-			align-items: center;
-			gap: 8px;
-			transition: color 0.3s;
+		.channel-info {
+			font-size: 1.2rem;
+			line-height: 1.8;
+			margin-bottom: 30px;
+			opacity: 0.9;
 		}
-		.contact-method-link:hover {
+		.channel-link {
+			display: inline-block;
+			padding: 15px 35px;
+			border: 2px solid currentColor;
+			border-radius: 50px;
+			text-decoration: none;
+			font-weight: 700;
+			font-size: 1.1rem;
+			transition: all 0.3s ease;
+		}
+		.channel-block:nth-child(1) .channel-link,
+		.channel-block:nth-child(4) .channel-link {
 			color: #FEE74A;
+			border-color: #FEE74A;
+		}
+		.channel-block:nth-child(1) .channel-link:hover,
+		.channel-block:nth-child(4) .channel-link:hover {
+			background: #FEE74A;
+			color: #042338;
+		}
+		.channel-block:nth-child(2) .channel-link,
+		.channel-block:nth-child(3) .channel-link {
+			color: #042338;
+			border-color: #042338;
+		}
+		.channel-block:nth-child(2) .channel-link:hover,
+		.channel-block:nth-child(3) .channel-link:hover {
+			background: #042338;
+			color: #ffffff;
 		}
 		
-		.contact-form-section {
+		.contact-form-diagonal {
+			padding: 150px 0;
 			background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-			padding: 100px 0;
+			position: relative;
 		}
-		.contact-form-wrapper {
-			max-width: 900px;
+		.contact-form-diagonal::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 150px;
+			background: linear-gradient(to bottom, transparent, #f8f9fa);
+			transform: skewY(2deg);
+		}
+		.form-container {
+			max-width: 1000px;
 			margin: 0 auto;
+			padding: 0 20px;
+			position: relative;
+			z-index: 2;
+		}
+		.form-header {
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		.form-header h2 {
+			font-size: 4rem;
+			font-weight: 900;
+			color: #042338;
+			margin-bottom: 20px;
+		}
+		.form-header p {
+			font-size: 1.2rem;
+			color: #666;
+		}
+		.contact-form-card {
 			background: #ffffff;
 			border-radius: 40px;
 			padding: 70px 60px;
-			box-shadow: 0 30px 100px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 40px 120px rgba(4, 35, 56, 0.15);
 		}
-		.contact-form-title {
-			font-size: 3rem;
-			font-weight: 800;
-			color: #042338;
-			text-align: center;
-			margin-bottom: 15px;
-		}
-		.contact-form-subtitle {
-			font-size: 1.1rem;
-			color: #666;
-			text-align: center;
-			margin-bottom: 50px;
-		}
-		.contact-form-grid {
+		.form-row {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 25px;
-			margin-bottom: 25px;
+			gap: 30px;
+			margin-bottom: 30px;
 		}
-		.contact-form-group {
-			margin-bottom: 25px;
+		.form-field {
+			margin-bottom: 30px;
 		}
-		.contact-form-group.full-width {
+		.form-field.full-width {
 			grid-column: 1 / -1;
 		}
-		.contact-form-label {
+		.form-label {
 			display: block;
-			font-weight: 600;
+			font-weight: 700;
 			color: #042338;
-			margin-bottom: 10px;
-			font-size: 0.95rem;
-		}
-		.contact-form-input {
-			width: 100%;
-			padding: 18px 25px;
-			border: 2px solid #e9ecef;
-			border-radius: 12px;
+			margin-bottom: 12px;
 			font-size: 1rem;
+		}
+		.form-input {
+			width: 100%;
+			padding: 20px 25px;
+			border: 3px solid #e9ecef;
+			border-radius: 15px;
+			font-size: 1.1rem;
 			transition: all 0.3s ease;
 			background: #f8f9fa;
 		}
-		.contact-form-input:focus {
+		.form-input:focus {
 			outline: none;
 			border-color: #042338;
 			background: #ffffff;
-			box-shadow: 0 0 0 4px rgba(4, 35, 56, 0.1);
+			box-shadow: 0 0 0 6px rgba(4, 35, 56, 0.1);
 		}
-		.contact-form-textarea {
-			min-height: 150px;
+		.form-textarea {
+			min-height: 180px;
 			resize: vertical;
 		}
-		.contact-form-submit {
+		.form-submit {
 			width: 100%;
-			padding: 20px;
+			padding: 25px;
 			background: linear-gradient(135deg, #042338, #1a3a5a);
 			color: #ffffff;
 			border: none;
-			border-radius: 12px;
-			font-size: 1.1rem;
-			font-weight: 700;
+			border-radius: 15px;
+			font-size: 1.2rem;
+			font-weight: 800;
 			cursor: pointer;
 			transition: all 0.3s ease;
-			margin-top: 10px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
-		.contact-form-submit:hover {
-			transform: translateY(-3px);
-			box-shadow: 0 15px 40px rgba(4, 35, 56, 0.3);
+		.form-submit:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 20px 50px rgba(4, 35, 56, 0.4);
 		}
 		
-		.contact-info-section {
-			padding: 100px 0;
-			background: #042338;
+		.map-section-diagonal {
+			padding: 150px 0;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			position: relative;
 		}
-		.contact-info-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: 40px;
+		.map-section-diagonal::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 150px;
+			background: linear-gradient(to bottom, #ffffff, #042338);
+			transform: skewY(-2deg);
 		}
-		.contact-info-card {
-			background: rgba(255, 255, 255, 0.05);
-			backdrop-filter: blur(10px);
-			border: 1px solid rgba(255, 255, 255, 0.1);
-			border-radius: 25px;
-			padding: 50px 40px;
+		.map-wrapper {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+			position: relative;
+			z-index: 2;
+		}
+		.map-header {
 			text-align: center;
-			transition: all 0.3s ease;
+			margin-bottom: 80px;
 		}
-		.contact-info-card:hover {
-			background: rgba(255, 255, 255, 0.1);
-			transform: translateY(-5px);
-		}
-		.contact-info-icon {
-			font-size: 3rem;
-			color: #FEE74A;
-			margin-bottom: 25px;
-		}
-		.contact-info-title {
-			font-size: 1.5rem;
-			font-weight: 700;
+		.map-header h2 {
+			font-size: 4rem;
+			font-weight: 900;
 			color: #ffffff;
 			margin-bottom: 20px;
 		}
-		.contact-info-text {
-			font-size: 1.05rem;
-			color: rgba(255, 255, 255, 0.8);
-			line-height: 1.8;
+		.map-header p {
+			font-size: 1.2rem;
+			color: rgba(255, 255, 255, 0.9);
 		}
-		.contact-info-link {
-			color: #FEE74A;
-			text-decoration: none;
-			font-weight: 600;
-			display: inline-block;
-			margin-top: 15px;
+		.map-card {
+			background: #ffffff;
+			border-radius: 30px;
+			padding: 60px;
+			box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
 		}
-		.contact-info-link:hover {
-			text-decoration: underline;
+		.map-placeholder {
+			width: 100%;
+			height: 500px;
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #ffffff;
+			font-size: 1.5rem;
+			margin-bottom: 40px;
+		}
+		.map-info {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 40px;
+		}
+		.map-info-item {
+			text-align: center;
+		}
+		.map-info-icon {
+			font-size: 2.5rem;
+			color: #042338;
+			margin-bottom: 20px;
+		}
+		.map-info-title {
+			font-size: 1.1rem;
+			font-weight: 700;
+			color: #042338;
+			margin-bottom: 10px;
+		}
+		.map-info-text {
+			font-size: 1rem;
+			color: #666;
 		}
 		
-		@media (max-width: 768px) {
-			.contact-hero-split {
+		@media (max-width: 1024px) {
+			.channels-diagonal-grid {
 				grid-template-columns: 1fr;
 			}
-			.contact-hero-title {
+			.form-row {
+				grid-template-columns: 1fr;
+			}
+			.map-info {
+				grid-template-columns: 1fr;
+			}
+		}
+		@media (max-width: 768px) {
+			.contact-diagonal-title {
+				font-size: 3rem;
+			}
+			.channels-header h2,
+			.form-header h2,
+			.map-header h2 {
 				font-size: 2.5rem;
 			}
-			.contact-form-grid {
-				grid-template-columns: 1fr;
-			}
-			.contact-form-wrapper {
+			.contact-form-card {
 				padding: 40px 30px;
 			}
 		}
@@ -463,107 +520,83 @@
 	</header>
 	<!-- end::Header Section -->
  
-	<main class="page-content">
+	<main class="contact-page-wrapper">
 		
-		<!-- begin::Contact Hero Split -->
-		<section class="contact-hero-split">
-			<div class="contact-hero-left">
-				<div class="contact-hero-content">
-					<span class="contact-hero-badge">24/7 Support Available</span>
-					<h1 class="contact-hero-title">Let's Start<br>Your Care Journey</h1>
-					<p class="contact-hero-text">Whether you need immediate medical support, scheduled home care, or want to explore partnership opportunities, our dedicated team is ready to assist you every step of the way.</p>
-					<div class="contact-quick-stats">
-						<div class="quick-stat">
-							<span class="quick-stat-number">&lt;2hr</span>
-							<span class="quick-stat-label">Response Time</span>
-						</div>
-						<div class="quick-stat">
-							<span class="quick-stat-number">7/7</span>
-							<span class="quick-stat-label">Days Available</span>
-						</div>
-						<div class="quick-stat">
-							<span class="quick-stat-number">100%</span>
-							<span class="quick-stat-label">Satisfaction</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="contact-hero-right">
-				<img src="images/appointment/mobile.png" alt="Contact DocnDoor" class="contact-hero-image">
-			</div>
-		</section>
-		<!-- end::Contact Hero Split -->
-		
-		<!-- begin::Contact Methods Grid -->
-		<section class="contact-methods-grid">
+		<!-- begin::Contact Diagonal Hero -->
+		<section class="contact-diagonal-hero">
 			<div class="container">
-				<div class="contact-method-card">
-					<div class="contact-method-icon">
-						<i class="fas fa-phone-alt"></i>
-					</div>
-					<h3 class="contact-method-title">Phone Support</h3>
-					<p class="contact-method-info">Speak directly with our care coordinators. Available daily from 7:00 AM to 10:00 PM for immediate assistance.</p>
-					<a href="tel:+916302989942" class="contact-method-link">
-						+91 6302989942 <i class="fas fa-arrow-right"></i>
-					</a>
-				</div>
-				<div class="contact-method-card">
-					<div class="contact-method-icon">
-						<i class="fas fa-envelope"></i>
-					</div>
-					<h3 class="contact-method-title">Email Us</h3>
-					<p class="contact-method-info">Send detailed inquiries, care plans, or partnership proposals. We respond to all emails within 2 hours during business hours.</p>
-					<a href="mailto:support@docndoor.com" class="contact-method-link">
-						support@docndoor.com <i class="fas fa-arrow-right"></i>
-					</a>
-				</div>
-				<div class="contact-method-card">
-					<div class="contact-method-icon">
-						<i class="fas fa-map-marker-alt"></i>
-					</div>
-					<h3 class="contact-method-title">Visit Our Office</h3>
-					<p class="contact-method-info">Schedule an in-person consultation at our headquarters. Open Monday through Saturday, 8:00 AM to 8:00 PM.</p>
-					<a href="https://maps.google.com" target="_blank" class="contact-method-link">
-						View Location <i class="fas fa-arrow-right"></i>
-					</a>
-				</div>
-				<div class="contact-method-card">
-					<div class="contact-method-icon">
-						<i class="fas fa-headset"></i>
-					</div>
-					<h3 class="contact-method-title">Live Chat</h3>
-					<p class="contact-method-info">Get instant answers through our client portal or WhatsApp. Real-time support for scheduling, updates, and quick questions.</p>
-					<a href="#contact-form" class="contact-method-link">
-						Start Chat <i class="fas fa-arrow-right"></i>
-					</a>
+				<div class="contact-diagonal-content">
+					<h1 class="contact-diagonal-title">Let's Connect</h1>
+					<p class="contact-diagonal-subtitle">We're here 7 days a week to help you coordinate medical care, schedule home services, or answer any questions. Reach out anytime—our team is ready to assist.</p>
 				</div>
 			</div>
 		</section>
-		<!-- end::Contact Methods Grid -->
+		<!-- end::Contact Diagonal Hero -->
 		
-		<!-- begin::Contact Form Section -->
-		<section class="contact-form-section">
-			<div class="container">
-				<div class="contact-form-wrapper">
-					<h2 class="contact-form-title">Send Us A Message</h2>
-					<p class="contact-form-subtitle">Fill out the form below and our team will get back to you as soon as possible.</p>
+		<!-- begin::Contact Channels Diagonal -->
+		<section class="contact-channels-diagonal">
+			<div class="channels-wrapper">
+				<div class="channels-header">
+					<h2>Multiple Ways<br>To Reach Us</h2>
+					<p>Choose the channel that works best for you—we're available through phone, email, live chat, and in-person visits.</p>
+				</div>
+				<div class="channels-diagonal-grid">
+					<div class="channel-block">
+						<div class="channel-icon-big"><i class="fas fa-phone-alt"></i></div>
+						<h3 class="channel-title">Phone Support</h3>
+						<p class="channel-info">Speak directly with our care coordinators. Available daily from 7:00 AM to 10:00 PM for immediate assistance and scheduling.</p>
+						<a href="tel:+916302989942" class="channel-link">Call Now</a>
+					</div>
+					<div class="channel-block">
+						<div class="channel-icon-big"><i class="fas fa-envelope"></i></div>
+						<h3 class="channel-title">Email Us</h3>
+						<p class="channel-info">Send detailed inquiries, care plans, or partnership proposals. We respond to all emails within 2 hours during business hours.</p>
+						<a href="mailto:support@docndoor.com" class="channel-link">Send Email</a>
+					</div>
+					<div class="channel-block">
+						<div class="channel-icon-big"><i class="fas fa-headset"></i></div>
+						<h3 class="channel-title">Live Chat</h3>
+						<p class="channel-info">Get instant answers through our client portal or WhatsApp. Real-time support for scheduling, updates, and quick questions.</p>
+						<a href="#contact-form" class="channel-link">Start Chat</a>
+					</div>
+					<div class="channel-block">
+						<div class="channel-icon-big"><i class="fas fa-map-marker-alt"></i></div>
+						<h3 class="channel-title">Visit Our Office</h3>
+						<p class="channel-info">Schedule an in-person consultation at our headquarters. Open Monday through Saturday, 8:00 AM to 8:00 PM.</p>
+						<a href="https://maps.google.com" target="_blank" class="channel-link">View Location</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end::Contact Channels Diagonal -->
+		
+		<!-- begin::Contact Form Diagonal -->
+		<section id="contact-form" class="contact-form-diagonal">
+			<div class="form-container">
+				<div class="form-header">
+					<h2>Send Us A Message</h2>
+					<p>Fill out the form below and our team will get back to you as soon as possible.</p>
+				</div>
+				<div class="contact-form-card">
 					<form action="#" method="post">
-						<div class="contact-form-grid">
-							<div class="contact-form-group">
-								<label class="contact-form-label">Your Name *</label>
-								<input type="text" class="contact-form-input" placeholder="John Doe" required>
+						<div class="form-row">
+							<div class="form-field">
+								<label class="form-label">Your Name *</label>
+								<input type="text" class="form-input" placeholder="John Doe" required>
 							</div>
-							<div class="contact-form-group">
-								<label class="contact-form-label">Email Address *</label>
-								<input type="email" class="contact-form-input" placeholder="john@example.com" required>
+							<div class="form-field">
+								<label class="form-label">Email Address *</label>
+								<input type="email" class="form-input" placeholder="john@example.com" required>
 							</div>
-							<div class="contact-form-group">
-								<label class="contact-form-label">Phone Number *</label>
-								<input type="tel" class="contact-form-input" placeholder="+1 234 567 8900" required>
+						</div>
+						<div class="form-row">
+							<div class="form-field">
+								<label class="form-label">Phone Number *</label>
+								<input type="tel" class="form-input" placeholder="+1 234 567 8900" required>
 							</div>
-							<div class="contact-form-group">
-								<label class="contact-form-label">Service Type *</label>
-								<select class="contact-form-input" required>
+							<div class="form-field">
+								<label class="form-label">Service Type *</label>
+								<select class="form-input" required>
 									<option value="">Select a service</option>
 									<option value="medical">Medical Care</option>
 									<option value="house">House Care</option>
@@ -572,56 +605,57 @@
 									<option value="other">Other</option>
 								</select>
 							</div>
-							<div class="contact-form-group full-width">
-								<label class="contact-form-label">Subject *</label>
-								<input type="text" class="contact-form-input" placeholder="What is this regarding?" required>
-							</div>
-							<div class="contact-form-group full-width">
-								<label class="contact-form-label">Your Message *</label>
-								<textarea class="contact-form-input contact-form-textarea" placeholder="Tell us more about your needs, questions, or how we can help..." required></textarea>
-							</div>
 						</div>
-						<button type="submit" class="contact-form-submit">
+						<div class="form-field full-width">
+							<label class="form-label">Subject *</label>
+							<input type="text" class="form-input" placeholder="What is this regarding?" required>
+						</div>
+						<div class="form-field full-width">
+							<label class="form-label">Your Message *</label>
+							<textarea class="form-input form-textarea" placeholder="Tell us more about your needs, questions, or how we can help..." required></textarea>
+						</div>
+						<button type="submit" class="form-submit">
 							Send Message <i class="fas fa-paper-plane ms-2"></i>
 						</button>
 					</form>
 				</div>
 			</div>
 		</section>
-		<!-- end::Contact Form Section -->
+		<!-- end::Contact Form Diagonal -->
 		
-		<!-- begin::Contact Info Section -->
-		<section class="contact-info-section">
-			<div class="container">
-				<div class="contact-info-grid">
-					<div class="contact-info-card">
-						<div class="contact-info-icon">
-							<i class="fas fa-building"></i>
-						</div>
-						<h3 class="contact-info-title">Headquarters</h3>
-						<p class="contact-info-text">18 Rosewood Avenue, Suite 210<br>New York, NY 10012<br>United States</p>
-						<a href="https://maps.google.com" target="_blank" class="contact-info-link">Get Directions →</a>
+		<!-- begin::Map Section Diagonal -->
+		<section class="map-section-diagonal">
+			<div class="map-wrapper">
+				<div class="map-header">
+					<h2>Visit Our Headquarters</h2>
+					<p>Schedule a showroom walk-through to test products, meet pod leads, and finalize your care plan in person.</p>
+				</div>
+				<div class="map-card">
+					<div class="map-placeholder">
+						<i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-right: 15px;"></i>
+						Interactive Map - 18 Rosewood Avenue, Suite 210, New York, NY 10012
 					</div>
-					<div class="contact-info-card">
-						<div class="contact-info-icon">
-							<i class="fas fa-clock"></i>
+					<div class="map-info">
+						<div class="map-info-item">
+							<div class="map-info-icon"><i class="fas fa-building"></i></div>
+							<div class="map-info-title">Address</div>
+							<div class="map-info-text">18 Rosewood Ave<br>Suite 210<br>New York, NY 10012</div>
 						</div>
-						<h3 class="contact-info-title">Business Hours</h3>
-						<p class="contact-info-text">Monday - Saturday: 8:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 6:00 PM<br>Emergency Line: 24/7</p>
-						<a href="tel:+916302989942" class="contact-info-link">Call Now →</a>
-					</div>
-					<div class="contact-info-card">
-						<div class="contact-info-icon">
-							<i class="fas fa-shield-alt"></i>
+						<div class="map-info-item">
+							<div class="map-info-icon"><i class="fas fa-clock"></i></div>
+							<div class="map-info-title">Hours</div>
+							<div class="map-info-text">Mon–Sat: 8:00 AM–8:00 PM<br>Sunday: 10:00 AM–6:00 PM</div>
 						</div>
-						<h3 class="contact-info-title">Emergency Support</h3>
-						<p class="contact-info-text">For urgent medical situations or critical care needs, our 24/7 emergency line connects you directly with our clinical escalation team.</p>
-						<a href="tel:+916302989942" class="contact-info-link">Emergency Line →</a>
+						<div class="map-info-item">
+							<div class="map-info-icon"><i class="fas fa-phone"></i></div>
+							<div class="map-info-title">Phone</div>
+							<div class="map-info-text">+91 6302989942<br>Emergency: 24/7</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Contact Info Section -->
+		<!-- end::Map Section Diagonal -->
 		
 	</main>
 	

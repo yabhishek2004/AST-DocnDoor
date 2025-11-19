@@ -17,7 +17,7 @@
 	<meta property="og:site_name" content="DocnDoor">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="en_us">
-	<meta property="og:title" content="Our Team | DocnDoor" >
+	<meta property="og:title" content="Our Team | DocnDoor - Meet Our Experts" >
 	<meta property="og:description" content="Meet the clinicians, coordinators, and house-care captains behind DocnDoor's seamless at-home experience.">
 	<meta property="og:image" content="https://brighter.layoutdrop.com/demo/preview.png" >
 	<!-- end::Meta Social -->
@@ -51,203 +51,171 @@
 	<!-- end::Plugins All CSS -->
 	
 	<style>
-		.team-hero-minimal {
-			min-height: 70vh;
-			background: linear-gradient(135deg, #042338 0%, #1a3a5a 50%, #2d5a7e 100%);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			position: relative;
-			overflow: hidden;
-			padding: 120px 20px;
-		}
-		.team-hero-minimal::before {
-			content: '';
-			position: absolute;
-			width: 600px;
-			height: 600px;
-			background: radial-gradient(circle, rgba(254, 231, 74, 0.15) 0%, transparent 70%);
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			border-radius: 50%;
-		}
-		.team-hero-content {
-			position: relative;
-			z-index: 2;
-			max-width: 800px;
-		}
-		.team-hero-badge {
-			display: inline-block;
-			padding: 12px 30px;
-			background: rgba(254, 231, 74, 0.2);
-			border: 1px solid rgba(254, 231, 74, 0.4);
-			border-radius: 50px;
-			color: #FEE74A;
-			font-size: 0.9rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-			margin-bottom: 30px;
-		}
-		.team-hero-title {
-			font-size: 4.5rem;
-			font-weight: 800;
-			color: #ffffff;
-			line-height: 1.2;
-			margin-bottom: 25px;
-		}
-		.team-hero-subtitle {
-			font-size: 1.3rem;
-			color: rgba(255, 255, 255, 0.9);
-			line-height: 1.8;
-			margin-bottom: 40px;
+		.team-page-wrapper {
+			background: #ffffff;
 		}
 		
-		.team-stats-bar {
-			background: #ffffff;
-			padding: 60px 0;
-			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-		}
-		.team-stats-container {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			gap: 40px;
-			text-align: center;
-		}
-		.team-stat-item {
-			padding: 20px;
-		}
-		.team-stat-number {
-			font-size: 3.5rem;
-			font-weight: 800;
-			color: #042338;
-			display: block;
-			margin-bottom: 10px;
-			line-height: 1;
-		}
-		.team-stat-label {
-			font-size: 1rem;
-			color: #666;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-		}
-		
-		.leadership-section {
-			padding: 100px 0;
-			background: #f8f9fa;
-		}
-		.section-header {
-			text-align: center;
-			margin-bottom: 70px;
-		}
-		.section-badge {
-			display: inline-block;
-			padding: 8px 20px;
-			background: rgba(4, 35, 56, 0.1);
-			border-radius: 50px;
-			color: #042338;
-			font-size: 0.85rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-			margin-bottom: 20px;
-		}
-		.section-title {
-			font-size: 3.5rem;
-			font-weight: 800;
-			color: #042338;
-			margin-bottom: 20px;
-		}
-		.section-subtitle {
-			font-size: 1.2rem;
-			color: #666;
-			max-width: 700px;
-			margin: 0 auto;
-		}
-		.leadership-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-			gap: 40px;
-			margin-top: 60px;
-		}
-		.leadership-card {
-			background: #ffffff;
-			border-radius: 30px;
-			padding: 50px 40px;
-			text-align: center;
-			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		.team-magazine-hero {
+			background: linear-gradient(180deg, #042338 0%, #1a3a5a 50%, #2d5a7e 100%);
+			padding: 200px 0 150px;
 			position: relative;
 			overflow: hidden;
 		}
-		.leadership-card::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 6px;
-			background: linear-gradient(90deg, #042338, #FEE74A);
-			transform: scaleX(0);
-			transition: transform 0.4s ease;
-		}
-		.leadership-card:hover::before {
-			transform: scaleX(1);
-		}
-		.leadership-card:hover {
-			transform: translateY(-15px);
-			box-shadow: 0 25px 60px rgba(4, 35, 56, 0.15);
-		}
-		.leadership-avatar {
-			width: 150px;
-			height: 150px;
-			margin: 0 auto 30px;
-			background: linear-gradient(135deg, #042338, #1a3a5a);
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 3.5rem;
-			font-weight: 700;
-			color: #FEE74A;
-			position: relative;
-			overflow: hidden;
-		}
-		.leadership-avatar::after {
+		.team-magazine-hero::before {
 			content: '';
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background: radial-gradient(circle, rgba(254, 231, 74, 0.3) 0%, transparent 70%);
-			top: 0;
-			left: 0;
+			background: repeating-linear-gradient(
+				45deg,
+				transparent,
+				transparent 10px,
+				rgba(254, 231, 74, 0.03) 10px,
+				rgba(254, 231, 74, 0.03) 20px
+			);
 		}
-		.leadership-name {
-			font-size: 1.8rem;
-			font-weight: 700;
+		.team-hero-text {
+			text-align: center;
+			max-width: 900px;
+			margin: 0 auto;
+			position: relative;
+			z-index: 2;
+		}
+		.team-hero-text h1 {
+			font-size: 6rem;
+			font-weight: 900;
+			color: #ffffff;
+			margin-bottom: 30px;
+			line-height: 1;
+			letter-spacing: -4px;
+		}
+		.team-hero-text p {
+			font-size: 1.5rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.8;
+		}
+		
+		.team-magazine-grid {
+			padding: 120px 0;
+			background: #f8f9fa;
+		}
+		.magazine-container {
+			max-width: 1600px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.magazine-header {
+			text-align: center;
+			margin-bottom: 100px;
+		}
+		.magazine-header h2 {
+			font-size: 5rem;
+			font-weight: 900;
+			color: #042338;
+			margin-bottom: 25px;
+			letter-spacing: -2px;
+		}
+		.magazine-header p {
+			font-size: 1.3rem;
+			color: #666;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		.magazine-layout {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			gap: 30px;
+		}
+		.magazine-profile {
+			background: #ffffff;
+			border-radius: 25px;
+			overflow: hidden;
+			box-shadow: 0 15px 50px rgba(4, 35, 56, 0.1);
+			transition: all 0.4s ease;
+			position: relative;
+		}
+		.magazine-profile:hover {
+			transform: translateY(-15px);
+			box-shadow: 0 30px 80px rgba(4, 35, 56, 0.2);
+		}
+		.magazine-profile.featured {
+			grid-column: span 6;
+			grid-row: span 2;
+		}
+		.magazine-profile.regular {
+			grid-column: span 3;
+		}
+		.magazine-profile.small {
+			grid-column: span 3;
+		}
+		.magazine-image {
+			width: 100%;
+			height: 400px;
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 5rem;
+			color: #FEE74A;
+			font-weight: 800;
+			position: relative;
+			overflow: hidden;
+		}
+		.magazine-profile.small .magazine-image {
+			height: 250px;
+			font-size: 3rem;
+		}
+		.magazine-profile.featured .magazine-image {
+			height: 500px;
+			font-size: 8rem;
+		}
+		.magazine-image::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(circle, rgba(254, 231, 74, 0.2) 0%, transparent 70%);
+		}
+		.magazine-content {
+			padding: 40px 35px;
+		}
+		.magazine-profile.featured .magazine-content {
+			padding: 60px 50px;
+		}
+		.magazine-name {
+			font-size: 2rem;
+			font-weight: 800;
 			color: #042338;
 			margin-bottom: 10px;
 		}
-		.leadership-role {
-			font-size: 1.1rem;
+		.magazine-profile.featured .magazine-name {
+			font-size: 3rem;
+		}
+		.magazine-role {
+			font-size: 1.2rem;
 			color: #FEE74A;
-			font-weight: 600;
+			font-weight: 700;
 			margin-bottom: 20px;
 		}
-		.leadership-bio {
-			font-size: 1rem;
+		.magazine-profile.featured .magazine-role {
+			font-size: 1.5rem;
+		}
+		.magazine-bio {
+			font-size: 1.05rem;
 			color: #666;
 			line-height: 1.8;
-			margin-bottom: 25px;
 		}
-		.leadership-social {
+		.magazine-profile.featured .magazine-bio {
+			font-size: 1.2rem;
+		}
+		.magazine-social {
 			display: flex;
-			justify-content: center;
 			gap: 15px;
+			margin-top: 25px;
 		}
-		.leadership-social a {
-			width: 40px;
-			height: 40px;
+		.magazine-social a {
+			width: 45px;
+			height: 45px;
 			background: #f8f9fa;
 			border-radius: 50%;
 			display: flex;
@@ -257,157 +225,67 @@
 			text-decoration: none;
 			transition: all 0.3s ease;
 		}
-		.leadership-social a:hover {
+		.magazine-social a:hover {
 			background: #042338;
 			color: #FEE74A;
 			transform: translateY(-3px);
 		}
 		
-		.team-members-section {
-			padding: 100px 0;
-			background: #ffffff;
-		}
-		.team-filter {
-			display: flex;
-			justify-content: center;
-			gap: 15px;
-			margin-bottom: 60px;
-			flex-wrap: wrap;
-		}
-		.filter-btn {
-			padding: 12px 30px;
-			background: #f8f9fa;
-			border: 2px solid transparent;
-			border-radius: 50px;
-			color: #666;
-			font-weight: 600;
-			cursor: pointer;
-			transition: all 0.3s ease;
-		}
-		.filter-btn:hover,
-		.filter-btn.active {
-			background: #042338;
-			color: #ffffff;
-			border-color: #042338;
-		}
-		.team-members-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-			gap: 35px;
-		}
-		.team-member-card {
-			background: #ffffff;
-			border: 2px solid #e9ecef;
-			border-radius: 25px;
-			padding: 40px 30px;
-			text-align: center;
-			transition: all 0.4s ease;
-			position: relative;
-			overflow: hidden;
-		}
-		.team-member-card::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 4px;
-			background: linear-gradient(90deg, #042338, #FEE74A);
-			transform: scaleX(0);
-			transition: transform 0.4s ease;
-		}
-		.team-member-card:hover::after {
-			transform: scaleX(1);
-		}
-		.team-member-card:hover {
-			border-color: #042338;
-			transform: translateY(-10px);
-			box-shadow: 0 20px 50px rgba(4, 35, 56, 0.15);
-		}
-		.member-avatar {
-			width: 120px;
-			height: 120px;
-			margin: 0 auto 25px;
-			background: linear-gradient(135deg, #042338, #1a3a5a);
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 2.5rem;
-			font-weight: 700;
-			color: #FEE74A;
-		}
-		.member-name {
-			font-size: 1.4rem;
-			font-weight: 700;
-			color: #042338;
-			margin-bottom: 8px;
-		}
-		.member-role {
-			font-size: 1rem;
-			color: #666;
-			margin-bottom: 15px;
-		}
-		.member-specialty {
-			font-size: 0.9rem;
-			color: #FEE74A;
-			font-weight: 600;
-			background: rgba(4, 35, 56, 0.1);
-			padding: 6px 15px;
-			border-radius: 20px;
-			display: inline-block;
-		}
-		
-		.culture-section {
+		.team-stats-magazine {
 			padding: 100px 0;
 			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
-			color: #ffffff;
 		}
-		.culture-grid {
+		.stats-magazine-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: 40px;
-			margin-top: 60px;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 50px;
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 0 20px;
 		}
-		.culture-card {
-			background: rgba(255, 255, 255, 0.05);
-			backdrop-filter: blur(10px);
-			border: 1px solid rgba(255, 255, 255, 0.1);
-			border-radius: 25px;
-			padding: 50px 40px;
+		.stat-magazine-item {
 			text-align: center;
-			transition: all 0.3s ease;
 		}
-		.culture-card:hover {
-			background: rgba(255, 255, 255, 0.1);
-			transform: translateY(-5px);
-		}
-		.culture-icon {
-			font-size: 3.5rem;
+		.stat-magazine-number {
+			font-size: 6rem;
+			font-weight: 900;
 			color: #FEE74A;
-			margin-bottom: 25px;
-		}
-		.culture-title {
-			font-size: 1.6rem;
-			font-weight: 700;
+			line-height: 1;
 			margin-bottom: 20px;
 		}
-		.culture-text {
-			font-size: 1.05rem;
-			line-height: 1.8;
+		.stat-magazine-label {
+			font-size: 1.2rem;
 			color: rgba(255, 255, 255, 0.9);
+			text-transform: uppercase;
+			letter-spacing: 2px;
 		}
 		
-		@media (max-width: 768px) {
-			.team-hero-title {
-				font-size: 2.8rem;
+		@media (max-width: 1200px) {
+			.magazine-layout {
+				grid-template-columns: repeat(6, 1fr);
 			}
-			.leadership-grid,
-			.team-members-grid {
+			.magazine-profile.featured {
+				grid-column: span 6;
+			}
+			.magazine-profile.regular,
+			.magazine-profile.small {
+				grid-column: span 3;
+			}
+		}
+		@media (max-width: 768px) {
+			.team-hero-text h1 {
+				font-size: 3rem;
+			}
+			.magazine-layout {
 				grid-template-columns: 1fr;
 			}
-			.section-title {
-				font-size: 2.5rem;
+			.magazine-profile.featured,
+			.magazine-profile.regular,
+			.magazine-profile.small {
+				grid-column: span 1;
+			}
+			.stats-magazine-grid {
+				grid-template-columns: repeat(2, 1fr);
 			}
 		}
 	</style>
@@ -469,7 +347,7 @@
 						</div>
 						<ul class="nav navbar-nav">	
 							<li><a href="index.html">Home</a></li>
-							<li>
+							<li class="active">
 								<a href="javascript:;">Pages <i class="fas fa-plus"></i></a>
 								<ul class="sub-menu">
 									<li class="add-menu-left">
@@ -512,203 +390,145 @@
 	</header>
 	<!-- end::Header Section -->
  
-	<main class="page-content">
+	<main class="team-page-wrapper">
 		
-		<!-- begin::Team Hero Minimal -->
-		<section class="team-hero-minimal">
+		<!-- begin::Team Magazine Hero -->
+		<section class="team-magazine-hero">
 			<div class="container">
-				<div class="team-hero-content">
-					<span class="team-hero-badge">Expert Professionals</span>
-					<h1 class="team-hero-title">Meet Our<br>Care Collective</h1>
-					<p class="team-hero-subtitle">A dedicated team of licensed clinicians, skilled coordinators, and experienced house-care specialists working together to deliver exceptional care to your doorstep.</p>
+				<div class="team-hero-text">
+					<h1>The People<br>Behind The Care</h1>
+					<p>Meet the dedicated professionals who make DocnDoor's integrated care model possible. From clinical experts to service coordinators, every team member is committed to your family's well-being.</p>
 				</div>
 			</div>
 		</section>
-		<!-- end::Team Hero Minimal -->
+		<!-- end::Team Magazine Hero -->
 		
-		<!-- begin::Team Stats Bar -->
-		<section class="team-stats-bar">
-			<div class="container">
-				<div class="team-stats-container">
-					<div class="team-stat-item">
-						<span class="team-stat-number">500+</span>
-						<span class="team-stat-label">Expert Professionals</span>
-					</div>
-					<div class="team-stat-item">
-						<span class="team-stat-number">120+</span>
-						<span class="team-stat-label">Licensed Clinicians</span>
-					</div>
-					<div class="team-stat-item">
-						<span class="team-stat-number">50K+</span>
-						<span class="team-stat-label">Families Served</span>
-					</div>
-					<div class="team-stat-item">
-						<span class="team-stat-number">99%</span>
-						<span class="team-stat-label">Satisfaction Rate</span>
-					</div>
+		<!-- begin::Team Magazine Grid -->
+		<section class="team-magazine-grid">
+			<div class="magazine-container">
+				<div class="magazine-header">
+					<h2>Our Expert Team</h2>
+					<p>A diverse group of professionals working together to deliver exceptional care to your doorstep.</p>
 				</div>
-			</div>
-		</section>
-		<!-- end::Team Stats Bar -->
-		
-		<!-- begin::Leadership Section -->
-		<section class="leadership-section">
-			<div class="container">
-				<div class="section-header">
-					<span class="section-badge">Executive Leadership</span>
-					<h2 class="section-title">Visionary Leaders</h2>
-					<p class="section-subtitle">Our leadership team brings decades of combined experience in healthcare, operations, and service excellence to guide DocnDoor's mission.</p>
-				</div>
-				<div class="leadership-grid">
-					<div class="leadership-card">
-						<div class="leadership-avatar">AS</div>
-						<h3 class="leadership-name">Amelia Shaw</h3>
-						<p class="leadership-role">Chief Medical Officer</p>
-						<p class="leadership-bio">Board-certified physician with 15+ years in home healthcare, specializing in care coordination and clinical excellence.</p>
-						<div class="leadership-social">
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fas fa-envelope"></i></a>
+				<div class="magazine-layout">
+					<div class="magazine-profile featured">
+						<div class="magazine-image">AS</div>
+						<div class="magazine-content">
+							<h3 class="magazine-name">Amelia Shaw</h3>
+							<p class="magazine-role">Chief Medical Officer</p>
+							<p class="magazine-bio">Board-certified physician with 15+ years in home healthcare, specializing in care coordination and clinical excellence. Amelia leads our medical team with a passion for integrated care solutions.</p>
+							<div class="magazine-social">
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fas fa-envelope"></i></a>
+							</div>
 						</div>
 					</div>
-					<div class="leadership-card">
-						<div class="leadership-avatar">JA</div>
-						<h3 class="leadership-name">Julian Avery</h3>
-						<p class="leadership-role">Head of Home Care</p>
-						<p class="leadership-bio">Operations expert with a passion for creating seamless service experiences and building high-performing teams.</p>
-						<div class="leadership-social">
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fas fa-envelope"></i></a>
+					<div class="magazine-profile regular">
+						<div class="magazine-image">JA</div>
+						<div class="magazine-content">
+							<h3 class="magazine-name">Julian Avery</h3>
+							<p class="magazine-role">Head of Home Care</p>
+							<p class="magazine-bio">Operations expert with a passion for creating seamless service experiences.</p>
+							<div class="magazine-social">
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</div>
 						</div>
 					</div>
-					<div class="leadership-card">
-						<div class="leadership-avatar">PM</div>
-						<h3 class="leadership-name">Priya Martinez</h3>
-						<p class="leadership-role">Operations Director</p>
-						<p class="leadership-bio">Strategic leader focused on scaling operations while maintaining the highest standards of quality and client satisfaction.</p>
-						<div class="leadership-social">
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fas fa-envelope"></i></a>
+					<div class="magazine-profile regular">
+						<div class="magazine-image">PM</div>
+						<div class="magazine-content">
+							<h3 class="magazine-name">Priya Martinez</h3>
+							<p class="magazine-role">Operations Director</p>
+							<p class="magazine-bio">Strategic leader focused on scaling operations while maintaining excellence.</p>
+							<div class="magazine-social">
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="magazine-profile small">
+						<div class="magazine-image">MP</div>
+						<div class="magazine-content">
+							<h3 class="magazine-name">Maya Patel</h3>
+							<p class="magazine-role">Lead Nurse, RN</p>
+						</div>
+					</div>
+					<div class="magazine-profile small">
+						<div class="magazine-image">LA</div>
+						<div class="magazine-content">
+							<h3 class="magazine-name">Leo Aranda</h3>
+							<p class="magazine-role">Physical Therapist</p>
+						</div>
+					</div>
+					<div class="magazine-profile small">
+						<div class="magazine-image">IR</div>
+						<div class="magazine-content">
+							<h3 class="magazine-name">Imani Rhodes</h3>
+							<p class="magazine-role">House Care Captain</p>
+						</div>
+					</div>
+					<div class="magazine-profile small">
+						<div class="magazine-image">NM</div>
+						<div class="magazine-content">
+							<h3 class="magazine-name">Noah Mendes</h3>
+							<p class="magazine-role">Client Concierge</p>
+						</div>
+					</div>
+					<div class="magazine-profile regular">
+						<div class="magazine-image">TQ</div>
+						<div class="magazine-content">
+							<h3 class="magazine-name">Dr. Tara Quinn</h3>
+							<p class="magazine-role">Medical Director</p>
+							<p class="magazine-bio">Oversees physician partnerships and complex case reviews.</p>
+							<div class="magazine-social">
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="magazine-profile regular">
+						<div class="magazine-image">OL</div>
+						<div class="magazine-content">
+							<h3 class="magazine-name">Oscar Lee</h3>
+							<p class="magazine-role">Quality Coach</p>
+							<p class="magazine-bio">Ensures standards through audits and training programs.</p>
+							<div class="magazine-social">
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Leadership Section -->
+		<!-- end::Team Magazine Grid -->
 		
-		<!-- begin::Team Members Section -->
-		<section class="team-members-section">
+		<!-- begin::Team Stats Magazine -->
+		<section class="team-stats-magazine">
 			<div class="container">
-				<div class="section-header">
-					<span class="section-badge">Our Specialists</span>
-					<h2 class="section-title">Expert Team Members</h2>
-					<p class="section-subtitle">Meet the dedicated professionals who make DocnDoor's integrated care model possible.</p>
-				</div>
-				<div class="team-filter">
-					<button class="filter-btn active" data-filter="all">All Team</button>
-					<button class="filter-btn" data-filter="medical">Medical Care</button>
-					<button class="filter-btn" data-filter="house">House Care</button>
-					<button class="filter-btn" data-filter="coordination">Coordination</button>
-				</div>
-				<div class="team-members-grid">
-					<div class="team-member-card" data-category="medical">
-						<div class="member-avatar">MP</div>
-						<h3 class="member-name">Maya Patel</h3>
-						<p class="member-role">Lead Nurse, RN</p>
-						<span class="member-specialty">Post-Surgical Care</span>
+				<div class="stats-magazine-grid">
+					<div class="stat-magazine-item">
+						<div class="stat-magazine-number">500+</div>
+						<div class="stat-magazine-label">Expert Professionals</div>
 					</div>
-					<div class="team-member-card" data-category="medical">
-						<div class="member-avatar">LA</div>
-						<h3 class="member-name">Leo Aranda</h3>
-						<p class="member-role">Physical Therapist</p>
-						<span class="member-specialty">Neuro & Ortho</span>
+					<div class="stat-magazine-item">
+						<div class="stat-magazine-number">120+</div>
+						<div class="stat-magazine-label">Licensed Clinicians</div>
 					</div>
-					<div class="team-member-card" data-category="house">
-						<div class="member-avatar">IR</div>
-						<h3 class="member-name">Imani Rhodes</h3>
-						<p class="member-role">House Care Captain</p>
-						<span class="member-specialty">Luxury Residences</span>
+					<div class="stat-magazine-item">
+						<div class="stat-magazine-number">50K+</div>
+						<div class="stat-magazine-label">Families Served</div>
 					</div>
-					<div class="team-member-card" data-category="coordination">
-						<div class="member-avatar">NM</div>
-						<h3 class="member-name">Noah Mendes</h3>
-						<p class="member-role">Client Concierge</p>
-						<span class="member-specialty">Scheduling & Support</span>
-					</div>
-					<div class="team-member-card" data-category="medical">
-						<div class="member-avatar">TQ</div>
-						<h3 class="member-name">Dr. Tara Quinn</h3>
-						<p class="member-role">Medical Director</p>
-						<span class="member-specialty">Clinical Leadership</span>
-					</div>
-					<div class="team-member-card" data-category="house">
-						<div class="member-avatar">OL</div>
-						<h3 class="member-name">Oscar Lee</h3>
-						<p class="member-role">Quality Coach</p>
-						<span class="member-specialty">Quality Assurance</span>
-					</div>
-					<div class="team-member-card" data-category="medical">
-						<div class="member-avatar">SK</div>
-						<h3 class="member-name">Sarah Kim</h3>
-						<p class="member-role">Wound Care Specialist</p>
-						<span class="member-specialty">Advanced Wound Care</span>
-					</div>
-					<div class="team-member-card" data-category="house">
-						<div class="member-avatar">DJ</div>
-						<h3 class="member-name">David Johnson</h3>
-						<p class="member-role">Deep Clean Specialist</p>
-						<span class="member-specialty">Eco-Friendly Cleaning</span>
+					<div class="stat-magazine-item">
+						<div class="stat-magazine-number">99%</div>
+						<div class="stat-magazine-label">Satisfaction Rate</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Team Members Section -->
-		
-		<!-- begin::Culture Section -->
-		<section class="culture-section">
-			<div class="container">
-				<div class="section-header" style="color: #ffffff;">
-					<span class="section-badge" style="background: rgba(254, 231, 74, 0.2); color: #FEE74A;">Our Culture</span>
-					<h2 class="section-title" style="color: #ffffff;">What Makes Us Different</h2>
-					<p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">The values and principles that guide our team every day.</p>
-				</div>
-				<div class="culture-grid">
-					<div class="culture-card">
-						<div class="culture-icon"><i class="fas fa-heart"></i></div>
-						<h3 class="culture-title">Compassionate Care</h3>
-						<p class="culture-text">Every team member is selected not just for their skills, but for their genuine commitment to making a positive impact in people's lives.</p>
-					</div>
-					<div class="culture-card">
-						<div class="culture-icon"><i class="fas fa-users"></i></div>
-						<h3 class="culture-title">Collaborative Pods</h3>
-						<p class="culture-text">Our pod structure ensures seamless communication between medical and house care teams, creating a unified care experience.</p>
-					</div>
-					<div class="culture-card">
-						<div class="culture-icon"><i class="fas fa-graduation-cap"></i></div>
-						<h3 class="culture-title">Continuous Learning</h3>
-						<p class="culture-text">We invest in ongoing training and professional development to ensure our team stays at the forefront of care innovation.</p>
-					</div>
-					<div class="culture-card">
-						<div class="culture-icon"><i class="fas fa-shield-alt"></i></div>
-						<h3 class="culture-title">Quality First</h3>
-						<p class="culture-text">Rigorous quality standards and regular audits ensure every visit meets our high expectations for safety and excellence.</p>
-					</div>
-					<div class="culture-card">
-						<div class="culture-icon"><i class="fas fa-handshake"></i></div>
-						<h3 class="culture-title">Transparent Growth</h3>
-						<p class="culture-text">Clear career paths and public recognition of achievements create an environment where everyone can thrive and advance.</p>
-					</div>
-					<div class="culture-card">
-						<div class="culture-icon"><i class="fas fa-leaf"></i></div>
-						<h3 class="culture-title">Eco-Conscious</h3>
-						<p class="culture-text">We're committed to sustainable practices, using eco-friendly products and methods that protect both your home and the environment.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- end::Culture Section -->
+		<!-- end::Team Stats Magazine -->
 		
 	</main>
 	
@@ -820,23 +640,6 @@
 <script src="vendor/swiper/swiper.min.js"></script>
 <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
 <script src="js/functions.js"></script>
-<script>
-	// Team filter functionality
-	document.querySelectorAll('.filter-btn').forEach(btn => {
-		btn.addEventListener('click', function() {
-			document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-			this.classList.add('active');
-			const filter = this.getAttribute('data-filter');
-			document.querySelectorAll('.team-member-card').forEach(card => {
-				if (filter === 'all' || card.getAttribute('data-category') === filter) {
-					card.style.display = 'block';
-				} else {
-					card.style.display = 'none';
-				}
-			});
-		});
-	});
-</script>
 <!-- end::Javascript Files -->
 </body>
 </html>

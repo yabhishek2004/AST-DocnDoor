@@ -51,298 +51,311 @@
 	<!-- end::Plugins All CSS -->
 	
 	<style>
-		.medical-hero-asymmetric {
-			min-height: 85vh;
-			background: linear-gradient(135deg, #042338 0%, #1a3a5a 50%, #2d5a7e 100%);
-			display: flex;
-			align-items: center;
-			padding: 120px 0;
-			position: relative;
-			overflow: hidden;
-		}
-		.medical-hero-asymmetric::before {
-			content: '';
-			position: absolute;
-			width: 600px;
-			height: 600px;
-			background: radial-gradient(circle, rgba(254, 231, 74, 0.15) 0%, transparent 70%);
-			bottom: -300px;
-			right: -300px;
-			border-radius: 50%;
-		}
-		.medical-hero-content {
-			position: relative;
-			z-index: 2;
-		}
-		.medical-hero-badge {
-			display: inline-block;
-			padding: 10px 25px;
-			background: rgba(254, 231, 74, 0.2);
-			border: 1px solid rgba(254, 231, 74, 0.4);
-			border-radius: 50px;
-			color: #FEE74A;
-			font-size: 0.9rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-			margin-bottom: 30px;
-		}
-		.medical-hero-title {
-			font-size: 4.5rem;
-			font-weight: 800;
-			color: #ffffff;
-			line-height: 1.2;
-			margin-bottom: 25px;
-		}
-		.medical-hero-text {
-			font-size: 1.3rem;
-			color: rgba(255, 255, 255, 0.9);
-			line-height: 1.8;
-			margin-bottom: 40px;
-			max-width: 600px;
-		}
-		.medical-hero-image {
-			position: relative;
-			z-index: 2;
-		}
-		.medical-hero-image img {
-			border-radius: 30px;
-			box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+		.medical-page-wrapper {
+			background: #ffffff;
 		}
 		
-		.medical-services-showcase {
-			padding: 100px 0;
-			background: #ffffff;
-		}
-		.services-header {
-			text-align: center;
-			margin-bottom: 80px;
-		}
-		.services-badge {
-			display: inline-block;
-			padding: 8px 20px;
-			background: rgba(4, 35, 56, 0.1);
-			border-radius: 50px;
-			color: #042338;
-			font-size: 0.85rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-			margin-bottom: 20px;
-		}
-		.services-title {
-			font-size: 3.5rem;
-			font-weight: 800;
-			color: #042338;
-			margin-bottom: 20px;
-		}
-		.services-subtitle {
-			font-size: 1.2rem;
-			color: #666;
-			max-width: 700px;
-			margin: 0 auto;
-		}
-		.services-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-			gap: 40px;
-			margin-top: 60px;
-		}
-		.service-feature-card {
-			background: #ffffff;
-			border: 2px solid #e9ecef;
-			border-radius: 30px;
-			padding: 50px 40px;
-			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		.medical-visual-hero {
+			min-height: 100vh;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			display: flex;
+			align-items: center;
 			position: relative;
 			overflow: hidden;
 		}
-		.service-feature-card::before {
+		.medical-visual-hero::before {
 			content: '';
 			position: absolute;
-			top: 0;
-			left: 0;
 			width: 100%;
-			height: 6px;
-			background: linear-gradient(90deg, #042338, #FEE74A, #042338);
-			transform: scaleX(0);
-			transition: transform 0.4s ease;
+			height: 100%;
+			background: radial-gradient(circle at 30% 50%, rgba(254, 231, 74, 0.15) 0%, transparent 50%);
 		}
-		.service-feature-card:hover::before {
-			transform: scaleX(1);
+		.medical-hero-visual-content {
+			position: relative;
+			z-index: 2;
+			padding: 100px 0;
 		}
-		.service-feature-card:hover {
-			border-color: #042338;
-			transform: translateY(-10px);
-			box-shadow: 0 25px 60px rgba(4, 35, 56, 0.15);
+		.medical-hero-visual-title {
+			font-size: 7rem;
+			font-weight: 900;
+			color: #ffffff;
+			line-height: 1;
+			margin-bottom: 40px;
+			letter-spacing: -5px;
 		}
-		.service-icon-wrapper {
-			width: 100px;
-			height: 100px;
-			background: linear-gradient(135deg, #042338, #1a3a5a);
-			border-radius: 25px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-bottom: 30px;
-			font-size: 2.5rem;
-			color: #FEE74A;
-			transition: transform 0.3s ease;
-		}
-		.service-feature-card:hover .service-icon-wrapper {
-			transform: scale(1.1) rotate(5deg);
-		}
-		.service-feature-title {
-			font-size: 1.8rem;
-			font-weight: 700;
-			color: #042338;
-			margin-bottom: 15px;
-		}
-		.service-feature-description {
-			font-size: 1.05rem;
-			color: #666;
+		.medical-hero-visual-subtitle {
+			font-size: 1.6rem;
+			color: rgba(255, 255, 255, 0.9);
 			line-height: 1.8;
-			margin-bottom: 25px;
+			max-width: 700px;
+			margin-bottom: 50px;
 		}
-		.service-feature-list {
+		.medical-hero-cta {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+		.medical-hero-btn {
+			padding: 20px 50px;
+			border-radius: 50px;
+			font-size: 1.2rem;
+			font-weight: 800;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		.medical-hero-btn.primary {
+			background: #FEE74A;
+			color: #042338;
+		}
+		.medical-hero-btn.primary:hover {
+			background: #ffffff;
+			transform: translateY(-5px);
+			box-shadow: 0 15px 40px rgba(254, 231, 74, 0.4);
+		}
+		.medical-hero-btn.secondary {
+			background: transparent;
+			color: #ffffff;
+			border: 3px solid #ffffff;
+		}
+		.medical-hero-btn.secondary:hover {
+			background: #ffffff;
+			color: #042338;
+			transform: translateY(-5px);
+		}
+		
+		.medical-showcase-large {
+			padding: 150px 0;
+			background: #ffffff;
+		}
+		.showcase-container {
+			max-width: 1600px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.showcase-header {
+			text-align: center;
+			margin-bottom: 100px;
+		}
+		.showcase-header h2 {
+			font-size: 5.5rem;
+			font-weight: 900;
+			color: #042338;
+			margin-bottom: 30px;
+			letter-spacing: -3px;
+		}
+		.showcase-header p {
+			font-size: 1.4rem;
+			color: #666;
+			max-width: 900px;
+			margin: 0 auto;
+		}
+		.showcase-grid-large {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 50px;
+		}
+		.showcase-item-large {
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			border-radius: 40px;
+			overflow: hidden;
+			position: relative;
+			min-height: 600px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 60px 50px;
+			transition: all 0.4s ease;
+		}
+		.showcase-item-large:hover {
+			transform: scale(1.02);
+			box-shadow: 0 40px 120px rgba(4, 35, 56, 0.3);
+		}
+		.showcase-item-large.featured {
+			grid-column: span 2;
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 50%, #2d5a7e 100%);
+			min-height: 700px;
+		}
+		.showcase-icon-large {
+			font-size: 6rem;
+			color: #FEE74A;
+			margin-bottom: 40px;
+		}
+		.showcase-item-large.featured .showcase-icon-large {
+			font-size: 8rem;
+		}
+		.showcase-title-large {
+			font-size: 3.5rem;
+			font-weight: 900;
+			color: #ffffff;
+			margin-bottom: 30px;
+			line-height: 1.2;
+		}
+		.showcase-item-large.featured .showcase-title-large {
+			font-size: 4.5rem;
+		}
+		.showcase-description-large {
+			font-size: 1.4rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.9;
+			margin-bottom: 40px;
+		}
+		.showcase-features-large {
 			list-style: none;
 			padding: 0;
-			margin: 0;
+			margin: 0 0 50px 0;
 		}
-		.service-feature-list li {
-			padding: 10px 0;
-			color: #666;
-			font-size: 1rem;
+		.showcase-features-large li {
+			font-size: 1.2rem;
+			color: rgba(255, 255, 255, 0.9);
+			margin-bottom: 20px;
 			display: flex;
 			align-items: center;
-			gap: 12px;
+			gap: 15px;
 		}
-		.service-feature-list li::before {
+		.showcase-features-large li::before {
 			content: '✓';
-			width: 25px;
-			height: 25px;
+			width: 35px;
+			height: 35px;
 			background: #FEE74A;
 			color: #042338;
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-weight: 700;
-			font-size: 0.9rem;
+			font-weight: 800;
+			font-size: 1.1rem;
 			flex-shrink: 0;
 		}
+		.showcase-btn-large {
+			display: inline-block;
+			padding: 20px 45px;
+			background: #FEE74A;
+			color: #042338;
+			border-radius: 50px;
+			text-decoration: none;
+			font-weight: 800;
+			font-size: 1.2rem;
+			transition: all 0.3s ease;
+			align-self: flex-start;
+		}
+		.showcase-btn-large:hover {
+			background: #ffffff;
+			transform: translateX(10px);
+			box-shadow: 0 10px 30px rgba(254, 231, 74, 0.4);
+		}
 		
-		.medical-standards-section {
-			padding: 100px 0;
+		.medical-process-visual {
+			padding: 150px 0;
 			background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 		}
-		.standards-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-			gap: 30px;
+		.process-visual-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 0 20px;
 		}
-		.standard-card {
-			background: #ffffff;
-			border-radius: 25px;
-			padding: 40px 30px;
+		.process-visual-header {
 			text-align: center;
-			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-			transition: all 0.3s ease;
+			margin-bottom: 100px;
 		}
-		.standard-card:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 20px 50px rgba(4, 35, 56, 0.15);
+		.process-visual-header h2 {
+			font-size: 5rem;
+			font-weight: 900;
+			color: #042338;
+			margin-bottom: 25px;
 		}
-		.standard-number {
-			font-size: 3.5rem;
+		.process-visual-steps {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 50px;
+		}
+		.process-step-visual {
+			text-align: center;
+			position: relative;
+		}
+		.process-step-visual::after {
+			content: '';
+			position: absolute;
+			top: 100px;
+			right: -25px;
+			width: 50px;
+			height: 4px;
+			background: linear-gradient(90deg, #042338, #FEE74A);
+		}
+		.process-step-visual:last-child::after {
+			display: none;
+		}
+		.process-step-number {
+			width: 200px;
+			height: 200px;
+			margin: 0 auto 40px;
+			background: linear-gradient(135deg, #042338, #1a3a5a);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 5rem;
+			font-weight: 900;
+			color: #FEE74A;
+			box-shadow: 0 20px 60px rgba(4, 35, 56, 0.3);
+		}
+		.process-step-title {
+			font-size: 2rem;
 			font-weight: 800;
 			color: #042338;
-			line-height: 1;
 			margin-bottom: 20px;
 		}
-		.standard-title {
-			font-size: 1.4rem;
-			font-weight: 700;
-			color: #042338;
-			margin-bottom: 15px;
-		}
-		.standard-text {
-			font-size: 1rem;
+		.process-step-description {
+			font-size: 1.1rem;
 			color: #666;
 			line-height: 1.8;
 		}
 		
-		.medical-cta-section {
-			padding: 100px 0;
+		.medical-cta-visual {
+			padding: 150px 0;
 			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
 			text-align: center;
 		}
-		.medical-cta-content {
-			max-width: 800px;
+		.medical-cta-visual-content {
+			max-width: 900px;
 			margin: 0 auto;
 		}
-		.medical-cta-icon {
-			font-size: 4rem;
-			color: #FEE74A;
-			margin-bottom: 30px;
-		}
-		.medical-cta-title {
-			font-size: 3.5rem;
-			font-weight: 800;
+		.medical-cta-visual h2 {
+			font-size: 5.5rem;
+			font-weight: 900;
 			color: #ffffff;
-			margin-bottom: 25px;
-		}
-		.medical-cta-text {
-			font-size: 1.2rem;
-			color: rgba(255, 255, 255, 0.9);
-			line-height: 1.8;
 			margin-bottom: 40px;
+			line-height: 1.1;
 		}
-		.medical-cta-buttons {
-			display: flex;
-			gap: 20px;
-			justify-content: center;
-			flex-wrap: wrap;
-		}
-		.medical-cta-btn {
-			padding: 18px 40px;
-			border-radius: 50px;
-			font-size: 1.1rem;
-			font-weight: 700;
-			text-decoration: none;
-			display: inline-block;
-			transition: all 0.3s ease;
-		}
-		.medical-cta-btn-primary {
-			background: #FEE74A;
-			color: #042338;
-		}
-		.medical-cta-btn-primary:hover {
-			background: #ffffff;
-			transform: translateY(-3px);
-			box-shadow: 0 10px 30px rgba(254, 231, 74, 0.3);
-		}
-		.medical-cta-btn-secondary {
-			background: transparent;
-			color: #ffffff;
-			border: 2px solid #ffffff;
-		}
-		.medical-cta-btn-secondary:hover {
-			background: #ffffff;
-			color: #042338;
-			transform: translateY(-3px);
+		.medical-cta-visual p {
+			font-size: 1.5rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.9;
+			margin-bottom: 60px;
 		}
 		
-		@media (max-width: 768px) {
-			.medical-hero-title {
-				font-size: 2.8rem;
-			}
-			.services-grid {
+		@media (max-width: 1200px) {
+			.showcase-grid-large {
 				grid-template-columns: 1fr;
 			}
-			.services-title {
-				font-size: 2.5rem;
+			.showcase-item-large.featured {
+				grid-column: span 1;
 			}
-			.medical-cta-title {
-				font-size: 2.5rem;
+			.process-visual-steps {
+				grid-template-columns: 1fr;
+			}
+			.process-step-visual::after {
+				display: none;
+			}
+		}
+		@media (max-width: 768px) {
+			.medical-hero-visual-title {
+				font-size: 3.5rem;
+			}
+			.showcase-header h2 {
+				font-size: 3rem;
+			}
+			.medical-cta-visual h2 {
+				font-size: 3rem;
 			}
 		}
 	</style>
@@ -416,7 +429,7 @@
 									</li>
 								</ul>
 							</li>
-							<li>
+							<li class="active">
 								<a href="javascript:;">Services <i class="fas fa-plus"></i></a>
 								<ul class="sub-menu">
 									<li class="add-menu-left">
@@ -447,171 +460,152 @@
 	</header>
 	<!-- end::Header Section -->
  
-	<main class="page-content">
+	<main class="medical-page-wrapper">
 		
-		<!-- begin::Medical Hero Asymmetric -->
-		<section class="medical-hero-asymmetric">
+		<!-- begin::Medical Visual Hero -->
+		<section class="medical-visual-hero">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-6">
-						<div class="medical-hero-content">
-							<span class="medical-hero-badge">Hospital-Level Care at Home</span>
-							<h1 class="medical-hero-title">Medical Care<br>Delivered To Your Doorstep</h1>
-							<p class="medical-hero-text">Skip waiting rooms. Our ICU-trained nurses, therapists, and case coordinators stabilize vitals, coordinate providers, and deliver hospital-grade support right where you recover fastest—home.</p>
-							<a href="#services" class="btn btn-primary" style="padding: 18px 40px; font-size: 1.1rem; font-weight: 700;">Explore Services</a>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="medical-hero-image">
-							<img src="images/appointment/women.png" alt="Medical Care" class="img-fluid">
-						</div>
+				<div class="medical-hero-visual-content">
+					<h1 class="medical-hero-visual-title">Hospital-Level<br>Medical Care<br>At Your Doorstep</h1>
+					<p class="medical-hero-visual-subtitle">Skip waiting rooms. Our ICU-trained nurses, therapists, and case coordinators stabilize vitals, coordinate providers, and deliver hospital-grade support right where you recover fastest—home.</p>
+					<div class="medical-hero-cta">
+						<a href="contact-us.html" class="medical-hero-btn primary">Schedule Consultation</a>
+						<a href="#services" class="medical-hero-btn secondary">Explore Services</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Medical Hero Asymmetric -->
+		<!-- end::Medical Visual Hero -->
 		
-		<!-- begin::Medical Services Showcase -->
-		<section id="services" class="medical-services-showcase">
-			<div class="container">
-				<div class="services-header">
-					<span class="services-badge">Comprehensive Medical Services</span>
-					<h2 class="services-title">Hospital-Level Expertise<br>Without The Ward</h2>
-					<p class="services-subtitle">DocnDoor mobilizes ICU-trained nurses, wound-care specialists, and remote physicians to manage complex cases at home. We interpret labs, adjust care plans with your doctor, and keep families informed every step.</p>
+		<!-- begin::Medical Showcase Large -->
+		<section id="services" class="medical-showcase-large">
+			<div class="showcase-container">
+				<div class="showcase-header">
+					<h2>Comprehensive Medical Services</h2>
+					<p>From acute recovery to chronic disease management, our licensed professionals bring hospital-level expertise directly to your home.</p>
 				</div>
-				<div class="services-grid">
-					<div class="service-feature-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-heartbeat"></i>
+				<div class="showcase-grid-large">
+					<div class="showcase-item-large featured">
+						<div>
+							<div class="showcase-icon-large"><i class="fas fa-heartbeat"></i></div>
+							<h3 class="showcase-title-large">Acute Recovery Nursing</h3>
+							<p class="showcase-description-large">ICU-trained nurses provide comprehensive post-surgical care, wound management, and vital signs monitoring in the comfort of your home. Our specialized team ensures smooth recovery transitions from hospital to home.</p>
+							<ul class="showcase-features-large">
+								<li>Advanced wound care & dressing changes</li>
+								<li>IV therapy & medication administration</li>
+								<li>Continuous vital signs monitoring</li>
+								<li>Post-surgical recovery coordination</li>
+								<li>24/7 clinical escalation support</li>
+							</ul>
 						</div>
-						<h3 class="service-feature-title">Acute Recovery Nursing</h3>
-						<p class="service-feature-description">ICU-trained nurses provide comprehensive post-surgical care, wound management, and vital signs monitoring in the comfort of your home.</p>
-						<ul class="service-feature-list">
-							<li>Wound care & dressing changes</li>
-							<li>IV therapy & medication administration</li>
-							<li>Vital signs monitoring</li>
-							<li>Post-surgical recovery support</li>
-						</ul>
+						<a href="contact-us.html" class="showcase-btn-large">Schedule Service</a>
 					</div>
-					<div class="service-feature-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-user-md"></i>
+					
+					<div class="showcase-item-large">
+						<div>
+							<div class="showcase-icon-large"><i class="fas fa-user-md"></i></div>
+							<h3 class="showcase-title-large">Advanced Physiotherapy</h3>
+							<p class="showcase-description-large">Neurological and orthopedic specialists rebuild strength using progressive rehabilitation plans and digital tracking systems.</p>
+							<ul class="showcase-features-large">
+								<li>Neurological rehabilitation</li>
+								<li>Orthopedic therapy</li>
+								<li>Mobility training</li>
+								<li>Pain management</li>
+							</ul>
 						</div>
-						<h3 class="service-feature-title">Advanced Physiotherapy</h3>
-						<p class="service-feature-description">Neurological and orthopedic specialists rebuild strength using progressive rehabilitation plans and digital tracking systems.</p>
-						<ul class="service-feature-list">
-							<li>Neurological rehabilitation</li>
-							<li>Orthopedic therapy</li>
-							<li>Mobility training</li>
-							<li>Pain management techniques</li>
-						</ul>
+						<a href="contact-us.html" class="showcase-btn-large">Learn More</a>
 					</div>
-					<div class="service-feature-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-pills"></i>
+					
+					<div class="showcase-item-large">
+						<div>
+							<div class="showcase-icon-large"><i class="fas fa-pills"></i></div>
+							<h3 class="showcase-title-large">Medication Management</h3>
+							<p class="showcase-description-large">Expert coordination of medication schedules, dosage adjustments, and coordination with prescribing physicians.</p>
+							<ul class="showcase-features-large">
+								<li>Medication reconciliation</li>
+								<li>Dosage monitoring</li>
+								<li>Drug interaction checks</li>
+								<li>Compliance tracking</li>
+							</ul>
 						</div>
-						<h3 class="service-feature-title">Medication Management</h3>
-						<p class="service-feature-description">Expert coordination of medication schedules, dosage adjustments, and coordination with prescribing physicians.</p>
-						<ul class="service-feature-list">
-							<li>Medication reconciliation</li>
-							<li>Dosage monitoring</li>
-							<li>Drug interaction checks</li>
-							<li>Compliance tracking</li>
-						</ul>
+						<a href="contact-us.html" class="showcase-btn-large">Learn More</a>
 					</div>
-					<div class="service-feature-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-stethoscope"></i>
+					
+					<div class="showcase-item-large">
+						<div>
+							<div class="showcase-icon-large"><i class="fas fa-stethoscope"></i></div>
+							<h3 class="showcase-title-large">Chronic Disease Management</h3>
+							<p class="showcase-description-large">Comprehensive care plans for managing chronic conditions like diabetes, heart disease, and respiratory issues.</p>
+							<ul class="showcase-features-large">
+								<li>Diabetes care & monitoring</li>
+								<li>Cardiac health management</li>
+								<li>Respiratory therapy</li>
+								<li>Health education</li>
+							</ul>
 						</div>
-						<h3 class="service-feature-title">Chronic Disease Management</h3>
-						<p class="service-feature-description">Comprehensive care plans for managing chronic conditions like diabetes, heart disease, and respiratory issues.</p>
-						<ul class="service-feature-list">
-							<li>Diabetes care & monitoring</li>
-							<li>Cardiac health management</li>
-							<li>Respiratory therapy</li>
-							<li>Health education & coaching</li>
-						</ul>
+						<a href="contact-us.html" class="showcase-btn-large">Learn More</a>
 					</div>
-					<div class="service-feature-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-laptop-medical"></i>
+					
+					<div class="showcase-item-large">
+						<div>
+							<div class="showcase-icon-large"><i class="fas fa-laptop-medical"></i></div>
+							<h3 class="showcase-title-large">Telehealth Coordination</h3>
+							<p class="showcase-description-large">Seamless coordination with your primary care physician through secure telehealth platforms and daily status reports.</p>
+							<ul class="showcase-features-large">
+								<li>Remote consultations</li>
+								<li>Secure video conferencing</li>
+								<li>Daily status reporting</li>
+								<li>Lab result interpretation</li>
+							</ul>
 						</div>
-						<h3 class="service-feature-title">Telehealth Coordination</h3>
-						<p class="service-feature-description">Seamless coordination with your primary care physician through secure telehealth platforms and daily status reports.</p>
-						<ul class="service-feature-list">
-							<li>Remote physician consultations</li>
-							<li>Secure video conferencing</li>
-							<li>Daily status reporting</li>
-							<li>Lab result interpretation</li>
-						</ul>
-					</div>
-					<div class="service-feature-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-notes-medical"></i>
-						</div>
-						<h3 class="service-feature-title">Care Plan Development</h3>
-						<p class="service-feature-description">Personalized care plans developed in collaboration with your medical team, tailored to your specific needs and recovery goals.</p>
-						<ul class="service-feature-list">
-							<li>Individualized care planning</li>
-							<li>Family involvement</li>
-							<li>Progress tracking</li>
-							<li>Regular plan adjustments</li>
-						</ul>
+						<a href="contact-us.html" class="showcase-btn-large">Learn More</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Medical Services Showcase -->
+		<!-- end::Medical Showcase Large -->
 		
-		<!-- begin::Medical Standards Section -->
-		<section class="medical-standards-section">
-			<div class="container">
-				<div class="services-header">
-					<span class="services-badge">Our Standards</span>
-					<h2 class="services-title">Why Families Trust<br>DocnDoor Medical Care</h2>
-					<p class="services-subtitle">We combine hospital-grade equipment, remote physician oversight, and daily reporting so every treatment is clinically verified at home.</p>
+		<!-- begin::Medical Process Visual -->
+		<section class="medical-process-visual">
+			<div class="process-visual-container">
+				<div class="process-visual-header">
+					<h2>How Medical Care Works</h2>
 				</div>
-				<div class="standards-grid">
-					<div class="standard-card">
-						<div class="standard-number">100%</div>
-						<h3 class="standard-title">Licensed Professionals</h3>
-						<p class="standard-text">All our medical staff are fully licensed, certified, and background-checked to ensure the highest standards of care.</p>
+				<div class="process-visual-steps">
+					<div class="process-step-visual">
+						<div class="process-step-number">01</div>
+						<h3 class="process-step-title">Clinical Intake</h3>
+						<p class="process-step-description">Share hospital notes, medications, and vital signs. Our nurse concierge assembles a comprehensive chart and alerts the on-call medical lead for immediate attention.</p>
 					</div>
-					<div class="standard-card">
-						<div class="standard-number">24/7</div>
-						<h3 class="standard-title">Emergency Support</h3>
-						<p class="standard-text">Round-the-clock access to our clinical escalation team for urgent medical situations and critical care needs.</p>
+					<div class="process-step-visual">
+						<div class="process-step-number">02</div>
+						<h3 class="process-step-title">At-Home Treatment</h3>
+						<p class="process-step-description">Licensed nurses stabilize vitals, coordinate lab work, and keep physicians informed through secure tele-rounds and daily status logs for continuous care coordination.</p>
 					</div>
-					<div class="standard-card">
-						<div class="standard-number">ICU</div>
-						<h3 class="standard-title">Trained Teams</h3>
-						<p class="standard-text">Our nurses have intensive care unit training, bringing hospital-level expertise directly to your home.</p>
-					</div>
-					<div class="standard-card">
-						<div class="standard-number">&lt;2hr</div>
-						<h3 class="standard-title">Response Time</h3>
-						<p class="standard-text">Rapid response for urgent medical needs, with same-day scheduling available for emergency situations.</p>
+					<div class="process-step-visual">
+						<div class="process-step-number">03</div>
+						<h3 class="process-step-title">Recovery Support</h3>
+						<p class="process-step-description">Ongoing monitoring, medication management, and therapy sessions ensure your recovery progresses smoothly with professional oversight every step of the way.</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Medical Standards Section -->
+		<!-- end::Medical Process Visual -->
 		
-		<!-- begin::Medical CTA Section -->
-		<section class="medical-cta-section">
+		<!-- begin::Medical CTA Visual -->
+		<section class="medical-cta-visual">
 			<div class="container">
-				<div class="medical-cta-content">
-					<div class="medical-cta-icon"><i class="fas fa-calendar-check"></i></div>
-					<h2 class="medical-cta-title">Ready To Start Your<br>Medical Care Journey?</h2>
-					<p class="medical-cta-text">Schedule a consultation with our care coordinators to discuss your medical needs and create a personalized care plan tailored to your recovery goals.</p>
-					<div class="medical-cta-buttons">
-						<a href="contact-us.html" class="medical-cta-btn medical-cta-btn-primary">Schedule Consultation</a>
-						<a href="tel:+916302989942" class="medical-cta-btn medical-cta-btn-secondary">Call Us Now</a>
+				<div class="medical-cta-visual-content">
+					<h2>Ready To Start Your<br>Medical Care Journey?</h2>
+					<p>Schedule a consultation with our care coordinators to discuss your medical needs and create a personalized care plan tailored to your recovery goals.</p>
+					<div class="medical-hero-cta">
+						<a href="contact-us.html" class="medical-hero-btn primary">Schedule Consultation</a>
+						<a href="tel:+916302989942" class="medical-hero-btn secondary">Call Us Now</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::Medical CTA Section -->
+		<!-- end::Medical CTA Visual -->
 		
 	</main>
 	

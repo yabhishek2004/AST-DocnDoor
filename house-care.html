@@ -51,112 +51,126 @@
 	<!-- end::Plugins All CSS -->
 	
 	<style>
-		.house-hero-fullwidth {
-			min-height: 90vh;
-			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+		.house-page-wrapper {
+			background: #ffffff;
+		}
+		
+		.house-gallery-hero {
+			min-height: 100vh;
+			background: linear-gradient(180deg, #042338 0%, #1a3a5a 100%);
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			text-align: center;
-			padding: 150px 20px;
 			position: relative;
 			overflow: hidden;
 		}
-		.house-hero-fullwidth::before {
+		.house-gallery-hero::before {
 			content: '';
 			position: absolute;
-			width: 800px;
-			height: 800px;
-			background: radial-gradient(circle, rgba(254, 231, 74, 0.1) 0%, transparent 70%);
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+			background: repeating-linear-gradient(
+				0deg,
+				transparent,
+				transparent 2px,
+				rgba(254, 231, 74, 0.05) 2px,
+				rgba(254, 231, 74, 0.05) 4px
+			);
 		}
-		.house-hero-content {
+		.house-gallery-hero-content {
 			position: relative;
 			z-index: 2;
-			max-width: 900px;
+			max-width: 1000px;
+			padding: 0 20px;
 		}
-		.house-hero-badge {
-			display: inline-block;
-			padding: 12px 30px;
-			background: rgba(254, 231, 74, 0.2);
-			border: 1px solid rgba(254, 231, 74, 0.4);
-			border-radius: 50px;
-			color: #FEE74A;
-			font-size: 0.9rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-			margin-bottom: 30px;
-		}
-		.house-hero-title {
-			font-size: 5rem;
-			font-weight: 800;
+		.house-gallery-hero h1 {
+			font-size: 7rem;
+			font-weight: 900;
 			color: #ffffff;
-			line-height: 1.2;
-			margin-bottom: 30px;
+			margin-bottom: 40px;
+			line-height: 1;
+			letter-spacing: -4px;
 		}
-		.house-hero-text {
-			font-size: 1.4rem;
+		.house-gallery-hero p {
+			font-size: 1.6rem;
 			color: rgba(255, 255, 255, 0.9);
-			line-height: 1.8;
-			margin-bottom: 50px;
+			line-height: 1.9;
+			margin-bottom: 60px;
+		}
+		.house-gallery-hero-btn {
+			display: inline-block;
+			padding: 22px 55px;
+			background: #FEE74A;
+			color: #042338;
+			border-radius: 50px;
+			text-decoration: none;
+			font-weight: 800;
+			font-size: 1.3rem;
+			transition: all 0.3s ease;
+		}
+		.house-gallery-hero-btn:hover {
+			background: #ffffff;
+			transform: translateY(-5px);
+			box-shadow: 0 20px 50px rgba(254, 231, 74, 0.4);
 		}
 		
-		.house-services-masonry {
-			padding: 100px 0;
+		.house-gallery-masonry {
+			padding: 150px 0;
 			background: #f8f9fa;
 		}
-		.masonry-header {
+		.gallery-masonry-container {
+			max-width: 1600px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.gallery-masonry-header {
 			text-align: center;
-			margin-bottom: 80px;
+			margin-bottom: 100px;
 		}
-		.masonry-badge {
-			display: inline-block;
-			padding: 8px 20px;
-			background: rgba(4, 35, 56, 0.1);
-			border-radius: 50px;
+		.gallery-masonry-header h2 {
+			font-size: 5.5rem;
+			font-weight: 900;
 			color: #042338;
-			font-size: 0.85rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
+			letter-spacing: -3px;
 		}
-		.masonry-title {
-			font-size: 3.5rem;
-			font-weight: 800;
-			color: #042338;
-			margin-bottom: 20px;
-		}
-		.masonry-subtitle {
-			font-size: 1.2rem;
+		.gallery-masonry-header p {
+			font-size: 1.4rem;
 			color: #666;
-			max-width: 700px;
+			max-width: 900px;
 			margin: 0 auto;
 		}
-		.masonry-grid {
+		.gallery-masonry-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-			gap: 30px;
-			margin-top: 60px;
+			grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+			gap: 40px;
+			grid-auto-rows: 10px;
 		}
-		.masonry-card {
+		.gallery-item {
 			background: #ffffff;
-			border-radius: 25px;
+			border-radius: 30px;
 			overflow: hidden;
-			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-			transition: all 0.4s ease;
-			display: flex;
-			flex-direction: column;
+			box-shadow: 0 15px 50px rgba(4, 35, 56, 0.1);
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			cursor: pointer;
 		}
-		.masonry-card:hover {
-			transform: translateY(-10px);
-			box-shadow: 0 25px 60px rgba(4, 35, 56, 0.15);
+		.gallery-item:hover {
+			transform: translateY(-20px) scale(1.02);
+			box-shadow: 0 35px 100px rgba(4, 35, 56, 0.25);
 		}
-		.masonry-card-image {
+		.gallery-item.tall {
+			grid-row: span 45;
+		}
+		.gallery-item.medium {
+			grid-row: span 35;
+		}
+		.gallery-item.short {
+			grid-row: span 30;
+		}
+		.gallery-image {
 			width: 100%;
-			height: 250px;
+			height: 300px;
 			background: linear-gradient(135deg, #042338, #1a3a5a);
 			display: flex;
 			align-items: center;
@@ -166,267 +180,265 @@
 			position: relative;
 			overflow: hidden;
 		}
-		.masonry-card-image::after {
+		.gallery-item.tall .gallery-image {
+			height: 400px;
+		}
+		.gallery-item.medium .gallery-image {
+			height: 350px;
+		}
+		.gallery-image::after {
 			content: '';
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			background: radial-gradient(circle, rgba(254, 231, 74, 0.2) 0%, transparent 70%);
-			top: 0;
-			left: 0;
 		}
-		.masonry-card-content {
+		.gallery-content {
 			padding: 40px 35px;
-			flex: 1;
 		}
-		.masonry-card-title {
-			font-size: 1.8rem;
-			font-weight: 700;
+		.gallery-item.tall .gallery-content {
+			padding: 50px 40px;
+		}
+		.gallery-title {
+			font-size: 2rem;
+			font-weight: 800;
 			color: #042338;
 			margin-bottom: 15px;
 		}
-		.masonry-card-description {
-			font-size: 1.05rem;
+		.gallery-item.tall .gallery-title {
+			font-size: 2.5rem;
+		}
+		.gallery-description {
+			font-size: 1.1rem;
 			color: #666;
 			line-height: 1.8;
 			margin-bottom: 25px;
 		}
-		.masonry-card-features {
+		.gallery-item.tall .gallery-description {
+			font-size: 1.2rem;
+		}
+		.gallery-features {
 			list-style: none;
 			padding: 0;
 			margin: 0 0 30px 0;
 		}
-		.masonry-card-features li {
-			padding: 8px 0;
-			color: #666;
-			font-size: 0.95rem;
-			display: flex;
-			align-items: center;
-			gap: 10px;
-		}
-		.masonry-card-features li::before {
-			content: '→';
-			color: #FEE74A;
-			font-weight: 700;
-			font-size: 1.2rem;
-		}
-		.masonry-card-btn {
-			display: inline-block;
-			padding: 12px 30px;
-			background: #042338;
-			color: #ffffff;
-			border-radius: 50px;
-			text-decoration: none;
-			font-weight: 600;
-			transition: all 0.3s ease;
-		}
-		.masonry-card-btn:hover {
-			background: #FEE74A;
-			color: #042338;
-			transform: translateX(5px);
-		}
-		
-		.house-packages-section {
-			padding: 100px 0;
-			background: #ffffff;
-		}
-		.packages-header {
-			text-align: center;
-			margin-bottom: 80px;
-		}
-		.packages-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: 40px;
-		}
-		.package-card {
-			background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-			border: 2px solid #e9ecef;
-			border-radius: 30px;
-			padding: 50px 40px;
-			text-align: center;
-			transition: all 0.4s ease;
-			position: relative;
-		}
-		.package-card:hover {
-			border-color: #042338;
-			transform: translateY(-10px);
-			box-shadow: 0 25px 60px rgba(4, 35, 56, 0.15);
-		}
-		.package-card.featured {
-			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
-			border-color: #FEE74A;
-			color: #ffffff;
-		}
-		.package-card.featured .package-title,
-		.package-card.featured .package-price,
-		.package-card.featured .package-feature {
-			color: #ffffff;
-		}
-		.package-icon {
-			font-size: 3.5rem;
-			color: #FEE74A;
-			margin-bottom: 25px;
-		}
-		.package-card.featured .package-icon {
-			color: #FEE74A;
-		}
-		.package-title {
-			font-size: 1.8rem;
-			font-weight: 700;
-			color: #042338;
-			margin-bottom: 20px;
-		}
-		.package-price {
-			font-size: 3rem;
-			font-weight: 800;
-			color: #042338;
-			margin-bottom: 10px;
-		}
-		.package-period {
+		.gallery-features li {
 			font-size: 1rem;
 			color: #666;
-			margin-bottom: 30px;
-		}
-		.package-card.featured .package-period {
-			color: rgba(255, 255, 255, 0.8);
-		}
-		.package-features {
-			list-style: none;
-			padding: 0;
-			margin: 0 0 40px 0;
-			text-align: left;
-		}
-		.package-feature {
-			padding: 12px 0;
-			color: #666;
-			font-size: 1rem;
+			margin-bottom: 12px;
 			display: flex;
 			align-items: center;
 			gap: 12px;
 		}
-		.package-card.featured .package-feature {
+		.gallery-features li::before {
+			content: '→';
+			color: #FEE74A;
+			font-weight: 700;
+			font-size: 1.3rem;
+		}
+		.gallery-btn {
+			display: inline-block;
+			padding: 15px 35px;
+			background: #042338;
+			color: #ffffff;
+			border-radius: 50px;
+			text-decoration: none;
+			font-weight: 700;
+			font-size: 1.1rem;
+			transition: all 0.3s ease;
+		}
+		.gallery-btn:hover {
+			background: #FEE74A;
+			color: #042338;
+			transform: translateX(10px);
+		}
+		
+		.house-packages-gallery {
+			padding: 150px 0;
+			background: #ffffff;
+		}
+		.packages-gallery-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.packages-gallery-header {
+			text-align: center;
+			margin-bottom: 100px;
+		}
+		.packages-gallery-header h2 {
+			font-size: 5rem;
+			font-weight: 900;
+			color: #042338;
+			margin-bottom: 25px;
+		}
+		.packages-gallery-header p {
+			font-size: 1.3rem;
+			color: #666;
+		}
+		.packages-gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 50px;
+		}
+		.package-gallery-card {
+			background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+			border: 3px solid #e9ecef;
+			border-radius: 35px;
+			padding: 60px 50px;
+			text-align: center;
+			transition: all 0.4s ease;
+			position: relative;
+		}
+		.package-gallery-card:hover {
+			border-color: #042338;
+			transform: translateY(-15px);
+			box-shadow: 0 40px 100px rgba(4, 35, 56, 0.2);
+		}
+		.package-gallery-card.featured {
+			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
+			border-color: #FEE74A;
+			color: #ffffff;
+		}
+		.package-gallery-card.featured .package-gallery-title,
+		.package-gallery-card.featured .package-gallery-price {
+			color: #ffffff;
+		}
+		.package-gallery-icon {
+			font-size: 4rem;
+			color: #042338;
+			margin-bottom: 30px;
+		}
+		.package-gallery-card.featured .package-gallery-icon {
+			color: #FEE74A;
+		}
+		.package-gallery-title {
+			font-size: 2rem;
+			font-weight: 800;
+			color: #042338;
+			margin-bottom: 25px;
+		}
+		.package-gallery-price {
+			font-size: 4rem;
+			font-weight: 900;
+			color: #042338;
+			margin-bottom: 15px;
+			line-height: 1;
+		}
+		.package-gallery-card.featured .package-gallery-price {
+			color: #FEE74A;
+		}
+		.package-gallery-period {
+			font-size: 1.1rem;
+			color: #666;
+			margin-bottom: 40px;
+		}
+		.package-gallery-card.featured .package-gallery-period {
+			color: rgba(255, 255, 255, 0.8);
+		}
+		.package-gallery-features {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 50px 0;
+			text-align: left;
+		}
+		.package-gallery-feature {
+			font-size: 1.1rem;
+			color: #666;
+			margin-bottom: 18px;
+			display: flex;
+			align-items: center;
+			gap: 15px;
+		}
+		.package-gallery-card.featured .package-gallery-feature {
 			color: rgba(255, 255, 255, 0.9);
 		}
-		.package-feature::before {
+		.package-gallery-feature::before {
 			content: '✓';
-			width: 25px;
-			height: 25px;
+			width: 30px;
+			height: 30px;
 			background: #FEE74A;
 			color: #042338;
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-weight: 700;
-			font-size: 0.9rem;
+			font-weight: 800;
+			font-size: 1rem;
 			flex-shrink: 0;
 		}
-		.package-card.featured .package-feature::before {
+		.package-gallery-card.featured .package-gallery-feature::before {
 			background: #FEE74A;
 			color: #042338;
 		}
-		.package-btn {
+		.package-gallery-btn {
 			width: 100%;
-			padding: 18px;
+			padding: 20px;
 			border-radius: 50px;
-			font-size: 1.1rem;
-			font-weight: 700;
+			font-size: 1.2rem;
+			font-weight: 800;
 			text-decoration: none;
 			display: inline-block;
 			transition: all 0.3s ease;
 		}
-		.package-btn-primary {
+		.package-gallery-btn.primary {
 			background: #042338;
 			color: #ffffff;
 		}
-		.package-btn-primary:hover {
+		.package-gallery-btn.primary:hover {
 			background: #FEE74A;
 			color: #042338;
 			transform: translateY(-3px);
 		}
-		.package-card.featured .package-btn-primary {
+		.package-gallery-card.featured .package-gallery-btn.primary {
 			background: #FEE74A;
 			color: #042338;
 		}
-		.package-card.featured .package-btn-primary:hover {
+		.package-gallery-card.featured .package-gallery-btn.primary:hover {
 			background: #ffffff;
 			color: #042338;
 		}
 		
-		.house-cta-section {
-			padding: 100px 0;
+		.house-cta-gallery {
+			padding: 150px 0;
 			background: linear-gradient(135deg, #042338 0%, #1a3a5a 100%);
 			text-align: center;
 		}
-		.house-cta-content {
-			max-width: 800px;
+		.house-cta-gallery-content {
+			max-width: 900px;
 			margin: 0 auto;
 		}
-		.house-cta-icon {
-			font-size: 4rem;
-			color: #FEE74A;
-			margin-bottom: 30px;
-		}
-		.house-cta-title {
-			font-size: 3.5rem;
-			font-weight: 800;
+		.house-cta-gallery h2 {
+			font-size: 5.5rem;
+			font-weight: 900;
 			color: #ffffff;
-			margin-bottom: 25px;
-		}
-		.house-cta-text {
-			font-size: 1.2rem;
-			color: rgba(255, 255, 255, 0.9);
-			line-height: 1.8;
 			margin-bottom: 40px;
+			line-height: 1.1;
 		}
-		.house-cta-buttons {
-			display: flex;
-			gap: 20px;
-			justify-content: center;
-			flex-wrap: wrap;
-		}
-		.house-cta-btn {
-			padding: 18px 40px;
-			border-radius: 50px;
-			font-size: 1.1rem;
-			font-weight: 700;
-			text-decoration: none;
-			display: inline-block;
-			transition: all 0.3s ease;
-		}
-		.house-cta-btn-primary {
-			background: #FEE74A;
-			color: #042338;
-		}
-		.house-cta-btn-primary:hover {
-			background: #ffffff;
-			transform: translateY(-3px);
-			box-shadow: 0 10px 30px rgba(254, 231, 74, 0.3);
-		}
-		.house-cta-btn-secondary {
-			background: transparent;
-			color: #ffffff;
-			border: 2px solid #ffffff;
-		}
-		.house-cta-btn-secondary:hover {
-			background: #ffffff;
-			color: #042338;
-			transform: translateY(-3px);
+		.house-cta-gallery p {
+			font-size: 1.5rem;
+			color: rgba(255, 255, 255, 0.9);
+			line-height: 1.9;
+			margin-bottom: 60px;
 		}
 		
-		@media (max-width: 768px) {
-			.house-hero-title {
-				font-size: 3rem;
+		@media (max-width: 1200px) {
+			.gallery-masonry-grid {
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 			}
-			.masonry-grid {
+			.packages-gallery-grid {
 				grid-template-columns: 1fr;
 			}
-			.masonry-title {
-				font-size: 2.5rem;
+		}
+		@media (max-width: 768px) {
+			.house-gallery-hero h1 {
+				font-size: 3.5rem;
 			}
-			.house-cta-title {
-				font-size: 2.5rem;
+			.gallery-masonry-header h2 {
+				font-size: 3rem;
+			}
+			.house-cta-gallery h2 {
+				font-size: 3rem;
 			}
 		}
 	</style>
@@ -500,7 +512,7 @@
 									</li>
 								</ul>
 							</li>
-							<li>
+							<li class="active">
 								<a href="javascript:;">Services <i class="fas fa-plus"></i></a>
 								<ul class="sub-menu">
 									<li class="add-menu-left">
@@ -531,199 +543,171 @@
 	</header>
 	<!-- end::Header Section -->
  
-	<main class="page-content">
+	<main class="house-page-wrapper">
 		
-		<!-- begin::House Hero Fullwidth -->
-		<section class="house-hero-fullwidth">
+		<!-- begin::House Gallery Hero -->
+		<section class="house-gallery-hero">
 			<div class="container">
-				<div class="house-hero-content">
-					<span class="house-hero-badge">Hotel-Grade Home Services</span>
-					<h1 class="house-hero-title">House Care<br>Whenever You Need It</h1>
-					<p class="house-hero-text">Book professional cleaning pros for laundry, deep cleans, and weekly resets. We pack eco-safe supplies, background-checked teams, and sparkling results into every visit.</p>
-					<a href="#services" class="btn btn-primary" style="padding: 18px 40px; font-size: 1.1rem; font-weight: 700;">Explore Services</a>
+				<div class="house-gallery-hero-content">
+					<h1>Premium House Care<br>Services</h1>
+					<p>Book professional cleaning pros for laundry, deep cleans, and weekly resets. We pack eco-safe supplies, background-checked teams, and sparkling results into every visit.</p>
+					<a href="#services" class="house-gallery-hero-btn">Explore Services</a>
 				</div>
 			</div>
 		</section>
-		<!-- end::House Hero Fullwidth -->
+		<!-- end::House Gallery Hero -->
 		
-		<!-- begin::House Services Masonry -->
-		<section id="services" class="house-services-masonry">
-			<div class="container">
-				<div class="masonry-header">
-					<span class="masonry-badge">Premium Home Services</span>
-					<h2 class="masonry-title">Detail-Oriented Crews,<br>Delightfully Tidy Rooms</h2>
-					<p class="masonry-subtitle">DocnDoor House Care blends concierge-level service with reliable routines. From kid zones and pet dens to short-term rentals, we map every surface, declutter plan, and scent profile so your space always feels freshly reset.</p>
+		<!-- begin::House Gallery Masonry -->
+		<section id="services" class="house-gallery-masonry">
+			<div class="gallery-masonry-container">
+				<div class="gallery-masonry-header">
+					<h2>Our House Care Services</h2>
+					<p>From deep cleaning to meal preparation, we offer comprehensive home services that keep your space spotless and organized.</p>
 				</div>
-				<div class="masonry-grid">
-					<div class="masonry-card">
-						<div class="masonry-card-image">
-							<i class="fas fa-broom"></i>
-						</div>
-						<div class="masonry-card-content">
-							<h3 class="masonry-card-title">Deep Cleaning</h3>
-							<p class="masonry-card-description">Comprehensive deep cleaning service that covers every corner of your home, from baseboards to ceiling fans.</p>
-							<ul class="masonry-card-features">
-								<li>Kitchen deep clean</li>
-								<li>Bathroom sanitization</li>
+				<div class="gallery-masonry-grid">
+					<div class="gallery-item tall">
+						<div class="gallery-image"><i class="fas fa-broom"></i></div>
+						<div class="gallery-content">
+							<h3 class="gallery-title">Deep Cleaning Service</h3>
+							<p class="gallery-description">Comprehensive deep cleaning service that covers every corner of your home, from baseboards to ceiling fans. Our professional team uses eco-friendly products and attention to detail to ensure your space is spotless.</p>
+							<ul class="gallery-features">
+								<li>Kitchen deep clean & sanitization</li>
+								<li>Bathroom deep clean & disinfection</li>
 								<li>Baseboard & window cleaning</li>
 								<li>Appliance deep clean</li>
+								<li>Ceiling fan & light fixture cleaning</li>
 							</ul>
-							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
+							<a href="contact-us.html" class="gallery-btn">Book Service</a>
 						</div>
 					</div>
-					<div class="masonry-card">
-						<div class="masonry-card-image">
-							<i class="fas fa-tshirt"></i>
-						</div>
-						<div class="masonry-card-content">
-							<h3 class="masonry-card-title">Laundry Services</h3>
-							<p class="masonry-card-description">Professional laundry and folding services that keep your wardrobe fresh and organized.</p>
-							<ul class="masonry-card-features">
+					<div class="gallery-item medium">
+						<div class="gallery-image"><i class="fas fa-tshirt"></i></div>
+						<div class="gallery-content">
+							<h3 class="gallery-title">Laundry Services</h3>
+							<p class="gallery-description">Professional laundry and folding services that keep your wardrobe fresh and organized. We handle everything from delicate items to everyday clothing.</p>
+							<ul class="gallery-features">
 								<li>Wash, dry & fold</li>
 								<li>Delicate item care</li>
 								<li>Ironing & pressing</li>
-								<li>Closet organization</li>
 							</ul>
-							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
+							<a href="contact-us.html" class="gallery-btn">Book Service</a>
 						</div>
 					</div>
-					<div class="masonry-card">
-						<div class="masonry-card-image">
-							<i class="fas fa-home"></i>
-						</div>
-						<div class="masonry-card-content">
-							<h3 class="masonry-card-title">Regular Maintenance</h3>
-							<p class="masonry-card-description">Weekly or bi-weekly cleaning routines to keep your home consistently clean and organized.</p>
-							<ul class="masonry-card-features">
-								<li>Weekly/bi-weekly schedules</li>
-								<li>Surface cleaning & dusting</li>
-								<li>Vacuuming & mopping</li>
-								<li>Trash removal</li>
-							</ul>
-							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
+					<div class="gallery-item short">
+						<div class="gallery-image"><i class="fas fa-home"></i></div>
+						<div class="gallery-content">
+							<h3 class="gallery-title">Regular Maintenance</h3>
+							<p class="gallery-description">Weekly or bi-weekly cleaning routines to keep your home consistently clean and organized.</p>
+							<a href="contact-us.html" class="gallery-btn">Book Service</a>
 						</div>
 					</div>
-					<div class="masonry-card">
-						<div class="masonry-card-image">
-							<i class="fas fa-boxes"></i>
-						</div>
-						<div class="masonry-card-content">
-							<h3 class="masonry-card-title">Organization & Decluttering</h3>
-							<p class="masonry-card-description">Transform cluttered spaces into organized, functional areas with our professional organization services.</p>
-							<ul class="masonry-card-features">
+					<div class="gallery-item medium">
+						<div class="gallery-image"><i class="fas fa-boxes"></i></div>
+						<div class="gallery-content">
+							<h3 class="gallery-title">Organization & Decluttering</h3>
+							<p class="gallery-description">Transform cluttered spaces into organized, functional areas with our professional organization services.</p>
+							<ul class="gallery-features">
 								<li>Room organization</li>
 								<li>Closet & storage solutions</li>
 								<li>Decluttering assistance</li>
-								<li>Space optimization</li>
 							</ul>
-							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
+							<a href="contact-us.html" class="gallery-btn">Book Service</a>
 						</div>
 					</div>
-					<div class="masonry-card">
-						<div class="masonry-card-image">
-							<i class="fas fa-utensils"></i>
-						</div>
-						<div class="masonry-card-content">
-							<h3 class="masonry-card-title">Meal Preparation</h3>
-							<p class="masonry-card-description">Healthy meal prep services that save you time while ensuring nutritious, delicious meals.</p>
-							<ul class="masonry-card-features">
-								<li>Meal planning</li>
+					<div class="gallery-item tall">
+						<div class="gallery-image"><i class="fas fa-utensils"></i></div>
+						<div class="gallery-content">
+							<h3 class="gallery-title">Meal Preparation</h3>
+							<p class="gallery-description">Healthy meal prep services that save you time while ensuring nutritious, delicious meals. Our team handles everything from planning to cleanup.</p>
+							<ul class="gallery-features">
+								<li>Custom meal planning</li>
 								<li>Grocery shopping</li>
-								<li>Meal preparation</li>
+								<li>Meal preparation & cooking</li>
 								<li>Kitchen cleanup</li>
+								<li>Nutritional guidance</li>
 							</ul>
-							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
+							<a href="contact-us.html" class="gallery-btn">Book Service</a>
 						</div>
 					</div>
-					<div class="masonry-card">
-						<div class="masonry-card-image">
-							<i class="fas fa-leaf"></i>
-						</div>
-						<div class="masonry-card-content">
-							<h3 class="masonry-card-title">Eco-Friendly Cleaning</h3>
-							<p class="masonry-card-description">Environmentally conscious cleaning using safe, non-toxic products that protect your family and pets.</p>
-							<ul class="masonry-card-features">
-								<li>Non-toxic products</li>
-								<li>Safe for children & pets</li>
-								<li>Sustainable practices</li>
-								<li>Allergy-friendly options</li>
-							</ul>
-							<a href="contact-us.html" class="masonry-card-btn">Book Service</a>
+					<div class="gallery-item short">
+						<div class="gallery-image"><i class="fas fa-leaf"></i></div>
+						<div class="gallery-content">
+							<h3 class="gallery-title">Eco-Friendly Cleaning</h3>
+							<p class="gallery-description">Environmentally conscious cleaning using safe, non-toxic products that protect your family and pets.</p>
+							<a href="contact-us.html" class="gallery-btn">Book Service</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::House Services Masonry -->
+		<!-- end::House Gallery Masonry -->
 		
-		<!-- begin::House Packages Section -->
-		<section class="house-packages-section">
-			<div class="container">
-				<div class="packages-header">
-					<span class="masonry-badge">Service Packages</span>
-					<h2 class="masonry-title">Choose Your Perfect<br>Cleaning Plan</h2>
-					<p class="masonry-subtitle">Flexible packages designed to meet your specific needs, from one-time deep cleans to ongoing maintenance.</p>
+		<!-- begin::House Packages Gallery -->
+		<section class="house-packages-gallery">
+			<div class="packages-gallery-container">
+				<div class="packages-gallery-header">
+					<h2>Service Packages</h2>
+					<p>Flexible packages designed to meet your specific needs, from one-time deep cleans to ongoing maintenance.</p>
 				</div>
-				<div class="packages-grid">
-					<div class="package-card">
-						<div class="package-icon"><i class="fas fa-sparkles"></i></div>
-						<h3 class="package-title">One-Time Deep Clean</h3>
-						<div class="package-price">$199</div>
-						<p class="package-period">One-time service</p>
-						<ul class="package-features">
-							<li class="package-feature">Full home deep clean</li>
-							<li class="package-feature">All rooms included</li>
-							<li class="package-feature">Eco-friendly products</li>
-							<li class="package-feature">4-6 hour service</li>
+				<div class="packages-gallery-grid">
+					<div class="package-gallery-card">
+						<div class="package-gallery-icon"><i class="fas fa-sparkles"></i></div>
+						<h3 class="package-gallery-title">One-Time Deep Clean</h3>
+						<div class="package-gallery-price">$199</div>
+						<p class="package-gallery-period">One-time service</p>
+						<ul class="package-gallery-features">
+							<li class="package-gallery-feature">Full home deep clean</li>
+							<li class="package-gallery-feature">All rooms included</li>
+							<li class="package-gallery-feature">Eco-friendly products</li>
+							<li class="package-gallery-feature">4-6 hour service</li>
 						</ul>
-						<a href="contact-us.html" class="package-btn package-btn-primary">Book Now</a>
+						<a href="contact-us.html" class="package-gallery-btn primary">Book Now</a>
 					</div>
-					<div class="package-card featured">
-						<div class="package-icon"><i class="fas fa-star"></i></div>
-						<h3 class="package-title">Weekly Maintenance</h3>
-						<div class="package-price">$149</div>
-						<p class="package-period">Per week</p>
-						<ul class="package-features">
-							<li class="package-feature">Weekly scheduled visits</li>
-							<li class="package-feature">Regular maintenance</li>
-							<li class="package-feature">Priority scheduling</li>
-							<li class="package-feature">10% discount on extras</li>
+					<div class="package-gallery-card featured">
+						<div class="package-gallery-icon"><i class="fas fa-star"></i></div>
+						<h3 class="package-gallery-title">Weekly Maintenance</h3>
+						<div class="package-gallery-price">$149</div>
+						<p class="package-gallery-period">Per week</p>
+						<ul class="package-gallery-features">
+							<li class="package-gallery-feature">Weekly scheduled visits</li>
+							<li class="package-gallery-feature">Regular maintenance</li>
+							<li class="package-gallery-feature">Priority scheduling</li>
+							<li class="package-gallery-feature">10% discount on extras</li>
 						</ul>
-						<a href="contact-us.html" class="package-btn package-btn-primary">Book Now</a>
+						<a href="contact-us.html" class="package-gallery-btn primary">Book Now</a>
 					</div>
-					<div class="package-card">
-						<div class="package-icon"><i class="fas fa-calendar-alt"></i></div>
-						<h3 class="package-title">Bi-Weekly Plan</h3>
-						<div class="package-price">$129</div>
-						<p class="package-period">Per visit</p>
-						<ul class="package-features">
-							<li class="package-feature">Every other week</li>
-							<li class="package-feature">Comprehensive cleaning</li>
-							<li class="package-feature">Flexible scheduling</li>
-							<li class="package-feature">Consistent service</li>
+					<div class="package-gallery-card">
+						<div class="package-gallery-icon"><i class="fas fa-calendar-alt"></i></div>
+						<h3 class="package-gallery-title">Bi-Weekly Plan</h3>
+						<div class="package-gallery-price">$129</div>
+						<p class="package-gallery-period">Per visit</p>
+						<ul class="package-gallery-features">
+							<li class="package-gallery-feature">Every other week</li>
+							<li class="package-gallery-feature">Comprehensive cleaning</li>
+							<li class="package-gallery-feature">Flexible scheduling</li>
+							<li class="package-gallery-feature">Consistent service</li>
 						</ul>
-						<a href="contact-us.html" class="package-btn package-btn-primary">Book Now</a>
+						<a href="contact-us.html" class="package-gallery-btn primary">Book Now</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::House Packages Section -->
+		<!-- end::House Packages Gallery -->
 		
-		<!-- begin::House CTA Section -->
-		<section class="house-cta-section">
+		<!-- begin::House CTA Gallery -->
+		<section class="house-cta-gallery">
 			<div class="container">
-				<div class="house-cta-content">
-					<div class="house-cta-icon"><i class="fas fa-sparkles"></i></div>
-					<h2 class="house-cta-title">Ready To Transform<br>Your Home?</h2>
-					<p class="house-cta-text">Schedule a consultation with our house care specialists to discuss your needs and create a customized cleaning plan that fits your lifestyle.</p>
-					<div class="house-cta-buttons">
-						<a href="contact-us.html" class="house-cta-btn house-cta-btn-primary">Schedule Service</a>
-						<a href="tel:+916302989942" class="house-cta-btn house-cta-btn-secondary">Call Us Now</a>
+				<div class="house-cta-gallery-content">
+					<h2>Ready To Transform<br>Your Home?</h2>
+					<p>Schedule a consultation with our house care specialists to discuss your needs and create a customized cleaning plan that fits your lifestyle.</p>
+					<div style="display: flex; gap: 25px; justify-content: center; flex-wrap: wrap;">
+						<a href="contact-us.html" class="house-gallery-hero-btn">Schedule Service</a>
+						<a href="tel:+916302989942" style="display: inline-block; padding: 22px 55px; background: transparent; color: #ffffff; border: 3px solid #ffffff; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.3rem; transition: all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.color='#042338';" onmouseout="this.style.background='transparent'; this.style.color='#ffffff';">Call Us Now</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end::House CTA Section -->
+		<!-- end::House CTA Gallery -->
 		
 	</main>
 	
